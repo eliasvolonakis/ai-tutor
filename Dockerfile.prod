@@ -1,0 +1,35 @@
+# Production Dockerfile
+FROM oven/bun:latest as builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json bun.lock ./
+
+# Install all dependencies (including dev dependencies for build)
+RUN bun install
+
+# Copy source code
+COPY src/ ./src/
+
+# Build the application (if needed)
+# For Elysia, we can run directly, but this is ready for build step if added later
+
+FROM oven/bun:latest
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json bun.lock ./
+
+# Install only production dependencies
+RUN bun install --production
+
+# Copy built application from builder stage
+COPY --from=builder /app/src ./src
+
+# Expose port
+EXPOSE 3000
+
+# Run the application
+CMD ["bun", "run", "start"]
