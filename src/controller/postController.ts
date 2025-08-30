@@ -1,5 +1,5 @@
 import {  run } from '@openai/agents';
-import {startAgent} from '../agents';
+import {simpleAgent as startAgent} from '../agents';
 
 export const postHandler = async () => {
 
