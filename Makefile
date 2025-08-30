@@ -34,7 +34,9 @@ clean:
 	-docker volume rm -f $$(docker volume ls -q --filter "name=$(shell basename $(PWD))_*") || true
 
 restart-dev:
-	docker compose restart dev
+	docker compose down dev || true
+	docker compose up --build --force-recreate dev
 
 restart-prod:
-	docker compose restart prod
+	docker compose down prod || true
+	docker compose up --build --force-recreate -d prod

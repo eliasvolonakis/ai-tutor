@@ -1,38 +1,22 @@
-import { Agent, run, tool } from '@openai/agents';
+import { Agent, tool } from '@openai/agents';
 import { z } from 'zod';
 
 const randomNumberTool = tool({
   name: 'random_number',
   description: 'Generate a random number up to the provided maximum.',
-  parameters: z.object({ max: z.number() }),
+  parameters: z.object({ max: z.number() }).strict(),
   execute: async ({ max }: { max: number }) => {
     return Math.floor(Math.random() * (max + 1)).toString();
   },
 });
 
-const multiplyByTwoTool = tool({
-  name: 'multiply_by_two',
-  description: 'Simple multiplication by two.',
-  parameters: z.object({ x: z.number() }),
-  execute: async ({ x }: { x: number }) => {
-    return (x * 2).toString();
-  },
-});
-
-const multiplyAgent = new Agent({
-  name: 'Multiply Agent',
-  instructions: 'Multiply the number by 2 and then return the final result.',
-  tools: [multiplyByTwoTool],
-  outputType: z.object({ number: z.number() }),
-});
 
 export const startAgent = new Agent({
   name: 'Start Agent',
   instructions:
-    "Generate a random number. If it's even, stop. If it's odd, hand off to the multiply agent.",
+    "Generate a random number",
   tools: [randomNumberTool],
-  outputType: z.object({ number: z.number() }),
-  handoffs: [multiplyAgent],
+  outputType: z.object({ number: z.number() })
 });
 
 function attachHooks(agent: Agent<any, any>) {
@@ -54,4 +38,3 @@ function attachHooks(agent: Agent<any, any>) {
 }
 
 attachHooks(startAgent);
-attachHooks(multiplyAgent);

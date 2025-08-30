@@ -25,7 +25,7 @@ services:
       - "${DEV_PORT}:4141"
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
+      - /app/node_modules
     env_file:
       - .env
     environment:
@@ -64,5 +64,4 @@ services:
 
 volumes:
   ai_tutor_postgres_data:
-  node_modules:
 

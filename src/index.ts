@@ -1,7 +1,7 @@
-import Elysia from "elysia";
-import { registerRoutes } from "./routes";
-import { validateEnv } from "./env";
 import { swagger } from "@elysiajs/swagger";
+import Elysia from "elysia";
+import { validateEnv } from "./env";
+import { registerRoutes } from "./routes";
 
 // Validate env at startup
 const env = validateEnv();
