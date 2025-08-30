@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Math Tutoring Platform
 
 An interactive AI-powered platform where students upload worksheets, solve math problems, and receive tailored guidance.  
@@ -40,3 +41,20 @@ The system helps students not only find the right answer but also understand the
 - **Backend**: Node.js (API & AI integration)  
 - **Database**: PostgreSQL (student work history, worksheets)  
 - **AI Models**: GPT-based models for solution analysis & hint generation 
+=======
+# Elysia with Bun runtime
+
+## Getting Started
+To get started with this template, simply paste this command into your terminal:
+```bash
+bun create elysia ./elysia-example
+```
+
+## Development
+To start the development server run:
+```bash
+bun run dev
+```
+
+Open http://localhost:3000/ with your browser to see the result.
+>>>>>>> nthomas/setup
