@@ -24,9 +24,14 @@ logs-prod:
 stop:
 	docker compose down
 
+# Clean only this app's volumes and images
 clean:
-	docker compose down -v --rmi all
-	docker system prune -f
+	# stop containers
+	docker compose down
+	# remove images built for this compose project (by label)
+	-docker image prune -f --filter "label=com.docker.compose.project=$(shell basename $(PWD))"
+	# remove named volumes created for this project (name starts with project name)
+	-docker volume rm -f $$(docker volume ls -q --filter "name=$(shell basename $(PWD))_*") || true
 
 restart-dev:
 	docker compose restart dev
