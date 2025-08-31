@@ -102,6 +102,8 @@ export const getEmbeddings = async ({ query }: { query: any }) => {
                 id: q.id,
                 question: q.question,
                 answer: q.answer,
+                questionEmbedding: q.questionEmbedding,
+                answerEmbedding: q.answerEmbedding,
                 createdAt: q.createdAt,
             })),
             pagination: {
@@ -144,6 +146,8 @@ export const getEmbeddingById = async ({ params }: { params: any }) => {
                 id: question.id,
                 question: question.question,
                 answer: question.answer,
+                questionEmbedding: question.questionEmbedding,
+                answerEmbedding: question.answerEmbedding,
                 createdAt: question.createdAt,
                 updatedAt: question.updatedAt,
             },
