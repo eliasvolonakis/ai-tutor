@@ -64,6 +64,8 @@ export const createEmbedding = async ({ body }: { body: any }) => {
                 id: newQuestion.id,
                 question: newQuestion.question,
                 answer: newQuestion.answer,
+                questionEmbedding: newQuestion.questionEmbedding,
+                answerEmbedding: newQuestion.answerEmbedding,
                 createdAt: newQuestion.createdAt ?? new Date(),
             },
             message: 'Question and answer embeddings created successfully',
