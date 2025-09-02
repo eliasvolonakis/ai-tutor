@@ -1,16 +1,18 @@
 import { Agent, tool } from "@openai/agents";
-import { z } from "zod";
+import {  z } from "zod";
 
 // Define a tool
+
+
 const randomNumberTool = tool({
   name: "random_number",
   description: "Generate a random number up to the provided maximum.",
   parameters: z.object({
-    max: z.number(),
-  }),
-  async execute({ max }: { max: number }) {
+    max: z.number().int().nonnegative()
+  }).strict(),
+  execute: async ({ max }: { max: number }):Promise<string> => {
     const n = Math.floor(Math.random() * (max + 1));
-    return { number: n };
+    return `${n}`;
   },
 });
 
@@ -20,6 +22,6 @@ export const simpleAgent = new Agent({
   instructions: "Generate a random number using the tool",
   tools: [randomNumberTool],
   outputType: z.object({
-    number: z.number(),
-  }),
+    number: z.number()
+  })
 });
