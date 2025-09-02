@@ -4,8 +4,7 @@ export const questions = pgTable('questions', {
     id: uuid('id').primaryKey().defaultRandom(),
     question: text('question').notNull(),
     answer: text('answer').notNull(),
-    questionEmbedding: vector('question_embedding', { dimensions: 1536 }).notNull(),
-    answerEmbedding: vector('answer_embedding', { dimensions: 1536 }).notNull(),
+    embedding: vector('embedding', { dimensions: 1536 }).notNull(),
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),
 })

@@ -1,62 +1,36 @@
-import { eq } from 'drizzle-orm'
-import { t } from 'elysia'
-import { db } from '../db'
-import { questions } from '../db/schema'
+import { CreateEmbeddingDto, EmbeddingModel } from '../models/embedding'
 import {
-    generateQuestionAnswerEmbeddings
+    generateCombinedEmbedding
 } from '../services/embeddingService'
-import { embeddingRequestSchema } from '../types/embeddings'
 import { HttpStatusCode } from '../utils'
 import {
     EmbeddingError
 } from '../utils/error/customEmbeddingError'
 
-/**
- * Helper function to format error responses consistently
- */
-const formatErrorResponse = (error: Error, defaultCode: string = 'UNKNOWN_ERROR', defaultStatusCode: HttpStatusCode = HttpStatusCode.INTERNALSERVERERROR, defaultRetryable: boolean = false) => {
-    if (error instanceof EmbeddingError) {
-        return {
-            statusCode: error.statusCode as HttpStatusCode,
-            error: error.message,
-            code: error.code,
-            retryable: error.retryable,
-        }
-    }
-
-    return {
-        statusCode: defaultStatusCode,
-        error: error.message,
-        code: defaultCode,
-        retryable: defaultRetryable,
-    }
-}
-
 export const createEmbedding = async ({ body }: { body: any }) => {
     try {
-        // Validate request body
-        const validatedData = embeddingRequestSchema.parse(body)
+        const validatedData: CreateEmbeddingDto = body
 
-        // Generate embeddings for question and answer
-        const { questionEmbedding, answerEmbedding } =
-            await generateQuestionAnswerEmbeddings(
-                validatedData.question,
-                validatedData.answer
-            )
+        if (!validatedData.question || !validatedData.answer) {
+            return {
+                statusCode: HttpStatusCode.BADREQUEST,
+                error: 'Question and answer are required',
+                code: 'VALIDATION_ERROR',
+                retryable: false,
+            }
+        }
 
-        // No need for conversion or validation functions, as the Drizzle `vector` type
-        // handles the `number[]` array directly.
+        const embedding = await generateCombinedEmbedding(
+            validatedData.question,
+            validatedData.answer
+        )
 
-        // Store in database
-        const [newQuestion] = await db
-            .insert(questions)
-            .values({
-                question: validatedData.question,
-                answer: validatedData.answer,
-                questionEmbedding: questionEmbedding, // Pass the array directly
-                answerEmbedding: answerEmbedding, // Pass the array directly
-            })
-            .returning()
+        // Store in database using the model directly
+        const newQuestion = await EmbeddingModel.create(
+            validatedData.question,
+            validatedData.answer,
+            embedding
+        )
 
         return {
             statusCode: HttpStatusCode.CREATED,
@@ -64,17 +38,30 @@ export const createEmbedding = async ({ body }: { body: any }) => {
                 id: newQuestion.id,
                 question: newQuestion.question,
                 answer: newQuestion.answer,
-                questionEmbedding: newQuestion.questionEmbedding,
-                answerEmbedding: newQuestion.answerEmbedding,
+                embedding: newQuestion.embedding,
                 createdAt: newQuestion.createdAt ?? new Date(),
             },
-            message: 'Question and answer embeddings created successfully',
+            message: 'Question and answer embedding created successfully',
         }
     } catch (error) {
         console.error('Error creating embeddings:', error)
 
+        if (error instanceof EmbeddingError) {
+            return {
+                statusCode: error.statusCode,
+                error: error.message,
+                code: error.code,
+                retryable: error.retryable,
+            }
+        }
+
         if (error instanceof Error) {
-            return formatErrorResponse(error, 'EMBEDDING_ERROR', HttpStatusCode.INTERNALSERVERERROR, false)
+            return {
+                statusCode: HttpStatusCode.BADREQUEST,
+                error: error.message,
+                code: 'VALIDATION_ERROR',
+                retryable: false,
+            }
         }
 
         return {
@@ -91,34 +78,25 @@ export const getEmbeddings = async ({ query }: { query: any }) => {
         const limit = query.limit ? parseInt(query.limit) : 10
         const offset = query.offset ? parseInt(query.offset) : 0
 
-        const results = await db
-            .select()
-            .from(questions)
-            .limit(limit)
-            .offset(offset)
-            .orderBy(questions.createdAt)
+        const results = await EmbeddingModel.findAll(limit, offset)
 
         return {
             statusCode: HttpStatusCode.SUCCESSWITHBODY,
-            data: results.map(q => ({
-                id: q.id,
-                question: q.question,
-                answer: q.answer,
-                questionEmbedding: q.questionEmbedding,
-                answerEmbedding: q.answerEmbedding,
-                createdAt: q.createdAt,
-            })),
-            pagination: {
-                limit,
-                offset,
-                total: results.length,
-            },
+            data: results.data,
+            pagination: results.pagination,
         }
     } catch (error) {
         console.error('Error fetching embeddings:', error)
-        if (error instanceof Error) {
-            return formatErrorResponse(error, 'FETCH_ERROR', HttpStatusCode.INTERNALSERVERERROR, false)
+
+        if (error instanceof EmbeddingError) {
+            return {
+                statusCode: error.statusCode,
+                error: error.message,
+                code: error.code,
+                retryable: error.retryable,
+            }
         }
+
         return {
             statusCode: HttpStatusCode.INTERNALSERVERERROR,
             error: 'Failed to fetch embeddings',
@@ -130,17 +108,7 @@ export const getEmbeddings = async ({ query }: { query: any }) => {
 
 export const getEmbeddingById = async ({ params }: { params: any }) => {
     try {
-        const [question] = await db
-            .select()
-            .from(questions)
-            .where(eq(questions.id, params.id))
-
-        if (!question) {
-            return {
-                statusCode: HttpStatusCode.NOTFOUND,
-                error: 'Question not found',
-            }
-        }
+        const question = await EmbeddingModel.findById(params.id)
 
         return {
             statusCode: HttpStatusCode.SUCCESSWITHBODY,
@@ -148,21 +116,141 @@ export const getEmbeddingById = async ({ params }: { params: any }) => {
                 id: question.id,
                 question: question.question,
                 answer: question.answer,
-                questionEmbedding: question.questionEmbedding,
-                answerEmbedding: question.answerEmbedding,
+                embedding: question.embedding,
                 createdAt: question.createdAt,
                 updatedAt: question.updatedAt,
             },
         }
     } catch (error) {
         console.error('Error fetching embedding:', error)
-        if (error instanceof Error) {
-            return formatErrorResponse(error, 'FETCH_ERROR', HttpStatusCode.INTERNALSERVERERROR, false)
+
+        if (error instanceof EmbeddingError) {
+            return {
+                statusCode: error.statusCode,
+                error: error.message,
+                code: error.code,
+                retryable: error.retryable,
+            }
         }
+
         return {
             statusCode: HttpStatusCode.INTERNALSERVERERROR,
             error: 'Failed to fetch embedding',
             code: 'FETCH_ERROR',
+            retryable: false,
+        }
+    }
+}
+
+export const updateEmbedding = async ({ params, body }: { params: any; body: any }) => {
+    try {
+        const { id } = params
+        const updates: Partial<CreateEmbeddingDto> = body
+
+        if (!id) {
+            return {
+                statusCode: HttpStatusCode.BADREQUEST,
+                error: 'Embedding ID is required',
+                code: 'MISSING_ID',
+                retryable: false,
+            }
+        }
+
+        if (updates.question || updates.answer) {
+            const currentEmbedding = await EmbeddingModel.findById(id)
+
+            const question = updates.question || currentEmbedding.question
+            const answer = updates.answer || currentEmbedding.answer
+
+            const embedding = await generateCombinedEmbedding(question, answer)
+
+            const updatedEmbedding = await EmbeddingModel.update(id, {
+                question,
+                answer,
+            })
+
+            return {
+                statusCode: HttpStatusCode.SUCCESSWITHBODY,
+                data: {
+                    id: updatedEmbedding.id,
+                    question: updatedEmbedding.question,
+                    answer: updatedEmbedding.answer,
+                    createdAt: updatedEmbedding.createdAt,
+                    updatedAt: updatedEmbedding.updatedAt,
+                },
+                message: 'Embedding updated successfully',
+            }
+        } else {
+            const updatedEmbedding = await EmbeddingModel.update(id, updates)
+
+            return {
+                statusCode: HttpStatusCode.SUCCESSWITHBODY,
+                data: {
+                    id: updatedEmbedding.id,
+                    question: updatedEmbedding.question,
+                    answer: updatedEmbedding.answer,
+                    createdAt: updatedEmbedding.createdAt,
+                    updatedAt: updatedEmbedding.updatedAt,
+                },
+                message: 'Embedding updated successfully',
+            }
+        }
+    } catch (error) {
+        console.error('Error updating embedding:', error)
+
+        if (error instanceof EmbeddingError) {
+            return {
+                statusCode: error.statusCode,
+                error: error.message,
+                code: error.code,
+                retryable: error.retryable,
+            }
+        }
+
+        return {
+            statusCode: HttpStatusCode.INTERNALSERVERERROR,
+            error: 'Failed to update embedding',
+            code: 'UPDATE_ERROR',
+            retryable: false,
+        }
+    }
+}
+
+export const deleteEmbedding = async ({ params }: { params: any }) => {
+    try {
+        const { id } = params
+
+        if (!id) {
+            return {
+                statusCode: HttpStatusCode.BADREQUEST,
+                error: 'Embedding ID is required',
+                code: 'MISSING_ID',
+                retryable: false,
+            }
+        }
+
+        await EmbeddingModel.delete(id)
+
+        return {
+            statusCode: HttpStatusCode.SUCCESSWITHBODY,
+            message: 'Embedding deleted successfully',
+        }
+    } catch (error) {
+        console.error('Error deleting embedding:', error)
+
+        if (error instanceof EmbeddingError) {
+            return {
+                statusCode: error.statusCode,
+                error: error.message,
+                code: error.code,
+                retryable: error.retryable,
+            }
+        }
+
+        return {
+            statusCode: HttpStatusCode.INTERNALSERVERERROR,
+            error: 'Failed to delete embedding',
+            code: 'DELETE_ERROR',
             retryable: false,
         }
     }
