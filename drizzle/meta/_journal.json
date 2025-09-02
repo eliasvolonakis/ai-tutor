@@ -1,0 +1,13 @@
+{
+    "version": "6",
+    "dialect": "pg",
+    "entries": [
+        {
+            "idx": 0,
+            "version": "6",
+            "when": 1725120000000,
+            "tag": "0000_initial_questions_table",
+            "breakpoints": true
+        }
+    ]
+}

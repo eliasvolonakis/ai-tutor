@@ -12,6 +12,8 @@ RUN bun install
 # Copy source code
 COPY src/ ./src/
 
+# Expose port
+EXPOSE 4141
 
 # Run in development mode with hot reload
 CMD ["bun", "run", "dev"]
