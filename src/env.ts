@@ -2,8 +2,8 @@ import { z } from "zod";
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "production"]).default("development"),
-  DEV_PORT: z.string().optional(),
-  PROD_PORT: z.string().optional(),
+  DEV_PORT: z.string().default("4141"),
+  PROD_PORT: z.string().default("4141"),
   POSTGRES_IMAGE: z.string().default("postgres:17"),
   POSTGRES_CONTAINER: z.string().default("ai-tutor-postgres"),
   POSTGRES_DB: z.string().default("ai_tutor_db"),
