@@ -2,13 +2,37 @@
 
 import fs from 'fs'
 import path from 'path'
-import { createEmbedding } from '../controller/embeddingController'
+import { db } from '../db'
+import { questions } from '../db/schema'
+import { generateEmbeddings } from '../services/embeddingService'
 
 interface QuestionAnswerPair {
     question: string
     answer: string
     unit: string
     questionNumber: string
+}
+
+/**
+ * Database health check function
+ */
+async function checkDatabaseHealth(): Promise<boolean> {
+    try {
+        await db.execute('SELECT 1')
+        return true
+    } catch (error) {
+        console.error('Database health check failed:', error)
+        return false
+    }
+}
+
+/**
+ * Generate combined embedding for question and answer
+ */
+async function generateCombinedEmbedding(question: string, answer: string) {
+    const combinedText = `Question: ${question}\nAnswer: ${answer}`
+    const embedding = await generateEmbeddings(combinedText)
+    return embedding
 }
 
 /**
@@ -66,36 +90,19 @@ function parseLatexFile(filePath: string): QuestionAnswerPair[] {
 }
 
 /**
- * Create embedding for a question-answer pair
- */
-async function createEmbeddingForPair(pair: QuestionAnswerPair): Promise<boolean> {
-    try {
-        console.log(`Creating embedding for ${pair.unit} Q${pair.questionNumber}...`)
-
-        const result = await createEmbedding({
-            body: {
-                question: pair.question,
-                answer: pair.answer
-            }
-        })
-
-        if (result.statusCode === 201) {
-            console.log(`✅ Created embedding with ID: ${result.data?.id}`)
-            return true
-        } else {
-            console.error(`❌ Failed to create embedding:`, result.error)
-            return false
-        }
-    } catch (error) {
-        console.error(`❌ Error creating embedding for ${pair.unit} Q${pair.questionNumber}:`, error)
-        return false
-    }
-}
-
-/**
  * Seed the database with embeddings from LaTeX file
  */
 async function seedEmbeddings() {
+    console.log('🔍 Checking database connection...')
+
+    const isHealthy = await checkDatabaseHealth()
+    if (!isHealthy) {
+        console.error('💥 Exiting due to health check failure')
+        process.exit(1)
+    }
+
+    console.log('✅ Database connection established')
+
     const qaDir = path.join(process.cwd(), 'src', 'qa')
     const latexFile = path.join(qaDir, 'qa_latex.txt')
 
@@ -119,7 +126,7 @@ async function seedEmbeddings() {
 
     let successCount = 0
     let errorCount = 0
-    const BATCH_SIZE = 10 // Process 10 embeddings concurrently
+    const BATCH_SIZE = 5 // Process 5 embeddings concurrently to avoid rate limits
 
     for (let i = 0; i < pairs.length; i += BATCH_SIZE) {
         const batch = pairs.slice(i, i + BATCH_SIZE)
@@ -129,20 +136,20 @@ async function seedEmbeddings() {
             try {
                 console.log(`Creating embedding for ${pair.unit} Q${pair.questionNumber}...`)
 
-                const result = await createEmbedding({
-                    body: {
-                        question: pair.question,
-                        answer: pair.answer
-                    }
-                })
+                // Generate combined embedding using the service
+                const embedding = await generateCombinedEmbedding(pair.question, pair.answer)
 
-                if (result.statusCode === 201) {
-                    console.log(`✅ Created embedding with ID: ${result.data?.id}`)
-                    return true
-                } else {
-                    console.error(`❌ Failed to create embedding:`, result.error)
-                    return false
-                }
+                // Insert directly into database
+                const result = await db.insert(questions).values({
+                    question: pair.question,
+                    answer: pair.answer,
+                    embedding: embedding, // Store combined embedding as number array
+                    createdAt: new Date(),
+                    updatedAt: new Date()
+                }).returning({ id: questions.id })
+
+                console.log(`✅ Created question with ID: ${result[0].id}`)
+                return true
             } catch (error) {
                 console.error(`❌ Error creating embedding for ${pair.unit} Q${pair.questionNumber}:`, error)
                 return false
@@ -159,9 +166,9 @@ async function seedEmbeddings() {
             }
         })
 
-        // Small delay between batches
+        // Small delay between batches to avoid rate limits
         if (i + BATCH_SIZE < pairs.length) {
-            await new Promise(resolve => setTimeout(resolve, 100))
+            await new Promise(resolve => setTimeout(resolve, 1000))
         }
     }
 
@@ -171,9 +178,12 @@ async function seedEmbeddings() {
     console.log(`📊 Total processed: ${pairs.length} pairs`)
 }
 
-// Run the script if called directly
+// Run the seeding if this script is executed directly
 if (import.meta.main) {
-    seedEmbeddings().catch(console.error)
+    seedEmbeddings().catch((error) => {
+        console.error('💥 Fatal error during seeding:', error)
+        process.exit(1)
+    })
 }
 
 export { seedEmbeddings }

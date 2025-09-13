@@ -1,6 +1,6 @@
 === PAIR 1 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 1
 Question: ```latex
 \left( 2x^4 + \frac{x^2}{k} \right)^{12}, \, k \neq 0
 ```
@@ -33,8 +33,8 @@ k = 4
 ```
 
 === PAIR 2 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 2
 Question: ```latex
 x^3 \left( \frac{1}{2x} + x^2 \right)^{15}
 ```
@@ -53,8 +53,8 @@ r = 4, \quad r = 11, \quad n-r = 4
 ```
 
 === PAIR 3 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 3
 Question: ```latex
 (x+1)^7 = x^7 + ax^6 + bx^5 + 35x^4 + \ldots + 1 \quad \text{where} \quad x \neq 0
 \quad \text{and} \quad a, b \in \mathbb{Z}^+.
@@ -78,8 +78,8 @@ t = 9.30 \, \text{(seconds)}
 ```
 
 === PAIR 4 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 4
 Question: ```latex
 \left( 3x^2 - \frac{k}{x} \right)^9, \text{ where } k > 0.
 
@@ -102,8 +102,8 @@ Answer: ```latex
 ```
 
 === PAIR 5 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 5
 Question: ```latex
 (3 + x^2)^{n+1}
 n \in \mathbb{Z}^+
@@ -129,8 +129,8 @@ n=7
 ```
 
 === PAIR 6 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 6
 Question: ```latex
 \frac{(ax+1)^9}{21x^2}
 \quad a \neq 0
@@ -154,8 +154,8 @@ a = \frac{2}{7} \quad \text{and} \quad a = 0
 ```
 
 === PAIR 7 ===
-Unit: binom
-Question Number: thm
+Unit: binom_thm
+Question Number: 7
 Question: ```latex
 (1-a)^3
 
@@ -182,8 +182,8 @@ a = \cos 2x
 ```
 
 === PAIR 8 ===
-Unit: curve
-Question Number: sketching
+Unit: curve_sketching
+Question Number: 1
 Question: ```latex
 f(t) = \frac{1000}{1 + 24e^{-0.2t}}, \, 0 \leq t \leq 30
 ```
@@ -208,8 +208,8 @@ f'' = 0
 ```
 
 === PAIR 9 ===
-Unit: curve
-Question Number: sketching
+Unit: curve_sketching
+Question Number: 2
 Question: ```latex
 f(x), \, x \geq 0
 f'(x) = \frac{6x}{x^2 + 4}
@@ -252,8 +252,8 @@ n = 2 \, \text{(exact)}
 ```
 
 === PAIR 10 ===
-Unit: curve
-Question Number: sketching
+Unit: curve_skethcing
+Question Number: 3
 Question: ```latex
 f(x) = 3x - 4^{0.15x^2} \quad \text{for} \quad 0 \leq x \leq 3
 ```
@@ -270,8 +270,8 @@ x = 2.33
 ```
 
 === PAIR 11 ===
-Unit: curve
-Question Number: sketching
+Unit: curve_sketching
+Question Number: 4
 Question: ```latex
 f(x) = a(x-h)^2 + k
 

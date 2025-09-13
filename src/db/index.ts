@@ -1,5 +1,6 @@
 import { drizzle } from 'drizzle-orm/node-postgres'
 import { Pool } from 'pg'
+import { seedEmbeddings } from '../scripts/seedEmbeddings'
 import * as schema from './schema'
 
 const pool = new Pool({
@@ -43,12 +44,40 @@ const performHealthCheck = async (): Promise<boolean> => {
         // Check current database name
         const dbNameResult = await pool.query('SELECT current_database()')
         console.log(`🗄️  Connected to database: ${dbNameResult.rows[0]?.current_database}`)
-
         return true
 
     } catch (error) {
         console.error('❌ Database health check failed:', (error as Error).message)
         return false
+    }
+}
+
+const checkAndSeedDatabase = async (): Promise<void> => {
+    try {
+        // Check if we should seed based on environment variable
+        const shouldSeed = process.env.SEED_DATABASE === 'true' || process.env.NODE_ENV === 'development'
+
+        if (!shouldSeed) {
+            console.log('ℹ️  Skipping database seeding (set SEED_DATABASE=true to enable)')
+            return
+        }
+
+        // Check if database is already seeded
+        const countResult = await pool.query('SELECT COUNT(*) as count FROM questions')
+        const existingCount = parseInt(countResult.rows[0]?.count || '0')
+
+        if (existingCount > 0) {
+            console.log(`ℹ️  Database already contains ${existingCount} questions, skipping seeding`)
+            console.log('💡 To force re-seeding, truncate the questions table first')
+            return
+        }
+
+        console.log('🌱 Seeding database with embeddings...')
+        await seedEmbeddings()
+        console.log('✅ Database seeding completed successfully!')
+
+    } catch (error) {
+        console.error('❌ Database seeding failed:', (error as Error).message)
     }
 }
 
@@ -71,6 +100,8 @@ const setupDatabase = async (): Promise<boolean> => {
 
         if (tableExists.rows[0]?.exists) {
             console.log('ℹ️  Questions table already exists, skipping creation')
+            // Still check and seed even if table exists
+            await checkAndSeedDatabase()
             return true
         }
 
@@ -99,6 +130,9 @@ const setupDatabase = async (): Promise<boolean> => {
         tableInfo.rows.forEach(row => {
             console.log(`   ${row.column_name}: ${row.data_type}`)
         })
+
+        // Step 3: Check if we should seed the database
+        await checkAndSeedDatabase();
 
         return true
 
@@ -151,4 +185,4 @@ const initializeDatabase = async () => {
 initializeDatabase()
 
 
-export { db, schema, pool, initializeDatabase, performHealthCheck, setupDatabase }
+export { db, schema, pool, initializeDatabase, performHealthCheck, setupDatabase, checkAndSeedDatabase }
