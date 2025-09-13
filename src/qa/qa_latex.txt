@@ -1,0 +1,7325 @@
+=== PAIR 1 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+\left( 2x^4 + \frac{x^2}{k} \right)^{12}, \, k \neq 0
+```
+
+```latex
+x^{40}
+```
+
+```latex
+x^{38}
+```
+
+```latex
+k
+```
+Answer: ```latex
+\binom{12}{r} (2x^4)^{12-r} \left( \frac{x^2}{k} \right)^r, \, (2x^4)^{12} + \binom{12}{1} (2x^4)^{11} \left( \frac{x^2}{k} \right)^1 + \binom{12}{2} (2x^4)^{10} \left( \frac{x^2}{k} \right)^2 + \ldots
+
+(x^4)^{12-r} (x^2)^r = (x)^{40}, \, (x^4)^r (x^2)^{12-r} = (x)^{40},
+
+\binom{12}{r} (2^r) \left( \frac{1}{k} \right)^{12-r} (x^4)^r (x^2)^{12-r} = \binom{12}{r} (2^r) \left( \frac{1}{k} \right)^{12-r} x^{38}
+
+48 - 2r = 40, \, 48 - 2r = 38, \, 24 + 2r = 40, \, 2r + 24 = 38
+
+r = 4, \, r = 5 \, \text{OR} \, r = 7, \, r = 8
+
+\binom{12}{4} (2^8) \left( \frac{1}{k} \right)^4 = 5 \binom{12}{5} (2^7) \left( \frac{1}{k} \right)^5, \, \frac{126720}{k^4} = 5 \times \frac{792(128)}{k^5}, \, 990k = 3960
+
+k = 4
+```
+
+=== PAIR 2 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+x^3 \left( \frac{1}{2x} + x^2 \right)^{15}
+```
+Answer: ```latex
+\binom{15}{r} \left( \frac{1}{2x} \right)^{15-r} (x^2)^r, \left( \frac{1}{2x} \right)^{15} (x^2)^0 + 15 \left( \frac{1}{2x} \right)^{14} (x^2)^1 + \binom{15}{2} \left( \frac{1}{2x} \right)^{13} (x^2)^2 + \ldots
+
+\left( \frac{1}{2x} + x^2 \right)^{15}
+
+(x^{-1})^{15-r} (x^2)^r = x^{-3}, \quad (x^{-1})^r (x^2)^{15-r} = x^{-3}, \quad -15 + r + 2r = -3
+
+r = 4, \quad r = 11, \quad n-r = 4
+
+\binom{15}{4} \left( \frac{1}{2x} \right)^{15-4}, \quad 1365 \times \frac{1}{2^{11}}
+
+\frac{1365}{2048}
+```
+
+=== PAIR 3 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+(x+1)^7 = x^7 + ax^6 + bx^5 + 35x^4 + \ldots + 1 \quad \text{where} \quad x \neq 0
+\quad \text{and} \quad a, b \in \mathbb{Z}^+.
+
+b = 21.
+```
+Answer: ```latex
+\int v(t)
+
+8t - \frac{2t^2}{2} + c
+
+15 = 8(0) - \frac{2(0)^2}{2} + c, \, c = 15
+
+s_B(t) = 8t - t^2 + 15
+
+s_A = s_B, \, \text{sketch}, \, (9.30404, 2.86710)
+
+9.30404
+
+t = 9.30 \, \text{(seconds)}
+```
+
+=== PAIR 4 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+\left( 3x^2 - \frac{k}{x} \right)^9, \text{ where } k > 0.
+
+x^6 \text{ is } 6048. \text{ Find the value of } k.
+```
+Answer: ```latex
+\begin{align*}
+&\text{valid approach for expansion (must have correct substitution for parameters, but accept an incorrect value for } r\text{).} \\
+&\text{eg} \quad \binom{9}{r}(3x^2)^{9-r}\left(-\frac{k}{x}\right)^r, \quad (3x^2)^9 + \binom{9}{1}(3x^2)^8\left(-\frac{k}{x}\right)^1 + \binom{9}{2}(3x^2)^7\left(-\frac{k}{x}\right)^2 + \ldots \\
+&\text{valid attempt to identify correct term} \\
+&\text{eg} \quad 2(9-r) - r = 6, \quad (x^2)^r(x^{-1})^{9-r} = x^6 \\
+&\text{identifying correct term (may be indicated in expansion)} \\
+&\text{eg} \quad r = 4, \quad r = 5 \\
+&\text{correct term or coefficient in binomial expansion} \\
+&\text{eg} \quad \binom{9}{4}(3x^2)^5\left(-\frac{k}{x}\right)^4, \quad 126(243x^{10})\left(\frac{k^4}{x^4}\right), \quad 30618k^4 \\
+&\text{correct equation in } k \\
+&\text{eg} \quad \binom{9}{4}(243)(k^4)x^6 = 6048x^6, \quad 30618k^4 = 6048 \\
+&k = \frac{2}{3} \quad \text{(exact)} \quad 0.667
+\end{align*}
+```
+
+=== PAIR 5 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+(3 + x^2)^{n+1}
+n \in \mathbb{Z}^+
+x^4
+20412
+```
+Answer: ```latex
+n+1C_2 \times 3^{n+1-2} \times (x^2)^2 = \left( \frac{n(n+1)}{2} \times 3^{n-1} \times x^4 \right) \quad \text{OR} \quad n-r=1
+
+n+1C_2 \times 3^{n-1} = 20412
+
+r+2C_r \times 3^r = 20412 \Rightarrow r=6
+
+n=7
+
+3^{n+1} \left( 1 + \frac{x^2}{3} \right)^{n+1}
+
+3^{n+1} \times \frac{n(n+1)}{2!} \times \left( \frac{x^2}{3} \right)^2 = \left( \frac{3^{n-1}}{2} n(n+1)x^4 \right)
+
+3^{n-1} \times \frac{n(n+1)}{2} = 20412
+
+n=7
+```
+
+=== PAIR 6 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+\frac{(ax+1)^9}{21x^2}
+\quad a \neq 0
+\quad x^4
+\quad \frac{8}{7}a^5
+```
+Answer: ```latex
+x^6
+
+84a^6x^6 \quad \text{OR} \quad 84a^6
+
+x^6
+
+24a^5x^6 \quad \text{or} \quad 24a^5
+
+84a^6x^6 = 24a^5x^6 \quad \text{OR} \quad 84a = 24
+
+a = \frac{2}{7} \approx 0.286 (0.285714...)
+
+a = \frac{2}{7} \quad \text{and} \quad a = 0
+```
+
+=== PAIR 7 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+(1-a)^3
+
+1 - 3\cos 2x + 3\cos^2 2x - \cos^3 2x = 8\sin^6 x
+```
+Answer: ```latex
+1 + \binom{3}{1} \times 1 \times (-a) + \binom{3}{2} \times 1 \times (-a)^2 + 1 \times (-a)^3
+
+(1-a)(1-a)(1-a)
+
+= (1-a)(1-2a+a^2)
+
+= 1 - 3a + 3a^2 - a^3
+
+a = \cos 2x
+
+1 - 3\cos 2x + 3\cos^2 2x - \cos^3 2x =
+
+(1 - \cos 2x)^3
+
+= (2\sin^2 x)^3
+
+= 8\sin^6 x
+```
+
+=== PAIR 8 ===
+Unit: curve
+Question Number: sketching
+Question: ```latex
+f(t) = \frac{1000}{1 + 24e^{-0.2t}}, \, 0 \leq t \leq 30
+```
+
+(a) Find the population of fish at \( t = 10 \).
+
+(b) Find the rate at which the population of fish is increasing at \( t = 10 \).
+
+(c) Find the value of \( t \) for which the population of fish is increasing most rapidly.
+Answer: ```latex
+f(10)
+
+f'
+
+f'(10)
+
+35
+
+f'
+
+f'' = 0
+```
+
+=== PAIR 9 ===
+Unit: curve
+Question Number: sketching
+Question: ```latex
+f(x), \, x \geq 0
+f'(x) = \frac{6x}{x^2 + 4}
+f''(x) = \frac{24 - 6x^2}{(x^2 + 4)^2}
+x > n
+n
+```
+Answer: ```latex
+\text{METHOD 1}
+
+\frac{vu' - uv'}{v^2}
+
+6(x^2 + 4) - (6x)(2x)
+
+\frac{6(x^2 + 4) - (6x)(2x)}{(x^2 + 4)^2}
+
+f''(x) = \frac{24 - 6x^2}{(x^2 + 4)^2}
+
+\text{METHOD 2}
+
+vu' + uv'
+
+\left(x^2 + 4\right)^{-1} \quad -2x\left(x^2 + 4\right)^{-2}
+
+6\left(x^2 + 4\right)^{-1} + (-1)(6x)(2x)(x^2 + 4)^{-2}
+
+f''(x) = \frac{24 - 6x^2}{(x^2 + 4)^2}
+
+\text{METHOD 1}
+
+f'' < 0, \, 24 - 6x^2 < 0, \, n = \pm 2, \, x = 2
+
+n = 2 \, \text{(exact)}
+
+\text{METHOD 2}
+
+(2, \, 1.5), \, x = 2
+
+n = 2 \, \text{(exact)}
+```
+
+=== PAIR 10 ===
+Unit: curve
+Question Number: sketching
+Question: ```latex
+f(x) = 3x - 4^{0.15x^2} \quad \text{for} \quad 0 \leq x \leq 3
+```
+
+```latex
+f'(x) = 0
+```
+Answer: ```latex
+f'(x) = 0
+
+x = 2.33084\ldots
+
+x = 2.33
+```
+
+=== PAIR 11 ===
+Unit: curve
+Question Number: sketching
+Question: ```latex
+f(x) = a(x-h)^2 + k
+
+g'(x) = f(x) - d
+```
+Answer: ```latex
+f(x) - d > 0, \text{ or } g' > 0
+
+4 - d > 0, \, d - 4 < 0
+
+d < 4
+
+(-12)^2 - 4(2)(22 - d)
+
+-32 + 8d < 0 \quad \text{OR} \quad \Delta < 0
+
+d < 4
+
+g'' > 0
+
+g'' > 0 \quad \text{when} \quad f' > 0, \, 4x - 12 > 0, \, x - 3 > 0
+
+x > 3
+```
+
+=== PAIR 12 ===
+Unit: functions
+Question Number: 1
+Question: ```latex
+f(x) = x^2 + x + \frac{50}{x}, \, x \neq 0
+```
+
+```latex
+f(1)
+```
+
+```latex
+f(x) = 0
+```
+Answer: ```latex
+f(1), \ 1^2 + 1 + \frac{50}{1}
+```
+
+```latex
+52 \ \text{(exact)}
+```
+
+```latex
+-4.04932
+```
+
+```latex
+-4.05
+```
+
+```latex
+(2.76649, \ 28.4934)
+```
+
+```latex
+A(2.77, \ 28.5)
+```
+
+=== PAIR 13 ===
+Unit: functions
+Question Number: 10
+Question: ```latex
+f(x) = -2x + 3, \text{ for } x \in \mathbb{R}.
+
+g(x)
+
+h(x)
+
+(-1, 2)
+
+(g \circ h)(0)
+```
+Answer: ```latex
+g(x) = -2x
+
+y - 2 = \frac{1}{2}(x + 1) \quad \text{OR} \quad 2 = \frac{1}{2}(-1) + c
+
+h(x) = \frac{1}{2}(x + 1) + 2 \left( = \frac{1}{2}x + \frac{5}{2} \right)
+
+(g \circ h)(x) = -2 \left( \frac{1}{2}x + \frac{5}{2} \right) \quad \text{OR} \quad h(0) = \frac{5}{2} \quad \text{OR} \quad g \left( \frac{5}{2} \right)
+
+(g \circ h)(0) = -5
+```
+
+=== PAIR 14 ===
+Unit: functions
+Question Number: 11
+Question: ```latex
+f(x) = ax + b, \text{ where } a, \, b \in \mathbb{Z}
+
+g(x) = x^2 + x + 3.
+
+(g \circ f)(x) = 4x^2 - 14x + 15.
+```
+Answer: ```latex
+(g \circ f)(x)
+
+\left[ f(x) \right]^2 + f(x) + 3 \quad \text{OR} \quad (ax + b)^2 + ax + b + 3
+
+a^2 x^2 + 2abx + b^2 + ax + b + 3 ( = 4x^2 - 14x + 15)
+
+a^2 x^2 = 4x^2 \quad \text{OR} \quad a^2 = 4 \quad \text{OR} \quad 2abx + ax = -14x \quad \text{OR} \quad 2ab + a = -14 \quad \text{OR} \quad b^2 + b + 3 = 15
+
+a = \pm 2
+
+2ab + a = -14
+
+f(x) = 2x - 4 \quad (\text{accept } a = 2 \text{ with } b = -4), \quad f(x) = -2x + 3 \quad (\text{accept } a = -2 \text{ with } b = 3)
+```
+
+=== PAIR 15 ===
+Unit: functions
+Question Number: 12
+Question: ```latex
+f(x) = x + 2
+```
+
+```latex
+g(x) = x^2 - k^2
+```
+
+```latex
+(g \circ f)(x)
+```
+
+```latex
+(g \circ f)(4) = 11
+```
+
+```latex
+k
+```
+Answer: ```latex
+\begin{align*}
+(a) & \quad \text{attempt to form } (g \circ f)(x) \\
+& \quad ((g \circ f)(x)) = (x+2)^2 - k^2 \quad \left( = x^2 + 4x + 4 - k^2 \right) \\
+(b) & \quad \text{substituting } x = 4 \text{ into their } (g \circ f)(x) \text{ and setting their expression } = 11 \\
+& \quad (4+2)^2 - k^2 = 11 \quad \text{OR} \quad 4^2 + 4(4) + 4 - k^2 = 11 \\
+& \quad k^2 = 25 \quad \text{OR} \quad -k^2 = -25 \\
+& \quad k = \pm 5
+\end{align*}
+```
+
+=== PAIR 16 ===
+Unit: functions
+Question Number: 2
+Question: ```latex
+f(x) = 4 - x^3
+```
+```latex
+g(x) = \ln x
+```
+```latex
+(f \circ g)(x)
+```
+```latex
+(f \circ g)(x) = x
+```
+```latex
+g(2a) = f^{-1}(2a)
+```
+Answer: ```latex
+f(\ln x), \quad g(4-x^3)
+
+(f \circ g)(x) = 4 - (\ln x)^3
+
+(2.85, 2.85)
+
+2.85056
+
+2.85
+
+f(g(2a)) = f(f^{-1}(2a)) \quad (=2a)
+
+2a = 2.85056
+
+1.42528
+
+a = 1.43
+```
+
+=== PAIR 17 ===
+Unit: functions
+Question Number: 3
+Question: ```latex
+f(x) = e^{-x^2} - 0.5, \text{ for } -2 \leq x \leq 2.
+
+f(x) = 0.
+```
+Answer: ```latex
+x = -0.832554..., \, x = 0.832554...
+
+x = -0.833, \, x = 0.833
+
+-1 < x \leq -0.8, \, 0.8 \leq x < 1 \text{ for roots, } x = 0, \, 0.4 \leq y \leq 0.6 \text{ for maximum and } x = \pm 2, \, -0.6 \leq y \leq -0.4 \text{ for endpoints.}
+```
+
+=== PAIR 18 ===
+Unit: functions
+Question Number: 4
+Question: ```latex
+f(x) = \ln(xe^x + 1) - x^4, \quad 0 \leq x \leq 2
+```
+Answer: ```latex
+\begin{align*}
+&3. \\
+&(a) \\
+&(0.708519\ldots, 0.639580\ldots) \\
+&(0.709, 0.640) \quad (x = 0.709, y = 0.640) \\
+&(b) \\
+&1.09885\ldots \\
+&x = 1.10 \quad \text{accept} \quad (1.10, 0) \\
+\end{align*}
+```
+
+=== PAIR 19 ===
+Unit: functions
+Question Number: 5
+Question: ```latex
+f(x) = 2x - x^3
+```
+```latex
+g(x) = \tan x
+```
+```latex
+(f \circ g)(x)
+```
+```latex
+y = (f \circ g)(x)
+```
+```latex
+-1 \leq x \leq 1
+```
+Answer: ```latex
+y = 1
+y = -1
+x = \pm 1
+y \in [0.6, 0.8]
+y \in [-0.8, -0.6]
+(0.685, 1.09)
+(-0.685, -1.09)
+-0.8 \leq x \leq -0.6
+-1.2 \leq y \leq -1
+0.6 \leq x \leq 0.8
+1 \leq y \leq 1.2
+```
+
+=== PAIR 20 ===
+Unit: functions
+Question Number: 6
+Question: ```latex
+h(x) = \sqrt{4x - 2}, \text{ for } x \geq \frac{1}{2}.
+
+h^{-1}(x)
+
+h^{-1}
+
+x
+```
+Answer: ```latex
+h^{-1}(x) = \frac{x^2 + 2}{4}
+
+x \geq 0
+
+y \geq \frac{1}{2}
+
+\sqrt{4x - 2} = \frac{x^2 + 2}{4} \quad \text{OR} \quad \sqrt{4x - 2} = x \quad \text{OR} \quad \frac{x^2 + 2}{4} = x
+
+x = 0.585786..., \quad x = 3.414213... \left(= 2 + \sqrt{2}\right)
+
+x = 0.586, \quad x = 3.41
+```
+
+=== PAIR 21 ===
+Unit: functions
+Question Number: 7
+Question: ```latex
+f(x) = e^x - 2x - 5
+
+-4 \leq x \leq 3
+
+g(x) = e^{3x} - 6x - 7
+
+k
+
+c
+```
+Answer: ```latex
+-3 < x < -2
+2 < x < 3
+-4.5 < y < -3.5
+0.2 < x < 1.2
+-5 < y < -4
+-4.5 < x < -3.5
+2.5 < x < 3.5
+8.5 < y < 9.5
+
+k = \frac{1}{3}
+
+c = -2
+```
+
+=== PAIR 22 ===
+Unit: functions
+Question Number: 8
+Question: ```latex
+f(x)
+\quad
+g(x)
+\quad
+x
+\quad
+\begin{array}{|c|c|c|c|c|}
+\hline
+x & -2 & 0 & 3 & 4 \\
+\hline
+f(x) & 8 & 4 & 0 & -3 \\
+\hline
+g(x) & -5 & -2 & 4 & 0 \\
+\hline
+\end{array}
+\quad
+g(0)
+\quad
+(f \circ g)(0)
+\quad
+f(x) = 0
+```
+Answer: ```latex
+g(0) = -2
+
+f(g(0)) \quad \text{OR} \quad f(-2)
+
+(f \circ g)(0) = 8
+
+x = 3
+```
+
+=== PAIR 23 ===
+Unit: functions
+Question Number: 9
+Question: ```latex
+y = f(x) \quad \text{for} \quad -4 \leq x \leq 6
+```
+
+```latex
+f(2)
+```
+
+```latex
+(f \circ f)(2)
+```
+
+```latex
+g(x) = \frac{1}{2} f(x) + 1 \quad \text{for} \quad -4 \leq x \leq 6
+```
+Answer: ```latex
+f(2) = 6
+```
+
+```latex
+(f \circ f)(2) = -2
+```
+
+```latex
+\frac{f}{2} + 1
+```
+
+```latex
+y = 3
+```
+
+```latex
+(0,3)
+```
+
+```latex
+(6,0)
+```
+
+```latex
+(2,4)
+```
+
+=== PAIR 24 ===
+Unit: integrals
+Question Number: 1
+Question: ```latex
+f(x), \, x \geq 0
+f'(x) = \frac{6x}{x^2 + 4}
+f''(x) = \frac{24 - 6x^2}{(x^2 + 4)^2}
+x > n
+n
+\int \frac{6x}{x^2 + 4} \, dx
+R
+x = 1
+x = 3
+19.6
+f(x)
+```
+Answer: ```latex
+\int 3(2x) \frac{1}{u} \, dx, \, u = x^2 + 4, \, du = 2x \, dx, \, \int 3 \times \left( \frac{1}{u} \right) du
+
+\int \frac{6x}{(x^2 + 4)} \, dx = 3 \ln(x^2 + 4) + c
+
+f(x) = 3 \ln(x^2 + 4) + c, \, f(x) = 3 \ln(x^2 + 4)
+
+\int_1^3 3 \ln(x^2 + 4) \, dx
+
+12.4859
+
+\int_1^3 c \, dx
+
+[cx]_1^3, \, 2c
+
+12.4859 + 2c = 19.6, \, 2c = 7.114
+
+c = 3.55700
+
+f(x) = 3 \ln(x^2 + 4) + 3.56
+```
+
+=== PAIR 25 ===
+Unit: integrals
+Question Number: 10
+Question: ```latex
+x = k, \quad k \in \mathbb{Z}.
+\ln(p) + 8, \quad p \in \mathbb{Z}.
+```
+Answer: ```latex
+\text{triangle} + \int_5^k f(x) \, dx \quad \text{OR} \quad \int_3^5 g(x) \, dx + \int_5^k f(x) \, dx \quad \text{OR} \quad \int_3^5 (x-3) \, dx + \int_5^k \left( \frac{1}{x-4} + 1 \right) \, dx
+
+2 \cdot \frac{2}{2} \quad \text{OR} \quad \left( \frac{5^2}{2} - 3(5) \right) - \left( \frac{3^2}{2} - 3(3) \right)
+
+\int \left( \frac{1}{x-4} + 1 \right) \, dx = \ln(x-4) + x \, (+C)
+
+\ln(k-4) + k - (\ln 1 + 5)
+
+\left[ \ln(x-4) + x \right]_5^k = \ln(k-4) + k - 5
+
+2 + \ln(k-4) + k - 5 = \ln p + 8
+
+k - 3 = 8
+
+k = 11
+
+11 - 4 = p
+
+p = 7
+```
+
+=== PAIR 26 ===
+Unit: integrals
+Question Number: 11
+Question: ```latex
+f(x) = 6 + 6 \cos x, \quad 0 \leq x \leq 4\pi
+
+y = f(x)
+
+\text{(a) Find the } x\text{-coordinates of } A \text{ and } B.
+
+\text{(b) Show that the area of the shaded region is } 12\pi.
+
+\text{The cone has a base radius of } 2, \text{ height } h, \text{ and slant height } l.
+
+\text{(c) Find the value of } l.
+
+\text{(d) Hence, find the volume of the cone.}
+```
+Answer: ```latex
+\pi(2^2) + \pi(2)(l) = 12\pi
+
+4\pi + 2\pi l = 12\pi
+
+2\pi l = 8\pi
+
+l = 4
+
+2^2 + h^2 = ( \text{their } l )^2
+
+h = \sqrt{12} \quad ( = 2\sqrt{3} )
+
+V = \frac{1}{3} \pi r^2 h
+
+\left( \frac{1}{3} \pi (2^2) (\sqrt{12}) \right)
+
+\text{volume} = \frac{4\pi \sqrt{12}}{3} \left( = \frac{8\pi \sqrt{3}}{3} = \frac{8\pi}{\sqrt{3}} \right)
+```
+
+=== PAIR 27 ===
+Unit: integrals
+Question Number: 12
+Question: ```latex
+f'(x) = \frac{6x}{x^2 + 1}
+y = f(x)
+(1, 5)
+f(x)
+```
+Answer: ```latex
+\int \frac{6x}{x^2+1} \, dx \quad \text{OR} \quad u = x^2 + 1 \quad \text{OR} \quad \frac{du}{dx} = 2x
+
+\int \frac{3}{u} \, du \quad \text{OR} \quad 3 \int \frac{2x}{x^2+1} \, dx
+
+= 3 \ln (x^2+1)(+c) \quad \text{or} \quad 3 \ln u (+c)
+
+5 = 3 \ln 2 + c
+
+f(x) = 3 \ln (x^2+1) + 5 - 3 \ln 2 \left( = 3 \ln (x^2+1) + 5 - \ln 8 = 3 \ln \left( \frac{x^2+1}{2} \right) + 5 \right)
+```
+
+=== PAIR 28 ===
+Unit: integrals
+Question Number: 13
+Question: ```latex
+y = \frac{x}{x^2 + 2} \quad \text{for} \quad x \geq 0.
+
+R
+
+x = c.
+
+\ln 3.
+
+c.
+```
+Answer: ```latex
+\frac{1}{2} \ln \left( \frac{c^2 + 2}{2} \right) (= \ln 3) \quad \text{OR} \quad \ln \sqrt{c^2 + 2} - \ln \sqrt{2} (= \ln 3) \quad \text{OR} \quad \ln \left( \frac{c^2 + 2}{2} \right) = \ln 9
+
+\text{OR} \quad \ln (c^2 + 2) - \ln 2 = \ln 9 \quad \text{OR} \quad \ln \frac{\sqrt{c^2 + 2}}{\sqrt{2}} (= \ln 3)
+
+\frac{c^2 + 2}{2} = 9 \quad \text{OR} \quad \sqrt{\frac{c^2 + 2}{2}} = 3
+
+c^2 = 16
+
+c = 4
+```
+
+=== PAIR 29 ===
+Unit: integrals
+Question Number: 14
+Question: ```latex
+f(x) = \frac{12x}{(x^2 + 2)^3}
+```
+
+```latex
+f'(x) = \frac{12(2 - 5x^2)}{(x^2 + 2)^4}
+```
+
+```latex
+\int f(x) \, dx
+```
+
+```latex
+g'(x) = f'(x)
+```
+
+```latex
+x = 3
+```
+
+```latex
+\text{The area of } R \text{ is } \frac{21}{2}
+```
+
+```latex
+g(x)
+```
+Answer: ```latex
+g'(x) = f'(x) \Rightarrow g(x) = f(x) + k
+
+\pm \int_0^3 k \, dx \quad \text{OR} \quad = \int_0^3 |g - f| \, dx \quad \text{OR} \quad \int_0^3 f(x) + k - f(x) \, dx \quad \text{OR} \quad \int_0^3 f(x) \, dx - \int_0^3 g(x) \, dx
+
+= \pm \left[ kx \right]_0^3 \quad \text{OR} \quad \left[ -\frac{2}{(x^2+1)^2} + kx \right]_0^3 - \left[ -\frac{2}{(x^2+1)^2} \right]_0^3 \quad \text{OR} \quad \left[ -\frac{2}{(x^2+1)^2} \right]_0^3 - \left[ -\frac{2}{(x^2+1)^2} + kx \right]_0^3
+
+\pm 3k = \frac{21}{2}
+
+k = \pm \frac{21}{6} \left( = \pm \frac{7}{2} = \pm 3.5 \right)
+
+g(x) = \frac{12x}{(x^2+2)^3} - \frac{7}{2} \quad \text{AND} \quad g(x) = \frac{12x}{(x^2+2)^3} + \frac{7}{2} \quad \text{(accept } f(x) + \frac{7}{2} \text{ AND } f(x) - \frac{7}{2} \text{)}
+```
+
+=== PAIR 30 ===
+Unit: integrals
+Question Number: 2
+Question: ```latex
+\begin{enumerate}
+    \item [1.] [\text{Maximum mark: 6}]
+    \begin{enumerate}
+        \item [(a)] \text{Find } \int (6x + 7) \, dx.
+        \item [(b)] \text{Given } f'(x) = 6x + 7 \text{ and } f(1.2) = 7.32, \text{ find } f(x).
+    \end{enumerate}
+\end{enumerate}
+```
+Answer: ```latex
+3x^2 + 7x + c
+
+f(x) = \int f'(x) \, dx
+
+3(1.2)^2 + 7(1.2) + c = 7.32
+
+c = -5.4
+
+f(x) = 3x^2 + 7x - 5.4
+```
+
+=== PAIR 31 ===
+Unit: integrals
+Question Number: 3
+Question: ```latex
+L \quad f \quad f^{-1} \quad x \quad y
+```
+Answer: ```latex
+x = 5.56619\ldots
+
+= 5.57
+
+f'(x) = -45e^{-0.5x}
+
+-45e^{-0.5x} = -1
+
+\left( 2 \ln 45, 2 \right) \text{ (accept } \left( -2 \ln \frac{1}{45}, 2 \right) \text{)}
+
+\frac{\ln \frac{1}{45}}{-0.5} \quad \text{or} \quad \frac{\ln 45}{0.5}
+
+y - 2 = -(x - 2 \ln 45) \quad \text{OR} \quad 2 = -2 \ln 45 + c
+
+y = -x + 2 \ln 45 + 2
+
+x = \ln 45 + 1 (= 4.81)
+
+\int_{4.806\ldots}^{5.566\ldots} \left( x - (-x + 2 \ln 45 + 2) \right) \, dx + \int_{5.566\ldots}^{7.613\ldots} \left( 90e^{-0.5x} - (-x + 2 \ln 45 + 2) \right) \, dx
+
+= 1.52196\ldots
+
+= 1.52
+
+2 \times 1.52\ldots
+
+= 3.04
+```
+
+=== PAIR 32 ===
+Unit: integrals
+Question Number: 4
+Question: ```latex
+f(x) = \frac{4x+1}{x+4}, \quad x \in \mathbb{R}, \, x \neq -4.
+
+f^{-1}(x).
+
+x = p \quad \text{and} \quad x = q, \quad p < q.
+```
+Answer: ```latex
+f(x) = f^{-1}(x)
+
+p = -1 \quad \text{AND} \quad q = 1
+
+\int_{-1}^{1} \left( \frac{4x+1}{x+4} - \frac{1-4x}{x-4} \right) \, dx
+
+= 0.675231\ldots
+
+= 0.675
+```
+
+=== PAIR 33 ===
+Unit: integrals
+Question Number: 5
+Question: ```latex
+g'(x) = 3x^2 + 5e^x, \quad x \in \mathbb{R}
+```
+
+```latex
+(0, 4)
+```
+
+```latex
+g(x)
+```
+Answer: ```latex
+g(x) = \int (3x^2 + 5e^x) \, dx
+
+g(x) = x^3 + 5e^x (+C)
+
+4 = 0 + 5 + C \Rightarrow C = -1
+
+g(x) = x^3 + 5e^x - 1
+
+\int_0^x g'(t) \, dt = \int_0^x (3t^2 + 5e^t) \, dt
+
+g(x) - 4 = x^3 + 5e^x - 5e^0
+
+g(x) = x^3 + 5e^x - 1
+```
+
+=== PAIR 34 ===
+Unit: integrals
+Question Number: 6
+Question: ```latex
+f(x) = \ln(xe^x + 1) - x^4, \quad 0 \leq x \leq 2
+```
+
+```latex
+x = 2
+```
+Answer: ```latex
+\begin{align*}
+\text{(a)} & \\
+& (0.708519\ldots, 0.639580\ldots) \\
+& (0.709, 0.640) \quad (x = 0.709, y = 0.640) \\
+\\
+\text{(b)} & \\
+& 1.09885\ldots \\
+& x = 1.10 \text{ accept } (1.10, 0) \\
+\\
+\text{(c) METHOD 1} & \\
+& \int_{0}^{2} |f(x)| \, dx \\
+& 4.61117\ldots \\
+& \text{area} = 4.61 \\
+\\
+\text{METHOD 2} & \\
+& -\int_{1.09885\ldots}^{2} f(x) \, dx \quad \text{OR} \quad \int_{1.09885\ldots}^{2} |f(x)| \, dx \quad \text{OR} \quad 4.17527\ldots \\
+& \int_{0}^{1.09885\ldots} f(x) \, dx - \int_{1.09885\ldots}^{2} f(x) \, dx \quad \text{OR} \quad 0.435901\ldots + 4.17527\ldots \\
+& 4.61117\ldots \\
+& \text{area} = 4.61 \\
+\end{align*}
+```
+
+=== PAIR 35 ===
+Unit: integrals
+Question Number: 7
+Question: ```latex
+x = k, \quad k \in \mathbb{Z}.
+
+\ln(p) + 8, \quad p \in \mathbb{Z}.
+```
+Answer: ```latex
+\text{triangle} + \int_{5}^{k} f(x) \, dx \quad \text{OR} \quad \int_{3}^{5} g(x) \, dx + \int_{5}^{k} f(x) \, dx \quad \text{OR} \quad \int_{3}^{5} (x-3) \, dx + \int_{5}^{k} \left( \frac{1}{x-4} + 1 \right) \, dx
+
+\text{area of triangle is } 2 \quad \text{OR} \quad \frac{2 \cdot 2}{2} \quad \text{OR} \quad \left( \frac{5^2}{2} - 3(5) \right) - \left( \frac{3^2}{2} - 3(3) \right)
+
+\int \left( \frac{1}{x-4} + 1 \right) \, dx = \ln(x-4) + x \quad (+C)
+
+\ln(k-4) + k - (\ln 1 + 5)
+
+\left[ \ln(x-4) + x \right]_{5}^{k} = \ln(k-4) + k - 5
+
+2 + \ln(k-4) + k - 5 = \ln p + 8
+
+k - 3 = 8
+
+k = 11
+
+11 - 4 = p
+
+p = 7
+```
+
+=== PAIR 36 ===
+Unit: integrals
+Question Number: 8
+Question: ```latex
+\frac{3\sqrt{x} - 5}{\sqrt{x}}
+
+3 - 5x^p
+
+\int_{1}^{9} \left( \frac{3\sqrt{x} - 5}{\sqrt{x}} \right) \, dx
+```
+Answer: ```latex
+\frac{3\sqrt{x} - 5}{\sqrt{x}} = 3 - 5x^{-\frac{1}{2}}
+
+p = -\frac{1}{2}
+
+\int \frac{3\sqrt{x} - 5}{\sqrt{x}} \, dx = 3x - 10x^{\frac{1}{2}} \, (+c)
+
+3(9) - 10(9)^{\frac{1}{2}} - \left( 3(1) - 10(1)^{\frac{1}{2}} \right) \quad \text{OR} \quad 27 - 10 \times 3 - (3 - 10)
+
+= 4
+```
+
+=== PAIR 37 ===
+Unit: integrals
+Question Number: 9
+Question: ```latex
+(1-a)^3
+
+1 - 3 \cos 2x + 3 \cos^2 2x - \cos^3 2x = 8 \sin^6 x
+
+f(x) = 4 \cos x (1 - 3 \cos 2x + 3 \cos^2 2x - \cos^3 2x)
+
+\int_0^m f(x) \, dx = \frac{32}{7} \sin^7 m
+
+\int_m^{\frac{\pi}{2}} f(x) \, dx = \frac{127}{28}, \quad 0 \leq m \leq \frac{\pi}{2}
+```
+Answer: ```latex
+\int_{m}^{\frac{\pi}{2}} f(x) \, dx = \left[ \frac{32}{7} \sin^7 x \right]_{m}^{\frac{\pi}{2}} = \frac{32}{7} \sin^7 \frac{\pi}{2} - \frac{32}{7} \sin^7 m
+
+\frac{32}{7} \sin^7 \frac{\pi}{2} - \frac{32}{7} \sin^7 m = \frac{127}{28} \quad \text{OR} \quad \frac{32}{7} (1 - \sin^7 m) = \frac{127}{28}
+
+\int_{0}^{\frac{\pi}{2}} f(x) \, dx = \int_{0}^{m} f(x) \, dx + \int_{m}^{\frac{\pi}{2}} f(x) \, dx
+
+\frac{32}{7} = \frac{32}{7} \sin^7 m + \frac{127}{28}
+
+\sin^7 m = \frac{1}{128} \left( = \frac{1}{2^7} \right)
+
+\sin m = \frac{1}{2}
+
+m = \frac{\pi}{6}
+```
+
+=== PAIR 38 ===
+Unit: integrals
+Question Number: applications
+Question: ```latex
+f(x) = 6 + 6 \cos x, \quad 0 \leq x \leq 4\pi
+```
+
+```latex
+y = f(x)
+```
+
+```latex
+12\pi
+```
+
+```latex
+l
+```
+
+```latex
+2
+```
+Answer: ```latex
+\pi(2^2) + \pi(2)(l) = 12\pi
+
+4\pi + 2\pi l = 12\pi
+
+2\pi l = 8\pi
+
+l = 4
+
+2^2 + h^2 = (\text{their } l)^2
+
+h = \sqrt{12} \left( = 2\sqrt{3} \right)
+
+V = \frac{1}{3} \pi r^2 h
+
+\left( \frac{1}{3} \pi (2^2) (\sqrt{12}) \right)
+
+\text{volume} = \frac{4\pi \sqrt{12}}{3} = \left( \frac{8\pi \sqrt{3}}{3} = \frac{8\pi}{\sqrt{3}} \right)
+```
+
+=== PAIR 39 ===
+Unit: integrals
+Question Number: area
+Question: ```latex
+y = \left( x^3 + x \right)^{\frac{3}{2}}.
+
+\frac{dy}{dx}.
+
+\int \left( 3x^2 + 1 \right) \sqrt{x^3 + x} \, dx.
+
+f(x) = \sqrt{x^3 + x} \quad \text{and} \quad g(x) = 6 - 3x^2 \sqrt{x^3 + x}, \quad \text{for} \quad x \geq 0.
+
+x = 1.
+```
+Answer: ```latex
+\text{(d)} \quad \text{recognizing } \sqrt{x^3 + x} \text{ is a common factor (seen anywhere, may be seen in part (c))} \quad (M1)
+
+\text{eg} \quad (-3x^2 - 1) \sqrt{x^3 + x}, \int 6 - (3x^2 + 1) \sqrt{x^3 + x}, (3x^2 - 1) \sqrt{x^3 + x}
+
+\text{correct integration} \quad (A1)(A1)
+
+\text{eg} \quad 6x - \frac{2}{3} (x^3 + x)^{\frac{3}{2}}
+
+\text{Note: Award A1 for } 6x \text{ and award A1 for } -\frac{2}{3} (x^3 + x)^{\frac{3}{2}}.
+
+\text{substituting limits into their integrated function and subtracting (in any order)} \quad (M1)
+
+\text{eg} \quad 6 - \frac{2}{3} (1^3 + 1)^{\frac{3}{2}}, \quad 0 - \left[ 6 - \frac{2}{3} (1^3 + 1)^{\frac{3}{2}} \right]
+
+\text{correct working} \quad (A1)
+
+\text{eg} \quad 6 - \frac{2}{3} \times 2 \sqrt{2}, \quad 6 - \frac{2}{3} \times \sqrt{4} \times \sqrt{2}
+
+\text{area of } R = 6 - \frac{4\sqrt{2}}{3} \quad \left( = 6 - \frac{2}{3} \times \sqrt{8}, \quad 6 - \frac{2}{3} \times 2^2, \quad \frac{18 - 4\sqrt{2}}{3} \right)
+
+\text{A1} \quad \text{N3}
+
+[6 \text{ marks}]
+
+\text{Total [14 marks]}
+```
+
+=== PAIR 40 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+y = \frac{\ln x}{x^4} \quad \text{for} \quad x > 0.
+
+\frac{dy}{dx} = \frac{1 - 4 \ln x}{x^5}.
+
+f(x) = \frac{\ln x}{x^4} \quad \text{for} \quad x > 0
+
+f''(x) = \frac{20 \ln x - 9}{x^6}
+
+f(x) > 0 \quad \text{for} \quad x > 0.
+```
+Answer: ```latex
+f''\left(\frac{1}{e^4}\right) = 20 \ln e^4 - 9 \left(\frac{1}{e^4}\right)^6
+
+= \frac{5 - 9}{e^{1.5}} \left( = \frac{-4}{e^{1.5}} \right)
+
+\ln x > 0
+
+x > 1
+```
+
+=== PAIR 41 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+y = (2x - 1)e^{kx}, \, \text{where} \, x \in \mathbb{R} \, \text{and} \, k \in \mathbb{Q}.
+
+x = 1
+
+y = 5e^{kx}.
+
+k
+```
+Answer: ```latex
+\frac{dy}{dx} = (2x-1) \times \left( ke^{kx} \right) + 2 \times e^{kx} \quad \left( = e^{kx}(2kx-k+2) \right)
+
+\frac{dy}{dx} \text{ at } x=1 \Rightarrow ke^{k} + 2e^{k}
+
+5e^{k}
+
+\frac{dy}{dx} \text{ at } x=1 \text{ equals the slope of } y=5e^{k}x \quad \left( = 5e^{k} \right)
+
+ke^{k} + 2e^{k} = 5e^{k}
+
+k=3
+```
+
+=== PAIR 42 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+\text{Recognizing that for } g \text{ to be increasing, } f(x) - d > 0, \text{ or } g' > 0
+\quad \text{(M1)}
+
+\text{The vertex must be above the } x\text{-axis, } 4 - d > 0, \quad d - 4 < 0
+\quad \text{(R1)}
+
+d < 4
+\quad \text{A1}
+
+\text{attempting to find discriminant of } g'
+\quad \text{(M1)}
+
+(-12)^2 - 4(2)(22 - d)
+
+\text{recognizing discriminant must be negative}
+\quad \text{(R1)}
+
+-32 + 8d < 0 \quad \text{OR} \quad \Delta < 0
+
+d < 4
+\quad \text{A1}
+
+\text{recognizing that for } g \text{ to be concave up, } g'' > 0
+\quad \text{(M1)}
+
+g'' > 0 \quad \text{when } f' > 0, \quad 4x - 12 > 0, \quad x - 3 > 0
+\quad \text{(R1)}
+
+x > 3
+\quad \text{A1}
+```
+Answer: ```latex
+x = 3
+
+-\frac{b}{2a} = 3
+
+h = 3, \quad k = 4 \quad (\text{accept } a(x-3)^2 + 4)
+
+12 = a(5-3)^2 + 4, \quad 4a + 4 = 12
+
+a = 2
+
+f'(x) = 4(x-3) \quad \text{or} \quad f'(x) = 4x - 12
+
+f'(5) = 8 \quad (\text{may be seen as gradient in their equation})
+
+y - 12 = 8(x-5) \quad \text{or} \quad y = 8x - 28
+
+L = 8x - 28
+```
+
+=== PAIR 43 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = \ln(x^2 - 16)
+x > 4
+x = 4
+A(a, 0)
+\text{(a) Find the exact value of } a.
+\text{(b) Given that the gradient of } L \text{ is } \frac{1}{3}, \text{ find the } x\text{-coordinate of } B.
+```
+Answer: ```latex
+\begin{align*}
+5. \quad & (a) \quad \ln(x^2 - 16) = 0 \\
+& e^0 = x^2 - 16 (=1) \\
+& x^2 = 17 \quad \text{OR} \quad x = \pm \sqrt{17} \\
+& a = \sqrt{17} \\[10pt]
+& (b) \quad \text{attempt to differentiate (must include } 2x \text{ and/or } \frac{1}{x^2 - 16} \text{)} \\
+& f'(x) = \frac{2x}{x^2 - 16} \\
+& \text{setting their derivative } = \frac{1}{3} \\
+& \frac{2x}{x^2 - 16} = \frac{1}{3} \\
+& x^2 - 16 = 6x \quad \text{OR} \quad x^2 - 6x - 16 = 0 \quad \text{(or equivalent)} \\
+& \text{valid attempt to solve their quadratic} \\
+& x = 8
+\end{align*}
+```
+
+=== PAIR 44 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = -(x-h)^2 + 2k
+```
+```latex
+g(x) = e^{x-2} + k
+```
+```latex
+f'(x)
+```
+```latex
+x = 3
+```
+```latex
+h = \frac{e+6}{2}
+```
+```latex
+k = e + \frac{e^2}{4}
+```
+Answer: ```latex
+f'(x) = -2(x-h)
+
+g'(x) = e^{-x-2} \quad \text{OR} \quad g'(3) = e^{3-2}
+
+f'(3) = g'(3)
+
+-2(3-h) = e^{3-2} \ (= e)
+
+-6 + 2h = e \quad \text{OR} \quad 3-h = -\frac{e}{2}
+
+h = \frac{e+6}{2}
+
+f(3) = g(3)
+
+-(3-h)^2 + 2k = e^{3-2} + k
+
+-\left( \frac{3-\frac{e+6}{2}}{2} \right)^2 + 2k = e^{3-2} + k
+
+k = e + \left( \frac{6-e-6}{2} \right)^2 = e + \left( -\frac{e}{2} \right)^2
+
+k = e + \left( \frac{3-\frac{e+6}{2}}{2} \right)^2
+
+k = e + 9 - 3e - 18 + \frac{e^2 + 12e + 36}{4}
+
+k = e + \frac{e^2}{4}
+```
+
+=== PAIR 45 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+y = \frac{\ln x}{x^4} \quad \text{for} \quad x > 0.
+```
+```latex
+\frac{dy}{dx} = \frac{1 - 4 \ln x}{x^5}.
+```
+```latex
+f(x) = \frac{\ln x}{x^4} \quad \text{for} \quad x > 0
+```
+```latex
+f''(x) = \frac{20 \ln x - 9}{x^6}
+```
+```latex
+f(x) > 0 \quad \text{for} \quad x > 0.
+```
+Answer: ```latex
+\begin{align*}
+&\text{(a)} \\
+&\frac{dy}{dx} = \frac{x^4 \left( \frac{1}{x} \right) - (\ln x)(4x^3)}{(x^4)^2} \quad \text{OR} \quad (\ln x)(-4x^{-5}) + (x^{-4}) \left( \frac{1}{x} \right) \\
+&= \frac{x^3 (1 - 4 \ln x)}{x^8} \quad \text{OR cancelling } x^3 \quad \text{OR} \quad \frac{-4 \ln x}{x^5} + \frac{1}{x^5} \\
+&= \frac{1 - 4 \ln x}{x^5} \\[10pt]
+&\text{(b)} \\
+&f'(x) = \frac{dy}{dx} = 0 \\
+&\frac{1 - 4 \ln x}{x^5} = 0 \\
+&\ln x = \frac{1}{4} \\
+&x = e^{\frac{1}{4}} \\[10pt]
+&y = \frac{1}{\ln e^{\frac{1}{4}}} \left( e^{\frac{1}{4}} \right)^4 \\
+&= \frac{1}{4e} \left( \frac{1}{4} e^{-1} \right) \\
+&\mathbb{P} \left( e^{\frac{1}{4}}, \frac{1}{4e} \right)
+\end{align*}
+```
+
+=== PAIR 46 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+g(x) = e^{x^2 + 1}, \quad x \in \mathbb{R}
+```
+
+```latex
+g'(-1)
+```
+Answer: ```latex
+g'(x) = 2x e^{x^2 + 1}
+
+x = -1
+
+g'(-1) = -2e^2
+
+g'(x) = e^{x^2 + 1}
+```
+
+=== PAIR 47 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = \cos^2 x - 3 \sin^2 x, \, 0 \leq x \leq \pi.
+
+f(x) = 0.
+
+f'(x).
+
+y = f(x) \, \text{where} \, f'(x) = 0.
+
+f'(x) = 0.
+```
+Answer: ```latex
+\begin{align*}
+&\text{approximately correct smooth curve with minimum at } \left( \frac{\pi}{2}, -3 \right) \\
+&\text{endpoints at } (0,1), \, (\pi,1), \, x\text{-intercepts at } \frac{\pi}{6}, \, \frac{5\pi}{6} \\
+&\text{correct concavity clearly shown at } (0,1) \text{ and } (\pi,1)
+\end{align*}
+```
+
+=== PAIR 48 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+h(x) = 2xe^x + 3, \text{ for } x \in \mathbb{R}.
+
+h'(x).
+
+h''(x) = (2x + 4)e^x.
+```
+Answer: ```latex
+h''(x) = 2e^x + 2e^x + 2xe^x \quad \text{OR} \quad 2e^x + 2e^x(1+x)
+```
+
+```latex
+\text{Award } A1 \text{ for } \left( 2e^x \right)' = 2e^x, \, A1 \text{ for } 2e^x + 2xe^x \text{ or } (2x+2)e^x
+```
+
+```latex
+h''(x) = (2x+4)e^x
+```
+
+```latex
+\text{recognition that } h'' > 0 \text{ OR attempt to find point of inflexion}
+```
+
+```latex
+\text{since } e^x > 0, \, 2x+4 > 0 \text{ OR } 2x+4 = 0 \, (\Rightarrow x = -2)
+```
+
+```latex
+x > -2
+```
+
+=== PAIR 49 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+y = \left( x^3 + x \right)^{\frac{3}{2}}
+
+\frac{dy}{dx}
+```
+Answer: ```latex
+\frac{dy}{dx} = \frac{dy}{du} \times \frac{du}{dx}, \quad u = x^3 + x, \quad u' = 3x^2 + 1
+
+\frac{dy}{dx} = \frac{3}{2} (x^3 + x)^{\frac{1}{2}} (3x^2 + 1) \left( = \frac{3}{2} \sqrt{x^3 + x} (3x^2 + 1) \right)
+```
+
+=== PAIR 50 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = -(x-h)^2 + 2k
+```
+```latex
+g(x) = e^{x-2} + k
+```
+```latex
+h, k \in \mathbb{R}
+```
+```latex
+f'(x)
+```
+```latex
+x = 3
+```
+```latex
+h = \frac{e+6}{2}
+```
+```latex
+k = e + \frac{e^2}{4}
+```
+Answer: ```latex
+f'(x) = -2(x-h)
+
+g'(x) = e^{x-2} \quad \text{OR} \quad g'(3) = e^{3-2}
+
+f'(3) = g'(3)
+
+-2(3-h) = e^{3-2} \quad (=e)
+
+-6 + 2h = e \quad \text{OR} \quad 3-h = -\frac{e}{2}
+
+h = \frac{e+6}{2}
+
+f(3) = g(3)
+
+-(3-h)^2 + 2k = e^{3-2} + k
+
+-\left( \frac{3-\frac{e+6}{2}}{2} \right)^2 + 2k = e^{3-2} + k
+
+k = e + \left( \frac{6-e-6}{2} \right)^2 = e + \left( \frac{-e}{2} \right)^2
+
+k = e + \left( \frac{3-\frac{e+6}{2}}{2} \right)^2
+
+k = e + 9 - 3e - 18 + \frac{e^2 + 12e + 36}{4}
+
+k = e + \frac{e^2}{4}
+```
+
+=== PAIR 51 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = \ln(x^2 - 16) \quad \text{for} \quad x > 4.
+
+x = 4
+
+(a) \quad \text{Find the exact value of } a.
+
+(b) \quad \text{Given that the gradient of } L \text{ is } \frac{1}{3}, \text{ find the } x\text{-coordinate of } B.
+```
+Answer: ```latex
+\begin{align*}
+5. \quad & \text{(a)} \quad \ln(x^2 - 16) = 0 \quad & (M1) \\
+& e^0 = x^2 - 16 (=1) \\
+& x^2 = 17 \quad \text{OR} \quad x = \pm \sqrt{17} \quad & (A1) \\
+& a = \sqrt{17} \quad & A1 \\
+& \quad & [3 \text{ marks}] \\
+\\
+& \text{(b)} \quad \text{attempt to differentiate (must include } 2x \text{ and/or } \frac{1}{x^2 - 16} \text{)} \quad & (M1) \\
+& f'(x) = \frac{2x}{x^2 - 16} \quad & A1 \\
+& \text{setting their derivative } = \frac{1}{3} \quad & M1 \\
+& \frac{2x}{x^2 - 16} = \frac{1}{3} \\
+& x^2 - 16 = 6x \quad \text{OR} \quad x^2 - 6x - 16 = 0 \text{ (or equivalent)} \quad & A1 \\
+& \text{valid attempt to solve their quadratic} \quad & (M1) \\
+& x = 8 \quad & A1 \\
+& \quad & [6 \text{ marks}] \\
+& \text{Total } [9 \text{ marks}]
+\end{align*}
+```
+
+=== PAIR 52 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+\begin{array}{|c|c|c|c|c|}
+\hline
+x & f(x) & f'(x) & g(x) & g'(x) \\
+\hline
+1 & 2 & 4 & 9 & -3 \\
+8 & 4 & -3 & 2 & 5 \\
+\hline
+\end{array}
+
+h(x) = f(x)g(x)
+
+h(1)
+
+h'(8)
+```
+Answer: ```latex
+h(1) = f(1) \times g(1), \, 2(9)
+
+h(1) = 18
+
+h' = f g' + g f', \, h'(8) = f'(8) g(8) + g'(8) f(8)
+
+h'(8) = 4(5) + 2(-3), \, -6 + 20
+
+h'(8) = 14
+```
+
+=== PAIR 53 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f
+x \in \mathbb{R}
+y = 6x - 1
+x = 4
+f'(4)
+f(4)
+g
+x \in \mathbb{R}
+g(x) = x^2 - 3x
+h(x) = f(g(x))
+h(4)
+x = 4
+```
+Answer: ```latex
+f'(4) = 6
+
+f(4) = 6 \times 4 - 1 = 23
+
+h(4) = f(g(4))
+
+h(4) = f(4^2 - 3 \times 4) = f(4)
+
+h(4) = 23
+
+f'(g(x)) \times g'(x) \quad \text{OR} \quad (x^2 - 3x)' \times f'(x^2 - 3x)
+
+h'(4) = (2 \times 4 - 3) f'(4^2 - 3 \times 4)
+
+= 30
+
+y - 23 = 30(x - 4) \quad \text{OR} \quad y = 30x - 97
+```
+
+=== PAIR 54 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = a(x - p)(x - 3)
+x = 2.5
+(0, -6)
+y = kx - 5
+```
+Answer: ```latex
+g = f, \, kx - 5 = -x^2 + 5x - 6
+
+x^2 - 5x + kx + 1 = 0
+
+(k-5)^2 - 4, \, 25 - 10k + k^2 - 4
+
+k - 5 = \pm 2, \, (k-3)(k-7) = 0, \, \frac{10 \pm \sqrt{100 - 4 \times 21}}{2}
+
+k = 3, \, 7
+
+g = f, \, kx - 5 = -x^2 + 5x - 6
+
+f' = m_r, \, f' = k
+
+-2x + 5
+
+(-2x + 5)x - 5 = -x^2 + 5x - 6, \, k \left( \frac{5-k}{2} \right) - 5 = -\left( \frac{5-k}{2} \right)^2 + 5 \left( \frac{5-k}{2} \right) - 6
+
+x^2 - 1 = 0, \, k^2 - 10k + 21 = 0
+
+x = \pm 1, \, (k-3)(k-7) = 0, \, \frac{10 \pm \sqrt{100 - 4 \times 21}}{2}
+
+k = 3, \, 7
+```
+
+=== PAIR 55 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = x^2
+A(-k, k^2)
+C(-k, 0)
+f'(x)
+-\frac{k}{2}
+```
+Answer: ```latex
+\text{(c)} \quad \text{valid approach to find area of triangle} \quad (M1)
+
+\text{eg} \quad \frac{1}{2} (k^2) \left( \frac{k}{2} \right)
+
+\text{area of } ABC = \frac{k^3}{4} \quad A1 \quad N2 \quad [2 \text{ marks}]
+```
+
+=== PAIR 56 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = x^2 - x, \, \text{for} \, x \in \mathbb{R}.
+
+P(1, 0).
+
+f'(1) = 1.
+
+y = ax + b.
+```
+Answer: ```latex
+f'(x) = 2x - 1
+
+2(1) - 1, \, 2 - 1
+
+f'(1) = 1
+
+-\frac{1}{f'(1)}, \, m_1 m_2 = -1, \, \text{slope} = -1
+
+y - 0 = -1(x - 1), \, 0 = -1 + b, \, b = 1, \, L = -x + 1
+
+y = -x + 1
+
+f(x) = L, \, -x + 1 = x^2 - x
+
+x^2 - 1 = 0, \, x^2 = 1, \, x = 1
+
+x = -1 \quad (\text{accept } Q(-1, \, 2))
+```
+
+=== PAIR 57 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+\begin{pmatrix} 4 \\ 3 \end{pmatrix}
+f
+g
+g
+x
+L_2
+y
+Q
+g
+E
+Q
+D
+F
+O
+C
+G
+L_2
+x
+(c) \text{ Given that triangle } EDF \text{ and rectangle } CDFG \text{ have equal areas, find the gradient of } L_2 \text{ in terms of } p.
+```
+Answer: ```latex
+g(x) = \frac{k}{x-4} + 3
+
+\text{gradient of } L_2 = \text{gradient of } L_1, \, D(4, \, 3), \, 2p + 4
+
+\text{area of triangle } DEF = 2k, \, CD = 3, \, DF = 2p, \, CG = 2p, \, E\left(4, \, \frac{2k}{p} + 3\right)
+
+F(2p + 4, \, 3), \, Q(p + 4, \, \frac{k}{p}), \, \text{gradient of } L_2 = -\frac{k}{p^2}, \, g'(x) = -\frac{k}{(x-4)^2}
+
+\text{area of rectangle } CDFG = 2k
+
+\frac{\text{ED} \times \text{DF}}{2} = \text{CD} \times \text{DF}, \, 2p \cdot 3 = 2k, \, \text{ED} = 2\text{CD}, \, \int_{4}^{2p+4} L_2 \, dx = 4k
+
+\text{ED} = 6, \, E(4, \, 9), \, k = 3p, \, \text{gradient} = \frac{3 - \left(\frac{2k}{p} + 3\right)}{(2p + 4) - 4}, \, -\frac{6}{\frac{2k}{3}}, \, \frac{9}{k}
+
+-\frac{6}{2p}, \, \frac{9 - 3}{4 - (2p + 4)}, \, \frac{3p}{p^2}, \, \frac{3 - \left(\frac{2(3p)}{p} + 3\right)}{(2p + 4) - 4}, \, -\frac{9}{3p}
+
+\text{gradient of } L_2 \text{ is } \frac{3}{p} \, (= -3p^{-1})
+```
+
+=== PAIR 58 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f
+
+(3, 4)
+
+y
+
+x
+
+Q
+
+(3, 4)
+
+f(x) = a(x-h)^2 + k
+
+h
+
+k
+
+(5, 12)
+
+L
+```
+Answer: ```latex
+x = 3
+-\frac{b}{2a} = 3
+h = 3, \, k = 4 \, \text{(accept } a(x-3)^2 + 4 \text{)}
+12 = a(5-3)^2 + 4, \, 4a + 4 = 12
+a = 2
+f'(x) = 4(x-3) \, \text{or} \, f'(x) = 4x - 12
+f'(5) = 8
+y - 12 = 8(x-5) \, \text{or} \, y = 8x - 28
+L = 8x - 28
+```
+
+=== PAIR 59 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+g(x) = p^x + q, \text{ for } x, p, q \in \mathbb{R}, p > 1.
+
+A(0, a)
+
+f(x) = g^{-1}(x).
+
+y = x.
+
+L_1
+
+f'(a) = \frac{1}{\ln p}
+
+L_2
+
+y = (\ln p)x + q + 1.
+
+(-2, -2).
+
+\frac{1}{\ln \left( \frac{1}{3} \right)}.
+```
+Answer: ```latex
+B(a, 0) \text{ (accept } B(q+1, 0) \text{ )}
+
+g(0) = a, \quad p^0 + q = a
+
+a = q + 1
+
+y - 0 = f'(a)(x - a), \quad y = f'(a)(x - (q+1))
+
+y - 0 = \frac{1}{\ln(p)}(x - a)
+
+0 = \frac{1}{\ln(p)}(a) + b
+
+b = \frac{-a}{\ln(p)}
+
+y = \frac{1}{\ln p}(x - q - 1), \quad y = \frac{1}{\ln p}x - \frac{q+1}{\ln p}
+
+L_1 = \frac{1}{\ln p}(x - q - 1)
+```
+
+=== PAIR 60 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = x^3 - 2x^2 + ax + 6
+```
+
+```latex
+f'(x)
+```
+
+```latex
+a
+```
+Answer: ```latex
+f(0), \ 0^3 - 2(0)^2 + a(0) + 6, \ f(0) = 6, \ (0, y)
+
+(0, 6) \ (\text{accept } x = 0 \text{ and } y = 6)
+
+f'(x) = 3x^2 - 4x + a
+
+f'(0)
+
+3(0)^2 - 4(0) + a, \ \text{slope} = a, \ f'(0) = a
+
+y - 6 = a(x - 0), \ y - 0 = a(x - 6), \ 6 = a(0) + c, \ L = ax + 6
+
+y = ax + 6, \ y - 6 = ax, \ y - 6 = a(x - 0)
+
+f(x) = L
+
+x^3 - 2x^2 + ax + 6 = ax + 6
+
+x^3 - 2x^2 = 0, \ x^2(x - 2) = 0
+
+x = 2 \ \text{at } Q
+
+f'(x) = 0
+
+3x^2 - 4x + a = 0
+
+3(2)^2 - 4(2) + a = 0, \ 12 - 8 + a = 0
+
+a = -4
+```
+
+=== PAIR 61 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+f(x) = mx^2 - 2mx, \text{ where } x \in \mathbb{R} \text{ and } m \in \mathbb{R}.
+```
+
+```latex
+y = mx - 9
+```
+
+```latex
+m = 4
+```
+
+```latex
+f(x) = 4(x-p)(x-q), \text{ where } p, q \in \mathbb{R}.
+```
+
+```latex
+f(x) = 4(x-h)^2 + k, \text{ where } h, k \in \mathbb{R}.
+```
+Answer: ```latex
+\text{METHOD 3 (using } \frac{-b}{2a} \text{)}
+\\
+mx^2 - 2mx = mx - 9
+\\
+mx^2 - 3mx + 9 = 0
+\\
+\text{attempt to find } x\text{-coord of vertex using } \frac{-b}{2a}
+\\
+\frac{-(-3m)}{2m}
+\\
+x = \frac{3}{2}
+\\
+\text{substituting their } x \text{ value}
+\\
+\left( \frac{3}{2} \right)^2 m - 3m \times \frac{3}{2} + 9 = 0
+\\
+\frac{9}{4} m - \frac{9}{2} m + 9 = 0
+\\
+-9m = -36
+\\
+m = 4
+\\
+(b) \quad 4x(x-2)
+\\
+p = 0 \text{ and } q = 2 \text{ OR } p = 2 \text{ and } q = 0
+\\
+(c) \quad \text{attempt to use valid approach}
+\\
+\frac{0+2}{2}, \quad \frac{-(-8)}{2 \times 4}, \quad f(1), \quad 8x-8 = 0 \text{ OR } 4(x^2 - 2x + 1 - 1)(= 4(x-1)^2 - 4)
+\\
+h = 1, \quad k = -4
+\\
+(d) \quad \text{EITHER}
+\\
+\text{recognition } x = h \text{ to 2 (may be seen on sketch)}
+\\
+\text{OR}
+\\
+\text{recognition that } f(x) < 0 \text{ and } f'(x) > 0
+\\
+\text{THEN}
+\\
+1 < x < 2
+```
+
+=== PAIR 62 ===
+Unit: intro
+Question Number: calc
+Question: ```latex
+\theta
+\sin \theta = \frac{3}{5}
+\tan \theta
+L
+f(x) = e^x \sin x - \frac{3x}{4}
+0 \leq x \leq 3
+M
+L
+x
+```
+Answer: ```latex
+f' = \tan \theta, \quad f' = -\frac{3}{4}, \quad e^x \cos x + e^x \sin x - \frac{3}{4} = -\frac{3}{4},
+
+e^x (\cos x + \sin x) - \frac{3}{4} = -\frac{3}{4}
+
+\sin x = -\cos x, \quad \cos x + \sin x = 0, \quad -\frac{\sin x}{\cos x} = 1
+
+\tan \theta = -1, \quad x = 135^\circ
+
+x = \frac{3\pi}{4} \quad (\text{do not accept } 135^\circ)
+```
+
+=== PAIR 63 ===
+Unit: kinematics
+Question Number: 1
+Question: ```latex
+v \, \text{ms}^{-1}
+
+v(t) = (0.3t + 0.1)^t - 4, \quad \text{for} \quad 0 \leq t \leq 5.
+
+v
+
+t
+
+t
+```
+Answer: ```latex
+v = 0
+
+(0.3t + 0.1)^t - 4 = 0
+
+t = 4.27631
+
+t = 4.28 \text{ (seconds)}
+
+v'(t) = 0
+
+t = 1.19236
+
+t = 1.19 \text{ (seconds)}
+```
+
+=== PAIR 64 ===
+Unit: kinematics
+Question Number: 2
+Question: ```latex
+v(t) = 1.4^t - 2.7, \quad \text{for } 0 \leq t \leq 5.
+```
+Answer: ```latex
+v(t) = 0
+t = \log_{1.4} 2.7 \text{ (exact)}, \, t = 2.95 \, \text{(s)}
+
+a(t) = v'(t), \, v'(2)
+a(2) = 1.96 \ln 1.4 \, \text{(exact)}, \, a(2) = 0.659 \, \text{(ms}^{-2}\text{)}
+
+\int_{0}^{5} |v(t)| \, dt, \, \int_{0}^{2.95} (-v(t)) \, dt + \int_{2.95}^{5} v(t) \, dt
+\text{distance} = 5.35 \, \text{(m)}
+```
+
+=== PAIR 65 ===
+Unit: kinematics
+Question Number: 3
+Question: ```latex
+s_A = 15 - t - 6t^3 e^{-0.8t}, \, 0 \leq t \leq 25.
+
+v_B = 8 - 2t, \, 0 \leq t \leq 25.
+```
+Answer: ```latex
+\int_{0}^{2} (4 + 4t - 3t^2) \, dt
+
+\int_{0}^{3} \left| 4 + 4t - 3t^2 \right| \, dt
+
+\int_{0}^{2} (4 + 4t - 3t^2) \, dt = 8
+
+\int_{2}^{3} (4 + 4t - 3t^2) \, dt = -5
+
+\int_{0}^{2} v \, dt - \int_{2}^{3} v \, dt \quad \text{OR} \quad \int_{0}^{2} v \, dt + \left| \int_{2}^{3} v \, dt \right|
+
+\text{total distance travelled} = 13 \, (\text{m})
+```
+
+=== PAIR 66 ===
+Unit: kinematics
+Question Number: 4
+Question: ```latex
+v(t) = t \sin t - 3, \quad 0 \leq t \leq 10
+```
+Answer: ```latex
+v = 0
+
+t = 6.74416\ldots
+
+= 6.74 \text{ (sec)}
+
+\int_{0}^{10} |v(t)| dt \quad \text{OR} \quad -\int_{0}^{6.74416\ldots} v(t) \, dt + \int_{6.74416\ldots}^{9.08837\ldots} v(t) \, dt - \int_{9.08837\ldots}^{10} v(t) \, dt
+
+= 37.0968\ldots
+
+= 37.1 \text{ (m)}
+
+t = 7
+
+\text{acceleration} = 5.93430\ldots
+
+= 5.93 \text{ (ms}^{-2}\text{)}
+```
+
+=== PAIR 67 ===
+Unit: kinematics
+Question Number: 5
+Question: ```latex
+v(t) = e^{\sin t} + 4 \sin t \quad \text{for} \quad 0 \leq t \leq 6
+```
+Answer: ```latex
+v = 0
+
+t = 3.34692...
+
+t = 3.35
+
+v = 0
+
+t = -0.205
+
+t = 6.08
+
+a = -4.71439...
+
+a = -4.71 \, (\text{ms}^{-2})
+
+\int_{0}^{6} |v| \, dt
+
+\int_{0}^{3.34...} \left( e^{\sin(t)} + 4 \sin(t) \right) \, dt - \int_{3.34...}^{6} \left( e^{\sin(t)} + 4 \sin(t) \right) \, dt \, ( = 14.3104... + 6.44300...)
+
+= 20.7534...
+
+= 20.8 \, (\text{metres})
+```
+
+=== PAIR 68 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+c = at + b
+
+t = 7
+
+\mathcal{f} = \frac{2000}{1 + 99e^{-kt}}
+```
+Answer: ```latex
+a = 13.4, \quad b = 137
+
+13.3823 \times 7 + 137.482
+
+\frac{2000}{1 + 99e^{-k(0)}} \quad \frac{2000}{100}
+
+f(0)
+
+f(5) = 64
+
+64 = \frac{2000}{1 + 99e^{-k(5)}}, \quad 64(1 + 99e^{-5k}) = 2000
+
+k = -\frac{1}{5} \ln \left( \frac{11}{36} \right) \text{ (exact)}, \quad 0.237
+
+c = f
+
+\frac{2000}{1 + 99e^{-0.237124t}} = 13.382t + 137.482
+
+t = 12.0403
+```
+
+=== PAIR 69 ===
+Unit: logs
+Question Number: 1
+Question: ```latex
+f(x) = 2 \ln(x - 3), \text{ for } x > 3
+```
+Answer: ```latex
+x = 3
+
+f(x) = 0, \quad e^0 = x - 3
+
+x = 4, \quad (4, 0)
+```
+
+=== PAIR 70 ===
+Unit: logs
+Question Number: 2
+Question: ```latex
+A = A_0 e^{-kt} \quad \text{where} \quad t \geq 0 \quad \text{and} \quad A_0, \, k \, \text{are positive constants.}
+```
+
+```latex
+A_0 = 100
+```
+
+```latex
+k = \frac{\ln 2}{5730}
+```
+Answer: ```latex
+75 = 100e^{-\frac{\ln 2}{5730} t}
+
+\ln 0.75 = -\frac{\ln 2}{5730} t
+
+t = 2378.164...
+
+t = 2380 \text{ (years)}
+```
+
+=== PAIR 71 ===
+Unit: logs
+Question Number: 3
+Question: ```latex
+P(t) = 15000 e^{kt}, \text{ where } k < 0 \text{ and } t \geq 0.
+```
+Answer: ```latex
+P(0) = 15000 \quad \text{OR} \quad 0.11 \times 15000 \quad \text{OR} \quad 0.89 \times 15000
+
+15000 \times 0.89 = 13350
+
+t = 8
+
+15000 \times 0.89 = 15000 e^{8k} \quad \text{OR} \quad 13350 = 15000 e^{8k}
+
+k = \frac{\ln 0.89}{8} \approx -0.014566
+
+t = 2041 - 2014 (= 27)
+
+P(27) = 15000 e^{-0.0145 \ldots \times 27}
+
+P(27) = 10100 \quad (10122)
+```
+
+=== PAIR 72 ===
+Unit: logs
+Question Number: 4
+Question: ```latex
+A(t) = 500e^{-kt}
+```
+
+```latex
+t = 0
+```
+
+```latex
+280 \, \text{mg}
+```
+
+```latex
+k
+```
+
+```latex
+T
+```
+
+```latex
+140 \, \text{mg}
+```
+Answer: ```latex
+A(0) = 500 \, \text{(mg)}
+
+280 = 500 e^{-3k}
+
+k = 0.193272 \ldots
+
+k = 0.193 \left( = -\frac{1}{3} \ln \left( \frac{280}{500} \right) \right)
+
+500 e^{-0.193272 \ldots T} = 140
+
+T = 6.58636 \ldots
+
+T = 6.59 \, \text{(h)}
+```
+
+=== PAIR 73 ===
+Unit: logs
+Question Number: 5
+Question: ```latex
+\begin{align*}
+\text{(i)} & \quad \log_2 \frac{1}{16}; \\
+\text{(ii)} & \quad \log_9 3; \\
+\text{(iii)} & \quad \log_{\sqrt{3}} 81. \\
+\end{align*}
+
+\begin{align*}
+\text{(b)} & \quad \text{It is given that } \log_{ab} a = 3, \text{ where } a, b \in \mathbb{R}^+, ab \neq 1. \\
+\text{(i)} & \quad \text{Show that } \log_{ab} b = -2. \\
+\text{(ii)} & \quad \text{Hence find the value of } \log_{ab} \frac{\sqrt[3]{a}}{\sqrt{b}}.
+\end{align*}
+```
+Answer: ```latex
+\log_{ab} \frac{\sqrt[3]{a}}{\sqrt{b}} = \log_{ab} \sqrt[3]{a} - \log_{ab} \sqrt{b} \quad \text{OR} \quad \log_{ab} \frac{\sqrt[3]{a}}{\sqrt{b}} = \log_{ab} \sqrt[3]{a} + \log_{ab} \frac{1}{\sqrt{b}}
+
+= \frac{1}{3} \log_{ab} a - \frac{1}{2} \log_{ab} b \quad \text{OR} \quad \log_{ab} ab - \log_{ab} \sqrt{b}
+
+= \frac{1}{3} \cdot 3 - \frac{1}{2} (-2)
+
+= 2
+```
+
+=== PAIR 74 ===
+Unit: logs
+Question Number: 6
+Question: ```latex
+f(x) = \ln(2x - 7), \quad \text{where } x > \frac{7}{2}
+
+g(x) = 2 \ln x - \ln d, \quad \text{where } x > 0, \, d \in \mathbb{R}^+.
+
+x^2 - 2dx + 7d = 0.
+
+d^2 - 7d > 0.
+```
+Answer: ```latex
+x^2 - 20x + 70 \ (= 0)
+
+\left( (x-10)^2 - 30 = 0 \right) \quad \text{or} \quad \left( x = \frac{20 \pm \sqrt{(-20)^2 - 4 \times 1 \times 70}}{2} \right)
+
+x = 10 - \sqrt{30} (= p) \quad \text{or} \quad x = 10 + \sqrt{30} (= q)
+
+\text{distance} = 2\sqrt{30} \quad \left( \text{or} \ \sqrt{120} \right)
+
+(a = 2, \ b = 30) \quad \left( \text{or} \ a = 1, \ b = 120 \right)
+```
+
+=== PAIR 75 ===
+Unit: logs
+Question Number: seq
+Question: ```latex
+f(x) = a^x \quad \text{where} \quad x, a \in \mathbb{R} \quad \text{and} \quad x > 0, a > 1.
+```
+
+```latex
+\left( \frac{2}{3}, 4 \right)
+```
+
+```latex
+a = 8
+```
+
+```latex
+f^{-1}(x)
+```
+
+```latex
+f^{-1}\left(\sqrt{32}\right)
+```
+
+```latex
+\log_8 27, \log_8 p, \log_8 q, \log_8 125,
+```
+
+```latex
+27, p, q, 125
+```
+Answer: ```latex
+u_4 = u_1 r^3 \quad \text{OR} \quad 125 = 27(r)^3 \tag{M1}
+
+r = \frac{5}{3} \quad \text{(seen anywhere)} \tag{A1}
+
+p = 27r \quad \text{OR} \quad \frac{125}{q} = \frac{5}{3} \tag{M1}
+
+p = 45, \, q = 75 \tag{A1A1}
+
+u_4 = u_1 + 3d \quad \text{OR} \quad \log_8 125 = \log_8 27 + 3d \tag{M1}
+
+d = \log_8 \left( \frac{5}{3} \right) \quad \text{(seen anywhere)} \tag{A1}
+
+\log_8 p = \log_8 27 + \log_8 \left( \frac{5}{3} \right) \quad \text{OR} \quad \log_8 q = \log_8 27 + 2 \log_8 \left( \frac{5}{3} \right) \tag{M1}
+
+p = 45, \, q = 75 \tag{A1A1}
+
+pq = 125 \times 27 \quad \text{OR} \quad q^2 = 125p \quad \text{OR} \quad p^2 = 27q \tag{M1}
+
+q^2 = 125 \times \frac{125 \times 27}{q} \quad \text{OR} \quad p^2 = 27 \times \frac{125 \times 27}{p} \tag{M1}
+
+p = 45, \, q = 75 \tag{A1A1}
+```
+
+=== PAIR 76 ===
+Unit: logs
+Question Number: trig
+Question: ```latex
+\log_2(2 \sin x) + \log_2(\cos x) = -1, \text{ for } 2\pi < x < \frac{5\pi}{2}.
+```
+Answer: ```latex
+\log a + \log b = \log ab
+
+\log_2 (2 \sin x \cos x), \log 2 + \log (\sin x) + \log (\cos x)
+
+2 \sin x \cos x = 2^{-1}, \sin x \cos x = \frac{1}{4}, \sin 2x = \frac{1}{2}
+
+\log (\sin 2x), 2 \sin x \cos x = \sin 2x, \sin 2x = \frac{1}{2}
+
+\sin^{-1} \left( \frac{1}{2} \right) = \frac{\pi}{6} \quad (30^\circ)
+
+x = \frac{\pi}{12} + 2\pi, 2x = \frac{25\pi}{6}, \frac{29\pi}{6}, 750^\circ, 870^\circ, x = \frac{\pi}{12} \text{ and } x = \frac{5\pi}{12}
+
+x = \frac{25\pi}{12}, \frac{29\pi}{12}
+```
+
+=== PAIR 77 ===
+Unit: normal
+Question Number: 1
+Question: ```latex
+X
+R
+x
+P(X > 107)
+P(100 < X < 107)
+P(93 < X < 107)
+```
+Answer: ```latex
+z = -1.64485
+
+\sigma = \frac{x - \mu}{z}, \frac{4 - 10}{\sigma}
+
+-1.64 = \frac{4 - 10}{\sigma}, \frac{4 - 10}{-1.64}
+
+\sigma = 3.64774
+
+\sigma = 3.65
+
+1 - p, \ 0.62, \ \frac{w - 10}{3.65} = 0.305
+
+w = 11.1143
+
+w = 11.1
+
+95\% \text{ are delivered, } P(\text{medium} \mid \text{delivered}), \ 57 + 38
+
+0.57
+
+0.95
+
+\frac{57}{95}, \ 0.6, \ 60\%
+
+P(\text{large}) = 0.4, \ 40\%
+
+150 = \text{sales} - 300, \ \text{total sales} = \$450
+
+1.75(0.6x) + 3(0.4x), \ 1.75(0.6) + 3(0.4)
+
+1.75(0.6x) + 3(0.4x) = 450, \ 2.25x = 450
+```
+
+=== PAIR 78 ===
+Unit: normal
+Question Number: 2
+Question: ```latex
+\text{Mean for Group X: } \mu_X = 0.489
+\text{Standard deviation for Group X: } \sigma_X = 0.07
+
+\text{Mean for Group Y: } \mu_Y = 0.592
+\text{Standard deviation for Group Y: } \sigma
+
+\text{Probability for Group Y: } P(Y > 0.65) = 0.396
+
+\text{Percentage of participants in Group X: } 38\%
+```
+Answer: ```latex
+\begin{align*}
+9. \\
+(a) & \quad 0.010724 \\
+    & \quad 0.0107 \\
+(b) & \quad \text{correct } z\text{-value} \\
+    & \quad 0.263714 \ldots \\
+    & \quad \text{evidence of appropriate approach} \\
+    & \quad \frac{0.65 - 0.592}{\sigma}, \quad 0.264 = \frac{x - \mu}{\sigma} \\
+    & \quad \text{correct substitution} \\
+    & \quad \frac{0.65 - 0.592}{\sigma}, \quad \sigma = \frac{0.65 - 0.592}{0.264} \\
+    & \quad 0.219934 \\
+    & \quad \sigma = 0.220 \\
+(c) & \quad \text{correct work for } P(\text{group } X \text{ and } t > 0.65) \text{ or } P(\text{group } Y \text{ and } t > 0.65) \\
+    & \quad \text{(may be seen anywhere)} \\
+    & \quad P(\text{group } X) \times P(t > 0.65 \mid X), \quad P(X \cap t > 0.65) = 0.0107 \times 0.38 (= 0.004075), \\
+    & \quad P(Y \cap t > 0.65) = 0.396 \times 0.62 \\
+    & \quad \text{recognizing conditional probability (seen anywhere)} \\
+    & \quad P(X \mid t > 0.65), \quad P(A \mid B) = \frac{P(A \cap B)}{P(B)} \\
+    & \quad \text{valid approach to find } P(t > 0.65) \\
+    & \quad P(X \cap t > 0.65) + P(Y \cap t > 0.65) \\
+    & \quad \text{correct work for } P(t > 0.65) \\
+    & \quad 0.0107 \times 0.38 + 0.396 \times 0.62, \quad 0.249595 \\
+    & \quad \text{correct substitution into conditional probability formula} \\
+    & \quad \frac{0.0107 \times 0.38}{0.0107 \times 0.38 + 0.396 \times 0.62}, \quad \frac{0.004075}{0.249595} \\
+    & \quad 0.016327 \\
+    & \quad P(X \mid t > 0.65) = 0.0163270 \\
+\end{align*}
+```
+
+=== PAIR 79 ===
+Unit: normal
+Question Number: 3
+Question: ```latex
+P(A) = 0.70
+P(D) = 0.85
+P(A \cap D) = 0.65
+
+\text{(a) Show that event } A \text{ and event } D \text{ are not independent.}
+
+\text{(b) (i) Find } P(A \cap D').
+
+\text{(ii) Given that all passengers for a flight arrive on time, find the probability that the flight does not depart on time.}
+
+\text{The number of hours that pilots fly per week is normally distributed with a mean of 25 hours and a standard deviation } \sigma. \text{ 90\% of pilots fly less than 28 hours in a week.}
+
+\text{(c) Find the value of } \sigma.
+
+\text{(d) All flights have two pilots. Find the percentage of flights where both pilots flew more than 30 hours last week.}
+```
+Answer: ```latex
+z = 1.28155
+
+1.28155 = \frac{28 - 25}{\sigma}, \quad \frac{28 - 25}{1.28155}
+
+\sigma = 2.34
+
+P(X > 30) = 0.0163429
+
+\left[ P(X > 30) \right]^2, \quad (0.01634)^2, \quad B(2, 0.0163429), \quad 2.67E-4, \quad 2.66E-4
+
+0.0267090
+
+0.0267\%
+```
+
+=== PAIR 80 ===
+Unit: optimization
+Question Number: 1
+Question: ```latex
+h \, \text{cm}
+x \, \text{cm}
+41 \, \text{cm}^3
+S = \frac{82}{x} + 4\pi x^2
+\frac{dS}{dx}
+\frac{d^2S}{dx^2}
+x = a
+```
+Answer: ```latex
+\frac{d^2 S}{dx^2} = 164x^{-3} + 8\pi
+```
+
+```latex
+\frac{d^2 S}{dx^2} = 75.3982\ldots
+```
+
+```latex
+= 75.4 \ (=24\pi) > 0 \quad (75.7 \text{ from } a=1.48)
+```
+
+```latex
+\frac{d^2 S}{dx^2} > 0 \text{ at } x = a
+```
+
+```latex
+\text{minimum surface area} = 82.9 \ (\text{cm}^2)
+```
+
+=== PAIR 81 ===
+Unit: optimization
+Question Number: 2
+Question: ```latex
+x^2 + y^2 = 9
+
+y = \sqrt{9 - x^2}
+
+\frac{dA}{dx} = \frac{9 - 3x - 2x^2}{\sqrt{9 - x^2}}
+```
+Answer: ```latex
+\frac{d}{dx} \left( \frac{9 - 3x - 2x^2}{\sqrt{9 - x^2}} = 0 \right)
+
+9 - 3x - 2x^2 = 0
+
+-(2x - 3)(x + 3)(= 0) \quad \text{OR} \quad x = \frac{3 \pm \sqrt{(-3)^2 - 4(-2)(9)}}{2(-2)} \quad \text{(or equivalent)}
+
+x = \frac{3}{2}
+
+y = \sqrt{9 - x^2} \quad \text{or} \quad y = -\sqrt{9 - x^2}
+
+y = -\sqrt{9 - \left( \frac{3}{2} \right)^2}
+
+= -\frac{\sqrt{27}}{2} \left( = -\frac{3\sqrt{3}}{2}, = -\frac{\sqrt{27}}{4}, = -\sqrt{6.75} \right)
+```
+
+=== PAIR 82 ===
+Unit: probability
+Question Number: 1
+Question: ```latex
+\text{Let } C \text{ and } D \text{ be independent events, with } \text{P}(C) = 2k \text{ and } \text{P}(D) = 3k^2, \text{ where } 0 < k < 0.5.
+
+\text{(a) Write down an expression for } \text{P}(C \cap D) \text{ in terms of } k.
+
+\text{(b) Given that } \text{P}(C \cap D) = 0.162, \text{ find } k.
+
+\text{(c) Find } \text{P}(C' \mid D).
+```
+Answer: ```latex
+\text{P}(C \cap D) = 2k \times 3k^2
+
+\text{P}(C \cap D) = 6k^3
+
+2k \times 3k^2 = 0.162, \, 6k^3 = 0.162
+
+k = 0.3
+
+0.4 \times 0.27, \, 0.27 - 0.162, \, 0.108
+
+\text{P}(C' \cap D)
+
+\text{P}(C' \mid D) = \frac{\text{P}(C' \cap D)}{0.27}, \, \frac{(1 - 2k)(3k^2)}{3k^2}
+
+\text{P}(C' \mid D) = 0.4
+```
+
+=== PAIR 83 ===
+Unit: probability
+Question Number: 10
+Question: ```latex
+\begin{array}{|c|c|c|c|c|}
+\hline
+x & 1 & 2 & 3 & 4 \\
+\hline
+P(X = x) & p & 0.3 & q & 0.1 \\
+\hline
+\end{array}
+
+E(X) = 2
+
+P(X > 2)
+
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+s & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+P(S = s) & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} \\
+\hline
+\end{array}
+```
+Answer: ```latex
+\text{(e) METHOD 1}
+
+\text{EITHER}
+
+\text{P}(S=5) = \frac{4}{16}
+
+\text{P}(S=a+2) = \frac{4}{16}
+
+\Rightarrow a+2=5
+
+\text{OR}
+
+\text{P}(S=6) = \frac{3}{16}
+
+\text{P}(S=a+3) = \frac{2}{16} \quad \text{and} \quad \text{P}(S=5+1) = \frac{1}{16}
+
+\Rightarrow a+3=6
+
+\text{OR}
+
+\text{P}(S=4) = \frac{3}{16}
+
+\text{P}(S=a+1) = \frac{2}{16} \quad \text{and} \quad \text{P}(S=1+3) = \frac{1}{16}
+
+\Rightarrow a+1=4
+
+\text{THEN}
+
+\Rightarrow a=3
+```
+
+=== PAIR 84 ===
+Unit: probability
+Question Number: 11
+Question: ```latex
+\begin{array}{c|cccc}
+x & 1 & 2 & 3 & 4 \\
+\hline
+\mathbb{P}(X = x) & p & 0.3 & q & 0.1 \\
+\end{array}
+
+\mathbb{E}(X) = 2
+
+p = 0.4 \quad \text{and} \quad q = 0.2.
+
+\mathbb{P}(X > 2).
+
+\begin{array}{c|cccccccc}
+s & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+\mathbb{P}(S = s) & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} \\
+\end{array}
+```
+Answer: ```latex
+\text{(e) METHOD 1}
+
+\text{EITHER}
+
+\text{P}(S = 5) = \frac{4}{16}
+
+\text{P}(S = a + 2) = \frac{4}{16}
+
+\Rightarrow a + 2 = 5
+
+\text{OR}
+
+\text{P}(S = 6) = \frac{3}{16}
+
+\text{P}(S = a + 3) = \frac{2}{16} \quad \text{and} \quad \text{P}(S = 5 + 1) = \frac{1}{16}
+
+\Rightarrow a + 3 = 6
+
+\text{OR}
+
+\text{P}(S = 4) = \frac{3}{16}
+
+\text{P}(S = a + 1) = \frac{2}{16} \quad \text{and} \quad \text{P}(S = 1 + 3) = \frac{1}{16}
+
+\Rightarrow a + 1 = 4
+
+\text{THEN}
+
+\Rightarrow a = 3
+```
+
+=== PAIR 85 ===
+Unit: probability
+Question Number: 13
+Question: ```latex
+P(A) = 0.3
+```
+
+```latex
+P(B) = 0.8
+```
+
+```latex
+P(A \cap B)
+```
+Answer: ```latex
+P(A \cap B) = 0.24
+
+P(A \cup B) = 1.1 - P(A \cap B)
+
+0 \leq P(A \cup B) \leq 1
+
+P(A \cup B) = 1
+
+P(A \cap B)
+
+P(A \cap B) = P(A)
+
+P(A \cap B) = P(A)
+
+P(A \cap B)
+
+P(A \cap B) = P(A)
+```
+
+=== PAIR 86 ===
+Unit: probability
+Question Number: 14
+Question: ```latex
+\text{Events } A \text{ and } B \text{ are such that } \\
+P(A) = 0.4, \\
+P(A|B) = 0.25 \\
+\text{and } P(A \cup B) = 0.55. \\
+
+\text{Find } P(B).
+```
+Answer: ```latex
+\text{P}(A \cup B) = \text{P}(A) + \text{P}(B) - \text{P}(A \cap B)
+
+0.55 = 0.4 + \text{P}(B) - \text{P}(A \cap B)
+
+\text{P}(A|B) = \frac{\text{P}(A \cap B)}{\text{P}(B)} = 0.25
+
+0.55 = 0.4 + \text{P}(B) - 0.25\text{P}(B) \quad \text{OR} \quad \frac{\text{P}(B) - 0.15}{\text{P}(B)} = 0.25 \quad \text{OR} \quad \text{P}(B) - 0.15 = 0.25\text{P}(B)
+
+\text{P}(B) = \frac{15}{75} \left( = \frac{1}{5} = 0.2 \right)
+```
+
+=== PAIR 87 ===
+Unit: probability
+Question Number: 15
+Question: ```latex
+\text{Events } A \text{ and } B \text{ are such that } \text{P}(A) = 0.7, \text{P}(B) = 0.75 \text{ and } \text{P}(A \cap B) = 0.55.
+
+\text{(a) Find } \text{P}(A \cup B).
+
+\text{(b) Hence, or otherwise, find } \text{P}(A' \cap B').
+```
+Answer: ```latex
+\begin{align*}
+\text{(a)} \quad & \left( P(A \cup B) \right) = 0.7 + 0.75 - 0.55 \\
+& = 0.9 \\
+\\
+\text{(b)} \quad & \text{recognition that } A' \cap B' = (A \cup B)' \quad \text{OR} \quad A' \cap B' = 1 - A \cup B \\
+& \left( = 1 - 0.9 \right) \\
+& = 0.1 \\
+\\
+& \text{Note: For the final mark, 0.1 must be stated as the candidate's answer, or} \\
+& \text{labeled as } P(A' \cap B') \text{ in their Venn diagram. Just seeing an unlabeled} \\
+& \text{0.1 in the correct region of their diagram earns } M1A0.
+\end{align*}
+```
+
+=== PAIR 88 ===
+Unit: probability
+Question Number: 2
+Question: ```latex
+\begin{align*}
+&\text{In a group of } 35 \text{ students, some take art class } (A) \text{ and some take music class } (M). \\
+&5 \text{ of these students do not take either class.} \\
+&\text{This information is shown in the following Venn diagram.} \\
+&U \\
+&A \\
+&M \\
+&11 \\
+&6 \\
+&13 \\
+&5 \\
+&(a) \\
+&\text{Write down the number of students in the group who take art class.} \\
+&(b) \\
+&\text{One student from the group is chosen at random. Find the probability that} \\
+&(i) \\
+&\text{the student does not take art class;} \\
+&(ii) \\
+&\text{the student takes either art class or music class, but not both.} \\
+\end{align*}
+```
+Answer: ```latex
+(A \cap M') + (A \cap M), \frac{17}{35}, 11 + 6
+
+\text{number of students taking art class} = 17
+
+13 + 5, 35 - 17, 18, 1 - \text{P}(A)
+
+0.514285
+
+\text{P}(A') = \frac{18}{35} \text{ (exact)}, 0.514
+
+11 + 13, 35 - 6 - 5, 24
+
+0.685714
+
+\text{P}(A \text{ or } M \text{ but not both}) = \frac{24}{35} \text{ (exact)}, 0.686
+```
+
+=== PAIR 89 ===
+Unit: probability
+Question Number: 3
+Question: ```latex
+70\%
+20\%
+18\%
+
+48\%
+25\%
+
+P(G \cap T)
+G
+T
+```
+Answer: ```latex
+\text{(c)} \quad \text{P}(G \cap T) = \text{P}(T/G)\text{P}(G) \, (0.25 \times 0.48) \\
+= 0.12
+
+\text{(d) METHOD 1} \\
+\text{P}(G) \times \text{P}(T) \, (= 0.48 \times 0.2) = 0.096 \\
+\text{P}(G) \times \text{P}(T) \neq \text{P}(G \cap T) \Rightarrow \, G \, \text{and} \, T \, \text{are not independent}
+
+\text{METHOD 2} \\
+\text{P}(T|G) = 0.25 \\
+\text{P}(T|G) \neq \text{P}(T) \Rightarrow \, G \, \text{and} \, T \, \text{are not independent}
+```
+
+=== PAIR 90 ===
+Unit: probability
+Question Number: 4
+Question: ```latex
+P(A \cap B') = 0.16
+P(A' \cap B) = 0.36
+P(A \cap B) = x
+P(A' \mid B')
+```
+Answer: ```latex
+\text{recognising } \mathbb{P}(A' \mid B') = \mathbb{P}(A')
+
+= 1 - 0.16 - 0.24
+
+= 0.6
+
+\mathbb{P}(B) = 0.36 + 0.24 (= 0.6)
+
+\mathbb{P}(A' \mid B') = \frac{\mathbb{P}(A' \cap B')}{\mathbb{P}(B')} \left( = \frac{0.24}{0.4} \right)
+
+= 0.6
+```
+
+=== PAIR 91 ===
+Unit: probability
+Question Number: 5
+Question: ```latex
+P(A) = 3P(B)
+P(A \cup B) = 0.68
+```
+Answer: ```latex
+\begin{align*}
+\text{P}(A \cup B) &= \text{P}(A) + \text{P}(B) - \text{P}(A \cap B) = 0.68 \\
+\text{P}(A) + \text{P}(B) - \text{P}(A) \text{P}(B) &= ( = 0.68) \\
+3\text{P}(B) + \text{P}(B) - 3\text{P}(B) \text{P}(B) &= 0.68 \\
+\text{P}(B) &= 0.2, 1.133 \ldots \left( \frac{1}{5}, \frac{17}{15} \right) \\
+\text{P}(B) &= 0.2 \left( = \frac{1}{5} \right)
+\end{align*}
+```
+
+=== PAIR 92 ===
+Unit: probability
+Question Number: 6
+Question: ```latex
+P(A)
+```
+```latex
+P(D)
+```
+```latex
+P(A \cap D')
+```
+Answer: ```latex
+\text{METHOD 1}
+
+P(A) \text{ and } P(D)
+
+0.70 \times 0.85 , 0.595
+
+0.595 \neq 0.65 , 0.70 \times 0.85 \neq P(A \cap D)
+
+\text{METHOD 2}
+
+P(D \mid A)
+
+\frac{13}{14} , 0.928
+
+0.928 \neq 0.85 , \frac{0.65}{0.7} \neq P(D)
+
+P(A) - P(A \cap D) , 0.7 - 0.65
+
+P(A \cap D') = 0.05
+
+\frac{P(D' \cap A)}{P(A)} , P(A \mid B)
+
+\frac{0.05}{0.7}
+
+0.071428
+
+P(D' \mid A) = \frac{1}{14} , 0.0714
+```
+
+=== PAIR 93 ===
+Unit: probability
+Question Number: 7
+Question: ```latex
+n
+
+n = 25
+
+0.35
+
+k
+
+100
+```
+Answer: ```latex
+\text{P(at least one green)} = 1 - \text{P(three red)} \, \text{OR}
+
+\text{P(at least one G)} = \text{P(one G)} + \text{P(two G)} + \text{P(three G)}
+
+1 - \left( \frac{15}{25} \times \frac{14}{24} \times \frac{13}{23} \right) \, \text{OR} \, 3 \left( \frac{10}{25} \times \frac{15}{24} \times \frac{14}{23} \right) + 3 \left( \frac{10}{25} \times \frac{9}{24} \times \frac{15}{23} \right) + \left( \frac{10}{25} \times \frac{9}{24} \times \frac{8}{23} \right)
+
+0.802173\ldots
+
+\text{P(at least one green)} = 0.802 \, (\text{exact answer is } \frac{369}{460})
+
+\text{P(first green on third draw)} = \frac{15}{25} \times \frac{14}{24} \times \frac{10}{23} \times \frac{22}{22} = \left( \frac{7}{46} = 0.152173\ldots \right)
+
+\text{P(first green on fourth draw)} = \frac{15}{25} \times \frac{14}{24} \times \frac{13}{23} \times \frac{10}{22} = \left( \frac{91}{1012} = 0.0899209\ldots \right)
+
+\text{expected points per game} = 10 \times \frac{7}{46} + 50 \times \frac{91}{1012} = \left( \frac{3045}{506} = 6.01778\ldots \right)
+
+\frac{3045}{506} k > 100
+
+k > 16.6174\ldots \left( = \frac{10120}{609} \right)
+```
+
+=== PAIR 94 ===
+Unit: probability
+Question Number: 8
+Question: ```latex
+\begin{array}{|c|c|c|c|}
+\hline
+& M \, (\text{milk chocolate}) & D \, (\text{dark chocolate}) & \text{Total} \\
+\hline
+C \, (\text{children}) & 48 & p & 60 \\
+\hline
+A \, (\text{adults}) & x & y & q \\
+\hline
+\end{array}
+
+\begin{align*}
+\text{(a) Find the value of} \\
+\quad \text{(i)} \quad & p; \\
+\quad \text{(ii)} \quad & q. \\
+\text{(b)} \quad & \text{Three people are chosen at random from those surveyed. Find the probability that all three are adults.} \\
+\text{(c)} \quad & \text{(i) Given that } P(A|M) = \frac{1}{3}, \text{ find the value of } x. \\
+& \text{(ii) A person is chosen at random from those surveyed. Write down the probability that they are an adult who prefers milk chocolate.} \\
+\text{(d)} \quad & \text{Determine if the events } A \text{ and } M \text{ are independent. Justify your answer.}
+\end{align*}
+```
+Answer: ```latex
+\text{METHOD 1 (using } P(A \mid B) = P(A) \text{)}
+\quad (M1)
+
+\frac{1}{3} \neq \frac{100}{160}
+\quad R1
+
+\text{so they are not independent}
+\quad A1
+
+\text{METHOD 2 (using } P(A) \cdot P(B) = P(A \cap B) \text{)}
+
+\text{attempt to find the product } P(A) \times P(M) \text{ OR } P(A) \times P(D)
+\quad (M1)
+
+\frac{100}{160} \times \frac{72}{160} \neq \frac{24}{160} \left( \frac{9}{32} \neq \frac{3}{20} \right)
+\quad \text{OR} \quad
+\frac{100}{160} \times \frac{88}{160} \neq \frac{76}{160} \left( \frac{11}{32} \neq \frac{19}{40} \right)
+\quad R1
+
+\text{so they are not independent}
+\quad A1
+
+\text{Note: Do not award } R0A1.
+```
+
+=== PAIR 95 ===
+Unit: probability
+Question Number: 9
+Question: ```latex
+\text{Box 1 contains 5 red balls and 2 white balls.}
+\text{Box 2 contains 4 red balls and 3 white balls.}
+
+\text{(a) A box is chosen at random and a ball is drawn. Find the probability that the ball is red.}
+
+\text{Let } A \text{ be the event that “box 1 is chosen” and let } R \text{ be the event that “a red ball is drawn”.}
+
+\text{(b) Determine whether events } A \text{ and } R \text{ are independent.}
+```
+Answer: ```latex
+\text{valid approach to find } \text{P}(R) \\
+\text{tree diagram (must include probability of picking box) with correct required probabilities} \\
+\text{OR } \text{P}(R \cap B_1) + \text{P}(R \cap B_2) \text{ OR } \text{P}(R \mid B_1)\text{P}(B_1) + \text{P}(R \mid B_2)\text{P}(B_2) \\
+
+\frac{5}{7} \cdot \frac{1}{2} + \frac{4}{7} \cdot \frac{1}{2} \\
+
+\text{P}(R) = \frac{9}{14} \\
+
+\text{events } A \text{ and } R \text{ are not independent, since } \frac{9}{14} \cdot \frac{1}{2} \neq \frac{5}{14} \text{ OR } \frac{5}{7} \neq \frac{9}{14} \text{ OR } \frac{5}{9} \neq \frac{1}{2}
+```
+
+=== PAIR 96 ===
+Unit: probability
+Question Number: dist
+Question: ```latex
+\begin{array}{c|cccc}
+x & 0 & 1 & 2 & 3 \\
+\hline
+P(X = x) & q & 4p^2 & p & 0.7 - 4p^2 \\
+\end{array}
+
+\text{(a) Find an expression for } q \text{ in terms of } p.
+
+\text{(b) (i) Find the value of } p \text{ which gives the largest value of } \mathbb{E}(X).
+
+\text{(ii) Hence, find the largest value of } \mathbb{E}(X).
+```
+Answer: ```latex
+q + 4p^2 + p + 0.7 - 4p^2 = 1, \ 1 - 4p^2 - p - 0.7 + 4p^2
+
+q = 0.3 - p
+
+0 \times (0.3 - p) + 1 \times 4p^2 + 2 \times p + 3 \times (0.7 - 4p^2)
+
+8p + 2 + 3 \times (-8p) = 0, \ \frac{-b}{2a} = \frac{-2}{2 \times (-8)}
+
+p = \frac{1}{8} \ (= 0.125) \ (\text{exact}) \ (\text{accept} \ x = \frac{1}{8})
+
+2.225
+
+\frac{89}{40} \ (\text{exact}), \ 2.23
+```
+
+=== PAIR 97 ===
+Unit: quadratics
+Question Number: 1
+Question: ```latex
+f(x) = a(x - p)(x - 3)
+x = 2.5
+(0, -6)
+```
+Answer: ```latex
+f(x) = a(x - p)(x - 3)
+x = 2.5
+(0, -6)
+```
+
+=== PAIR 98 ===
+Unit: quadratics
+Question Number: 2
+Question: ```latex
+f(x) = x^2 - 4x - 5
+
+f(x) = (x-h)^2 + k
+
+\begin{pmatrix}
+-3 \\
+6
+\end{pmatrix}
+```
+Answer: ```latex
+\text{vertex of } f \text{ is at } (2, -9) \quad (A1)
+
+x = -2, \, (-2, -9) \quad (A1)
+
+x - 3, \, y + 6, \, \begin{pmatrix} -2 \\ -9 \end{pmatrix} + \begin{pmatrix} -3 \\ 6 \end{pmatrix} \quad (M1)
+
+\text{vertex of } g \text{ is } (-5, -3) \, (\text{accept } x = -5, \, y = -3) \quad A1A1 \, N1N1
+
+f(-x) \quad (A1)
+
+(-x)^2 - 4(-x) - 5, \, x^2 + 4x - 5, \, (-x - 2)^2 - 9 \quad (A1)
+
+(x + 3)^2 + 4(x + 3) - 5 + 6, \, x^2 + 10x + 22, \, (x + 5)^2 - 3 \quad (M1)
+
+\text{vertex of } g \text{ is } (-5, -3) \, (\text{accept } x = -5, \, y = -3) \quad A1A1 \, N1N1
+```
+
+=== PAIR 99 ===
+Unit: quadratics
+Question Number: 3
+Question: ```latex
+\text{Let } f(x) = 9 - x^2, \, x \in \mathbb{R}.
+
+\text{(a) Find the } x\text{-intercepts of the graph of } f.
+
+\text{Let } OP = b.
+
+\text{(b) Show that the area of PQRS is } 18b - 2b^3.
+
+\text{Consider another function } g(x) = (x - 3)^2 + k, \, x \in \mathbb{R}.
+
+\text{(d) Show that when the graphs of } f \text{ and } g \text{ intersect, } 2x^2 - 6x + k = 0.
+```
+Answer: ```latex
+\Delta, \ b^2 - 4ac
+
+(-6)^2 - 4(2)(k), \ (6)^2 - 4(2)(k)
+
+36 - 8k = 0, \ 8k = 36
+
+k = \frac{36}{8} \left( = \frac{9}{2}, \ 4.5 \right)
+
+2 \left( x^2 - 3x + \frac{9}{4} \right) = -k + \frac{18}{4}, \ x^2 - 3x + \frac{9}{4} - \frac{9}{4} + \frac{k}{2} = 0
+
+2 \left( x - \frac{3}{2} \right)^2 = -k + \frac{18}{4}, \ \left( x - \frac{3}{2} \right)^2 - \frac{9}{4} + \frac{k}{2} = 0
+
+\left( x - \frac{3}{2} \right)^2 = 0, \ -\frac{9}{4} + \frac{k}{2} = 0
+
+-k = \frac{18}{4}, \ \frac{k}{2} = \frac{9}{4}
+
+k = \frac{18}{4} \left( = \frac{9}{2}, \ 4.5 \right)
+```
+
+=== PAIR 100 ===
+Unit: quadratics
+Question Number: 4
+Question: ```latex
+g(x) = x^2 + bx + 11
+(-1, 8)
+b
+f(x) = x^2
+g
+```
+Answer: ```latex
+g(-1) = 8
+
+(-1)^2 + b(-1) + 11 = 8, \, 1 - b + 11 = 8
+
+b = 4
+
+(x^2 + 4x + 4) + 7, \, h = \frac{-4}{2}, \, k = g(-2)
+
+(x+2)^2 + 7, \, h = -2, \, k = 7
+
+\begin{pmatrix} -2 \\ 7 \end{pmatrix}
+```
+
+=== PAIR 101 ===
+Unit: quadratics
+Question Number: 5
+Question: ```latex
+f(x) = -x^2 + 4x + 5
+```
+
+```latex
+g(x) = -f(x) + k
+```
+
+```latex
+g(x) = 0
+```
+Answer: ```latex
+\begin{align*}
+&\text{METHOD 1 -- (discriminant)} \\
+&\text{correct expression for } g \\
+&\text{eg} \quad -\left(-x^2 + 4x + 5\right) + k, \quad x^2 - 4x - 5 + k = 0 \\
+&\text{evidence of discriminant} \\
+&\text{eg} \quad b^2 - 4ac, \quad \Delta \\
+&\text{correct substitution into discriminant of } g \\
+&\text{eg} \quad (-4)^2 - 4(1)(-5 + k), \quad 16 - 4(k - 5) \\
+&\text{recognizing discriminant is negative} \\
+&\text{eg} \quad \Delta < 0, \quad (-4)^2 - 4(1)(-5 + k) < 0, \quad 16 < 4(k - 5), \quad 16 - 4(-1)(5) < 0 \\
+&\text{correct working (must be correct inequality)} \\
+&\text{eg} \quad -4k < -36, \quad k - 5 > 4, \quad 16 + 20 - 4k < 0 \\
+&k > 9 \\
+
+&\text{METHOD 2 -- (transformation of vertex of } f) \\
+&\text{valid approach for finding } f(x) \text{ vertex} \\
+&\text{eg} \quad -\frac{b}{2a} = 2, \quad f'(x) = 0 \\
+&\text{correct vertex of } f(x) \\
+&\text{eg} \quad (2, 9) \\
+&\text{correct vertex of } -f(x) \\
+&\text{eg} \quad (2, -9) \\
+&\text{correct vertex of } g(x) \\
+&\text{eg} \quad \begin{pmatrix} 2 \\ -9 \end{pmatrix} + \begin{pmatrix} 0 \\ k \end{pmatrix}, \quad (2, -9 + k) \\
+&\text{recognizing when vertex is above x-axis} \\
+&\text{eg} \quad -9 + k > 0, \quad \text{sketch} \\
+&k > 9 \\
+\end{align*}
+```
+
+=== PAIR 102 ===
+Unit: quadratics
+Question Number: 6
+Question: ```latex
+f(x) = (1-k)x^2 + x + k, \, x \in \mathbb{R}
+```
+Answer: ```latex
+1 - 4(1-k)k
+1 - 4k + 4k^2, \quad 4k^2 - 4k = -1
+\Delta = 0, \quad b^2 - 4ac = 0
+(2k-1)^2, \quad \frac{-(-4) \pm \sqrt{16 - 4(4)(1)}}{2(4)}, \quad \left( \frac{k-1}{2} \right)^2 = 0, \quad k = \frac{-(-4)}{2(4)}
+k = \frac{1}{2}
+```
+
+=== PAIR 103 ===
+Unit: quadratics
+Question Number: 7
+Question: ```latex
+f(x) = -2(x - 1)(x + 3), \text{ for } x \in \mathbb{R}.
+```
+
+```latex
+f(x) = -2(x - h)^2 + k.
+```
+Answer: ```latex
+f(x) = 0
+
+x = 1, \, x = -3 \, \text{(accept } (1,0), (-3,0) \text{)}
+
+x = -1
+
+y = 8
+
+(-1, 8)
+
+-2 \left( (x+1)^2 - 4 \right)
+
+x = -1, \, y = 8
+
+(-1, 8)
+
+h = -1
+
+k = 8
+```
+
+=== PAIR 104 ===
+Unit: quadratics
+Question Number: 8
+Question: ```latex
+f(x) = mx^2 - 2mx, \quad x \in \mathbb{R} \text{ and } m \in \mathbb{R}.
+```
+
+```latex
+y = mx - 9
+```
+
+```latex
+m = 4
+```
+
+```latex
+f(x) = 4(x-p)(x-q), \quad p, q \in \mathbb{R}.
+```
+
+```latex
+f(x) = 4(x-h)^2 + k, \quad h, k \in \mathbb{R}.
+```
+Answer: ```latex
+\text{METHOD 3 (using } \frac{-b}{2a} \text{)}
+
+mx^2 - 2mx = mx - 9 \quad (M1)
+
+mx^2 - 3mx + 9 = 0
+
+\text{attempt to find } x\text{-coord of vertex using } \frac{-b}{2a} \quad (M1)
+
+\frac{-(-3m)}{2m}
+
+x = \frac{3}{2} \quad A1
+
+\text{substituting their } x \text{ value} \quad (M1)
+
+\left( \frac{3}{2} \right)^2 m - 3m \times \frac{3}{2} + 9 = 0
+
+\frac{9}{4} m - \frac{9}{2} m + 9 = 0 \quad A1
+
+-9m = -36
+
+m = 4 \quad AG
+
+\text{[6 marks]}
+
+(b) \quad 4x(x-2) \quad (A1)
+
+p = 0 \text{ and } q = 2 \text{ OR } p = 2 \text{ and } q = 0 \quad A1
+
+\text{[2 marks]}
+
+(c) \quad \text{attempt to use valid approach} \quad (M1)
+
+\frac{0+2}{2}, \frac{-(-8)}{2 \times 4}, \, f(1), \, 8x - 8 = 0 \text{ OR } 4(x^2 - 2x + 1 - 1) \left( = 4(x-1)^2 - 4 \right) \quad A1A1
+
+h = 1, \, k = -4
+
+\text{[3 marks]}
+
+(d) \quad \text{EITHER}
+
+\text{recognition } x = h \text{ to 2 (may be seen on sketch)} \quad (M1)
+
+\text{OR}
+
+\text{recognition that } f(x) < 0 \text{ and } f'(x) > 0 \quad (M1)
+
+\text{THEN}
+
+1 < x < 2 \quad A1A1
+
+\text{[3 marks]}
+
+\text{Total [14 marks]}
+```
+
+=== PAIR 105 ===
+Unit: quadratics
+Question Number: 9
+Question: ```latex
+f(x) = a(x-h)^2 + k.
+
+g(x) = px^2 + (t-1)x - p \quad \text{where} \quad x \in \mathbb{R} \quad \text{and} \quad p, t \in \mathbb{R}, p \neq 0.
+
+g(-3) = g(1) = 4,
+
+j(x) = -x + 3p \quad \text{where} \quad x \in \mathbb{R} \quad \text{and} \quad p \in \mathbb{R}, p \neq 0.
+
+j(x) = -x + 3p \quad \text{and} \quad g(x) = px^2 + (t-1)x - p
+```
+Answer: ```latex
+g(x) = j(x) \quad \text{OR} \quad px^2 + (t-1)x - p = -x + 3p
+
+px^2 + tx - 4p = 0
+
+\Delta = t^2 + 16p^2
+
+\Delta = t^2 + 16p^2 > 0, \text{ because } t^2 \geq 0 \text{ and } p^2 > 0
+```
+
+=== PAIR 106 ===
+Unit: quadratics
+Question Number: calc
+Question: ```latex
+L \quad f \quad y \quad x \quad Q \quad P \quad (-2, -5)
+
+y = ax + b
+```
+Answer: ```latex
+\frac{1}{4}(x+2)^2 - 5 = -x - 4
+
+\frac{1}{4}x^2 + 2x = 0 \quad \text{(or equivalent)}
+
+\frac{1}{4}x(x+8) = 0 \quad \text{OR} \quad x(x+8) = 0
+
+x = -8
+
+x = -8 \quad \text{and} \quad x = 0
+
+y = -(-8) - 4 \quad \text{or} \quad y = \frac{1}{4}(-8+2)^2 - 5
+
+Q(-8, 4)
+
+\sqrt{(-8-0)^2 + (4-(-4))^2}
+
+\text{distance} = \sqrt{128} \quad (= 8\sqrt{2})
+```
+
+=== PAIR 107 ===
+Unit: quadratics
+Question Number: logs
+Question: ```latex
+e^{2x} + \ln k = 3e^x
+```
+Answer: ```latex
+\text{recognition of quadratic in } e^x
+
+\left(e^x\right)^2 - 3e^x + \ln k (=0) \quad \text{OR} \quad A^2 - 3A + \ln k (=0)
+
+\text{recognizing discriminant } \geq 0 \text{ (seen anywhere)}
+
+(-3)^2 - 4(1)(\ln k) \quad \text{OR} \quad 9 - 4 \ln k
+
+\ln k \leq \frac{9}{4}
+
+e^{9/4} \text{ (seen anywhere)}
+
+0 < k \leq e^{9/4}
+```
+
+=== PAIR 108 ===
+Unit: quadratics
+Question Number: optimization
+Question: ```latex
+f(x) = 15 - x^2, \text{ for } x \in \mathbb{R}.
+```
+Answer: ```latex
+\text{OA} \times \text{OC}, \, x \times f(x), \, f(x) \times (-x)
+
+\text{area} = x(15-x^2), \, 15x-x^3, \, x^3-15x
+
+A'(x) = 0
+
+15 - 3x^2, \, (15-x^2) + x(-2x) = 0, \, -15 + 3x^2
+
+15 = 3x^2, \, x^2 = 5, \, x = \sqrt{5}
+
+x = -\sqrt{5} \quad (\text{accept } A(-\sqrt{5},0))
+```
+
+=== PAIR 109 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+y = f(x)
+```
+Answer: ```latex
+y
+x = 2
+\left( 0, \frac{3}{2} \right)
+y = 1
+(3, 0)
+y = 1 - \frac{1}{x - 2}
+```
+
+=== PAIR 110 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{4x+1}{x+4}, \quad x \in \mathbb{R}, \, x \neq -4.
+
+f^{-1}(x).
+
+x = p \quad \text{and} \quad x = q, \quad p < q.
+
+p \quad \text{and the value of} \quad q.
+```
+Answer: ```latex
+f(x) = f^{-1}(x)
+
+p = -1 \quad \text{AND} \quad q = 1
+```
+
+=== PAIR 111 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+y
+x
+
+\text{Note: Award } A1 \text{ for completely correct shape: two branches in correct quadrants with asymptotic behaviour.}
+
+A1
+
+[1 \text{ mark}]
+\text{Total } [5 \text{ marks}]
+```
+Answer: ```latex
+x = 3
+```
+
+```latex
+y = -2
+```
+
+```latex
+(-2, 0) \quad (\text{accept } x = -2)
+```
+
+```latex
+\left( 0, \frac{4}{3} \right) \quad (\text{accept } y = \frac{4}{3} \text{ and } f(0) = \frac{4}{3})
+```
+
+=== PAIR 112 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+x = -1
+y = 2
+x = \frac{1}{2}
+y = -1
+x > \frac{1}{2}
+\left( \frac{1}{2}, \infty \right)
+\left] \frac{1}{2}, \infty \right[
+```
+Answer: ```latex
+x = -1
+y = 2
+```
+
+=== PAIR 113 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{2x-1}{x+1}, \quad x \in \mathbb{R}, \, x \neq -1.
+
+y = f(x)
+
+0 < \frac{2x-1}{x+1} < 2.
+```
+Answer: ```latex
+x > \frac{1}{2}
+\left( \frac{1}{2}, \infty \right)
+\left] \frac{1}{2}, \infty \right[
+```
+
+=== PAIR 114 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{1}{x-4} + 1, \quad \text{for } x \neq 4
+```
+
+```latex
+g(x) = x - 3, \quad \text{for } x \in \mathbb{R}
+```
+
+```latex
+(3, 0)
+```
+Answer: ```latex
+\frac{1}{x-4} + 1 = x - 3
+
+x^2 - 8x + 15 = 0 \quad \text{OR} \quad (x-4)^2 = 1
+
+(x-3)(x-5) = 0 \quad \text{OR} \quad x = \frac{8 \pm \sqrt{8^2 - 4(1)(15)}}{2(1)} \quad \text{OR} \quad (x-4) = \pm 1
+
+x = 5 \quad (x = 3, \, x = 5) \quad \text{(may be seen in answer)}
+
+B(5, 2) \quad \text{(accept } x = 5, \, y = 2 \text{)}
+```
+
+=== PAIR 115 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{1}{x-4} + 1, \text{ for } x \neq 4
+```
+
+```latex
+g(x) = x - 3 \text{ for } x \in \mathbb{R}
+```
+
+```latex
+(3, 0)
+```
+Answer: ```latex
+\frac{1}{x-4} + 1 = x - 3
+
+x^2 - 8x + 15 = 0 \quad \text{OR} \quad (x-4)^2 = 1
+
+(x-3)(x-5) = 0 \quad \text{OR} \quad x = \frac{8 \pm \sqrt{8^2 - 4(1)(15)}}{2(1)} \quad \text{OR} \quad (x-4) = \pm 1
+
+x = 5 \quad (x = 3, x = 5)
+
+B(5, 2) \quad (\text{accept } x = 5, y = 2)
+```
+
+=== PAIR 116 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{7x+7}{2x-4} \quad \text{for } x \in \mathbb{R}, x \neq 2.
+```
+
+```latex
+f(x)
+```
+
+```latex
+y = f(x)
+```
+
+```latex
+f^{-1}(x)
+```
+Answer: ```latex
+f(x) = 0
+
+x = -1
+
+x = 2
+
+y = \frac{7}{2}
+
+2xy - 4x = 7y + 7
+
+2xy - 7y = 4x + 7
+
+2yx - 4y = 7x + 7
+
+2yx - 7x = 4y + 7
+
+x = \frac{4y + 7}{2y - 7}
+
+f^{-1}(x) = \frac{4x + 7}{2x - 7} \quad \left( x \neq \frac{7}{2} \right)
+```
+
+=== PAIR 117 ===
+Unit: rational
+Question Number: functions
+Question: ```latex
+f(x) = \frac{6x - 1}{2x + 3}, \text{ for } x \neq -\frac{3}{2}.
+```
+Answer: ```latex
+f(0)
+
+-\frac{1}{3}
+
+\left(0, -\frac{1}{3}\right)
+
+x = -\frac{3}{2}
+
+\frac{6}{2}
+
+f(x) = 3 - \frac{10}{2x+3}
+
+y = 3
+```
+
+=== PAIR 118 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_1 = 0.64, \, u_2 = 1.6, \, u_3 = 4
+
+\text{(a) Find the value of } r.
+
+\text{(b) Find the value of } S_6.
+
+\text{(c) Find the least value of } n \text{ such that } S_n > 75000.
+```
+Answer: ```latex
+\log x^n = n \log x
+
+16 \ln x
+
+\frac{u_{n+1}}{u_n}, \frac{\ln x^8}{\ln x^{16}}, \frac{4 \ln x}{8 \ln x}, \ln x^4 = \ln x^{16} \times r^2
+
+r = \frac{1}{2}
+
+2^4 \ln x + 2^3 \ln x, \frac{a}{1-r}, S_\infty, 16 \ln x + \ldots
+
+r = \frac{1}{2}
+
+\frac{2^4 \ln x}{1 - \frac{1}{2}}, \frac{\ln x^{16}}{\frac{1}{2}}, 32 \ln x
+
+\ln x = 2
+
+x = e^2
+```
+
+=== PAIR 119 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_n = 15 - 3n
+u_1
+-33
+n
+d
+```
+Answer: ```latex
+u_1 = 12
+
+15 - 3n = -33
+
+n = 16
+
+u_2 - u_1 = 9 - 12
+
+-33 = 12 + 15d
+
+d = -3
+```
+
+=== PAIR 120 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_8 = S_8 = 8
+u_1
+d
+```
+Answer: ```latex
+4(u_1 + 8) = 8
+
+u_1 = -6
+
+u_1 + 7d = 8 \text{ OR } 4(2u_1 + 7d) = 8
+
+d = 2
+
+u_1 + 7d = 8
+
+4(u_1 + 8) = 8 \text{ OR } 4(2u_1 + 7d) = 8 \text{ OR } u_1 = -3d
+
+u_1 = -6, d = 2
+```
+
+=== PAIR 121 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_1, u_2, u_3, \ldots
+
+S_n = n^2 + 4n
+
+S_6 = 60, \quad u_6
+
+u_1
+
+u_n
+
+v_n, \quad v_2 = u_1, \quad v_4 = u_6
+
+r
+
+v_{99} < 0, \quad v_5
+```
+Answer: ```latex
+d = 2
+
+S_n - S_{n-1}
+
+n^2 + 4n - (n^2 - 2n + 1 + 4n - 4)
+
+n^2 + 4n = \frac{n}{2}(5 + u_n)
+
+2n + 8 = 5 + u_n
+
+u_n = 5 + 2(n - 1) \quad \text{OR} \quad u_n = 2n + 3
+
+v_2 r^2 = v_4 \quad \text{OR} \quad (v_3)^2 = v_2 \times v_4
+
+r^2 = 3 \quad \text{OR} \quad v_3 = (\pm) \sqrt{3}
+
+r = \pm \sqrt{3}
+
+v_5 = -15 \sqrt{3} \left( = -\frac{45}{\sqrt{3}} \right)
+```
+
+=== PAIR 122 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+S_n = pn^2 - qn
+S_5 = 65
+S_6 = 96
+```
+Answer: ```latex
+65 = 25p - 5q \quad (13 = 5p - q) \quad \text{and} \quad 96 = 36p - 6q \quad (16 = 6p - q)
+
+p = 3, \quad q = 2
+
+S_n = 3n^2 - 2n
+
+65 = \frac{5}{2} (2u_1 + 4d) \quad (26 = 2u_1 + 4d) \quad \text{and} \quad 96 = 3(2u_1 + 5d) \quad (32 = 2u_1 + 5d)
+
+u_1 = 1, \quad d = 6
+
+S_n = \frac{n}{2} (2 + 6(n-1)) = 3n^2 - 2n
+
+p = 3 \quad \text{and} \quad q = 2
+
+u_6 = S_6 - S_5 \quad \text{OR substituting their values of} \quad u_1 \quad \text{and} \quad d \quad \text{into} \quad u_6 = u_1 + 5d
+
+96 = \frac{6}{2} (u_1 + u_6)
+
+(u_6 =) 96 - 65 \quad \text{OR} \quad (u_6 =) 1 + 5 \times 6 \quad \text{OR} \quad 96 = 3(1 + u_6)
+
+= 31
+```
+
+=== PAIR 123 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+\text{The sum of an infinite geometric sequence is } 33.25. \text{ The second term of the sequence is } 7.98. \\
+\text{Find the possible values of } r.
+```
+Answer: ```latex
+33.25 = \frac{u_1}{1-r}
+
+7.98 = u_1 r
+
+u_1 = \frac{7.98}{r}, \quad u_1 = 33.25(1-r), \quad r = \frac{7.98}{u_1}, \quad r = \frac{33.25-u_1}{33.25}
+
+\frac{\left(\frac{7.98}{r}\right)}{1-r} = 33.25, \quad 33.25(1-r) = \frac{7.98}{r}, \quad (0.4, 19.95), \quad (0.6, 13.3), \quad \frac{\frac{u_1}{7.98}}{1-\frac{u_1}{7.98}} = 33.25
+
+r = 0.4 \left(= \frac{2}{5}\right), \quad r = 0.6 \left(= \frac{3}{5}\right)
+```
+
+=== PAIR 124 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_1 = 1.3, \quad u_2 = 1.4, \quad u_k = 31.2
+```
+
+```latex
+k
+```
+
+```latex
+S_k
+```
+
+```latex
+u_n, \quad n \leq k
+```
+
+```latex
+F
+```
+
+```latex
+F = 3240
+```
+
+```latex
+S_\infty = a + \frac{a}{\sqrt{2}} + \frac{a}{2} + \ldots, \quad a \in \mathbb{Z}^+
+```
+
+```latex
+a, \quad S_\infty < F
+```
+Answer: ```latex
+\frac{1}{\sqrt{2}}, \, 0.707106\ldots, \, \frac{a}{0.293\ldots}
+
+\frac{a}{1 - \frac{1}{\sqrt{2}}} < 3240
+
+3240 \times \left( 1 - \frac{1}{\sqrt{2}} \right), \, a < 948.974, \, 948.974
+
+a = 948, \, S_\infty = 3236.67\ldots \quad \text{AND} \quad a = 949, \, S_\infty = 3240.08\ldots
+
+a = 948
+```
+
+=== PAIR 125 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_1 = a
+```
+
+```latex
+u_2 = \frac{1}{4}a^2 - 3a
+```
+
+```latex
+a > 0
+```
+
+```latex
+S_\infty = 76
+```
+Answer: ```latex
+\frac{1}{4}a^2 - 3a
+
+\frac{u_1}{u_2}, \frac{\frac{1}{4}a^2 - 3a}{a}
+
+r = \frac{1}{4}a - 3
+
+\left| r \right| < 1
+
+\left| \frac{1}{4}a - 3 \right| < 1, -1 \leq \frac{1}{4}a - 3 \leq 1, -4 < a - 12 < 4
+
+8 < a < 16
+
+\frac{\frac{a}{1 - \left( \frac{1}{4}a - 3 \right)}} = 76, a = 76 \left( 4 - \frac{1}{4}a \right)
+
+a = \frac{76}{5} \left( = 15.2 \right) \text{ (exact)}
+```
+
+=== PAIR 126 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+60
+-2.5
+k^{\text{th}}
+k
+S_n
+n
+S_n
+```
+Answer: ```latex
+u_1 + (n-1)d = 0
+
+60 - 2.5(k-1) = 0
+
+k = 25
+
+S_n
+
+= 750
+
+n = 25
+
+S_{25} = \frac{25}{2}(60 + 0), \quad S_{25} = \frac{25}{2}(2 \times 60 + 24 \times -2.5)
+
+S_{24} = \frac{24}{2}(2 \times 60 + 23 \times -2.5)
+
+= 750
+```
+
+=== PAIR 127 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+S_n = \sum_{r=1}^{n} \frac{2}{3} \left( \frac{7}{8} \right)^r
+
+u_1
+
+S_\infty
+
+S_\infty - S_n < 0.001
+```
+Answer: ```latex
+u_1 = S_1 = \frac{2}{3} \times \frac{7}{8}
+
+= \frac{14}{24} \left( = \frac{7}{12} = 0.583333\ldots \right)
+
+r = \frac{7}{8} \left( = 0.875 \right)
+
+S_\infty = \frac{u_1}{1-r}
+
+= \frac{14}{3} \left( = 4.66666\ldots \right)
+
+\frac{14}{3} - \sum_{r=1}^{n} \frac{2}{3} \left( \frac{7}{8} \right)^r < 0.001 \quad \text{OR} \quad S_n = \frac{7}{12} \left( 1 - \left( \frac{7}{8} \right)^n \right) \left( \frac{1}{1-\frac{7}{8}} \right)
+
+S_\infty - S_{63} = 0.001036\ldots \quad \text{OR} \quad S_\infty - S_{64} = 0.000906\ldots
+
+S_\infty - S_{63} - 0.001 = 0.0000363683\ldots \quad \text{OR} \quad S_\infty - S_{64} - 0.001 = -0.0000931777\ldots
+```
+
+=== PAIR 128 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+50
+86.4
+S_n
+n
+S_n > 33500
+```
+Answer: ```latex
+86.4 = 50r^3
+
+r = 1.2 = \sqrt[3]{\frac{86.4}{50}} \text{ seen anywhere}
+
+\frac{50(1.2^n - 1)}{0.2} > 33500 \quad \text{OR} \quad 250(1.2^n - 1) = 33500
+
+S_n
+
+n > 26.9045, \, n = 26.9 \quad \text{OR} \quad S_{26} = 28368.8 \quad \text{OR} \quad S_{27} = 34092.6
+
+n = 27 \quad \text{accept} \, n \geq 27
+```
+
+=== PAIR 129 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_8 = S_8 = 8
+u_1
+d
+```
+Answer: ```latex
+4(u_1 + 8) = 8 \\
+u_1 = -6 \\
+u_1 + 7d = 8 \quad \text{OR} \quad 4(2u_1 + 7d) = 8 \\
+d = 2 \\
+
+u_1 + 7d = 8 \\
+4(u_1 + 8) = 8 \quad \text{OR} \quad 4(2u_1 + 7d) = 8 \quad \text{OR} \quad u_1 = -3d \\
+u_1 = -6, d = 2
+```
+
+=== PAIR 130 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_n = 15 - 3n
+u_1
+-33
+n
+d
+```
+Answer: ```latex
+u_1 = 12
+
+15 - 3n = -33
+
+n = 16
+
+u_2 - u_1 = 9 - 12 \quad \text{OR} \quad \text{recognize gradient is } -3 \quad \text{OR} \quad \text{attempts to solve}
+
+-33 = 12 + 15d
+
+d = -3
+```
+
+=== PAIR 131 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+\ln x + p \ln x + \frac{1}{3} \ln x + \ldots
+
+p = \pm \frac{1}{\sqrt{3}}
+
+p > 0 \quad \text{and} \quad S_{\infty} = 3 + \sqrt{3}
+
+p = \frac{2}{3}
+
+d = k \ln x, \quad k \in \mathbb{Q}
+
+-3 \ln x
+```
+Answer: ```latex
+S_n = \frac{n}{2} \left[ 2 \ln x + (n-1) \times \left( -\frac{1}{3} \ln x \right) \right]
+
+\frac{n}{2} \left[ 2 \ln x + (n-1) \times \left( -\frac{1}{3} \ln x \right) \right] = -3 \ln x
+
+\frac{n}{2} \left[ 2 \ln x - \frac{n}{3} \ln x + \frac{1}{3} \ln x \right] \quad \text{OR} \quad n \ln x - \frac{n(n-1)}{6} \ln x \quad \text{OR}
+
+\frac{n}{2} \left[ \ln x + \left( \frac{4-n}{3} \right) \ln x \right]
+
+\frac{n}{2} \left( \frac{7}{3} - \frac{n}{3} \right) = -3 \quad \text{OR} \quad \frac{n - n(n-1)}{6} = -3 \quad \text{or equivalent}
+
+\frac{n}{2} \left( \frac{7}{3} - \frac{n}{3} \right) = -3
+
+n^2 - 7n - 18 = 0
+
+(n-9)(n+2) = 0
+
+n = 9
+```
+
+=== PAIR 132 ===
+Unit: seq
+Question Number: ser
+Question: ```latex
+u_1 = 0.6
+\quad
+u_4 = 0.15
+\quad
+d
+
+\mathbb{P}(X = n) = \frac{u_n}{k}
+\quad
+n \in \mathbb{Z}^+
+\quad
+1 \leq n \leq 4
+\quad
+k \in \mathbb{R}^+
+
+\begin{array}{|c|c|c|c|c|}
+\hline
+n & 1 & 2 & 3 & 4 \\
+\hline
+\mathbb{P}(X = n) & \frac{0.6}{k} & \frac{u_2}{k} & \frac{u_3}{k} & \frac{0.15}{k} \\
+\hline
+\end{array}
+
+k
+```
+Answer: ```latex
+u_1 + 3d = u_4
+
+0.6 + 3d = 0.15
+
+d = -0.15
+
+u_2 = 0.45 \quad \text{or} \quad u_3 = 0.3
+
+\frac{0.6}{k} + \frac{u_2}{k} + \frac{u_3}{k} + \frac{0.15}{k} = 1
+
+\frac{0.6}{k} + \frac{0.45}{k} + \frac{0.3}{k} + \frac{0.15}{k} = 1
+
+\frac{1.5}{k} = 1
+
+k = 1.5
+
+S_4 = \frac{4}{2} \left( 2(0.6) + (4-1)(-0.15) \right) \quad \text{OR} \quad S_4 = \frac{4}{2} \left( 2 \left( \frac{0.6}{k} \right) + (4-1) \left( \frac{-0.15}{k} \right) \right)
+
+\text{OR} \quad S_4 = \frac{4}{2} (0.6 + 0.15) \quad \text{OR} \quad S_4 = \frac{4}{2} \left( \frac{0.6}{k} + \frac{0.15}{k} \right)
+
+\frac{u_1}{k} + \frac{u_2}{k} + \frac{u_3}{k} + \frac{u_4}{k} = 1 \quad \text{OR} \quad u_1 + u_2 + u_3 + u_4 = k \quad \text{OR} \quad S_4 = 1 \quad \text{OR} \quad S_4 = k
+
+\frac{4}{2} \left( 2(0.6) + (4-1)(-0.15) \right) = k
+
+k = 1.5
+```
+
+=== PAIR 133 ===
+Unit: stats
+Question Number: 1
+Question: ```latex
+\begin{array}{|c|c|}
+\hline
+\text{Exercising time} & \text{Number of} \\
+\text{(in hours)} & \text{students} \\
+\hline
+2 & 5 \\
+3 & 1 \\
+4 & 4 \\
+5 & 3 \\
+6 & x \\
+\hline
+\end{array}
+
+\text{The median is } 4.5 \text{ hours.}
+
+\text{(a) Find the value of } x.
+
+\text{(b) Find the standard deviation.}
+```
+Answer: ```latex
+5 + 1 + 4 = 3 + x
+
+\sum f = 20
+
+x = 7
+
+1.58429\ldots
+
+1.58
+
+\sigma^2 = \frac{5 \times (2 - 4.3)^2 + 1 \times (3 - 4.3)^2 + 4 \times (4 - 4.3)^2 + 3 \times (5 - 4.3)^2 + 7 \times (6 - 4.3)^2}{20} = (2.51)
+
+\sigma^2 = \frac{5 \times 2^2 + 1 \times 3^2 + 4 \times 4^2 + 3 \times 5^2 + 7 \times 6^2}{20} - 4.3^2 = (2.51)
+
+\sigma = \sqrt{2.51} = 1.58429\ldots
+
+= 1.58
+```
+
+=== PAIR 134 ===
+Unit: stats
+Question Number: 2
+Question: ```latex
+\begin{enumerate}[label=(\alph*)]
+    \item \text{State the median reaction time after sleeping well.} \hspace{1cm} [1]
+    \item \text{Verify that the measurement of } 0.46 \text{ seconds is not an outlier.} \hspace{1cm} [3]
+    \item \text{State why it appears that the mean reaction time is greater than the median reaction time.} \hspace{1cm} [1]
+    \item \text{Comment on whether these box and whisker diagrams provide any evidence that might suggest that not sleeping well causes an increase in reaction time.} \hspace{1cm} [1]
+\end{enumerate}
+```
+Answer: ```latex
+\text{(d) \textbf{EITHER}}
+
+\text{the distribution for ‘not sleeping well’ is centred at a higher reaction time} \quad R1
+
+\text{\textbf{OR}}
+
+\text{The median reaction time after not sleeping well is equal to the upper quartile} \\
+\text{reaction time after sleeping well} \quad R1
+
+\text{\textbf{OR}}
+
+75\% \text{ of reaction times are } <0.35 \text{ seconds after sleeping well, compared with} \\
+50\% \text{ after not sleeping well} \quad R1
+
+\text{\textbf{OR}}
+
+\text{the sample size of 9 is too small to draw any conclusions} \quad R1
+```
+
+=== PAIR 135 ===
+Unit: stats
+Question Number: 3
+Question: ```latex
+\text{A total of 600 athletes from different teams compete in a 5 km race.}
+
+\text{There were 400 athletes who took between 22 and } m \text{ minutes to complete the 5 km race.}
+
+\text{(d) Find } m.
+
+\text{The first 150 athletes that completed the race won a prize.}
+
+\text{(e) Given that an athlete took between 22 and } m \text{ minutes to complete the 5 km race, calculate the probability that they won a prize.}
+```
+Answer: ```latex
+m = 30 \text{ (minutes)}
+
+27 \text{ (minutes)}
+
+P(22 < t < 27) = \frac{150 - 20}{600}, \frac{13}{60}
+
+P(A \mid B), \, P(t < 27 \mid 22 < t < 30), \, \frac{P(22 < t < 27)}{P(22 < t < m)}, \, \frac{150}{400}
+
+\frac{130}{600}, \, \frac{150 - 20}{400}
+
+\frac{130}{600} \left( \frac{13}{40} = \frac{78000}{240000} = \frac{390}{1200} = 0.325 \right)
+
+\frac{150}{400}
+
+\frac{3}{8}
+```
+
+=== PAIR 136 ===
+Unit: stats
+Question Number: 4
+Question: ```latex
+L \quad U
+```
+```latex
+\text{The interquartile range is } 20 \text{ grams and there are no outliers in the results.}
+```
+```latex
+\text{(a) Find the minimum possible value of } U.
+```
+```latex
+\text{(b) Hence, find the minimum possible value of } L.
+```
+Answer: ```latex
+1.5 \times 20 + Q_3
+
+1.5 \times 20 + U \geq 75 \quad (\Rightarrow U \geq 45, \text{ accept } U > 45) \quad \text{OR} \quad 1.5 \times 20 - Q_3 = 75
+
+U - L = 20 \quad (\text{may be seen in part (a)}) \quad \text{OR} \quad L \geq 25 \quad (\text{accept } L > 25)
+```
+
+=== PAIR 137 ===
+Unit: stats
+Question Number: 5
+Question: ```latex
+10\%
+k
+2 < h \leq 7
+7 < h \leq 15
+15 < h \leq 21
+21 < h \leq 24
+4
+p
+16
+q
+p
+q
+320
+15
+```
+Answer: ```latex
+\text{median} = 14 \, (\text{hours})
+
+k = 18 \, (\text{hours})
+
+p = 60 - 4
+
+p = 56
+
+q = 80 - 76 \, \text{OR} \, q = 80 - 4 - 56
+
+q = 4
+
+\frac{20}{80} = \frac{x}{320} \, \text{OR} \, \frac{1}{4} \times 320 \, \text{OR} \, 4 \times 20
+
+80 \, (\text{students})
+```
+
+=== PAIR 138 ===
+Unit: stats
+Question Number: 6
+Question: ```latex
+a = \frac{7}{4}c + 20
+```
+
+```latex
+c = \frac{1}{2}a - 9
+```
+Answer: ```latex
+\text{IQR} = 10 - 6 (= 4)
+
+Q_3 + 1.5 \times \text{IQR}
+
+10 + 6
+
+16
+
+c = \frac{1}{2} a - 9
+
+\frac{1}{2} \times 42 - 9
+
+= 12 \text{ (years old)}
+
+34 \text{ (years old)}
+```
+
+=== PAIR 139 ===
+Unit: stats
+Question Number: 7
+Question: ```latex
+\begin{align*}
+(a) & \quad \text{Find the median number of hours per week these Year 12 students spend doing homework.} \\
+(b) & \quad \text{Given that } 10\% \text{ of these Year 12 students spend more than } k \text{ hours per week doing homework, find the value of } k. \\
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Hours } (h) \text{ spent doing homework} & 2 < h \leq 7 & 7 < h \leq 15 & 15 < h \leq 21 & 21 < h \leq 24 \\
+\hline
+\text{Frequency} & 4 & p & 16 & q \\
+\hline
+\end{array} \\
+(c) & \quad \text{Find the value of } p \text{ and the value of } q. \\
+& \quad \text{There are 320 students in Year 12 at this school.} \\
+(d) & \quad \text{Estimate the number of Year 12 students that spend more than 15 hours each week doing homework.} \\
+(e) & \quad (i) \quad \text{Explain why this sampling method might not provide an accurate representation of the amount of time all of the students in the school spend doing homework.} \\
+& \quad (ii) \quad \text{Suggest a more appropriate sampling method.}
+\end{align*}
+```
+Answer: ```latex
+\begin{align*}
+&\text{7. (a) evidence of median position} \\
+&40 \text{ students} \\
+&\text{median } = 14 \text{ (hours)} \\[10pt]
+&\text{(b) recognizing there are 8 students in the top } 10\% \\
+&72 \text{ students spent less than } k \text{ hours} \\
+&k = 18 \text{ (hours)} \\[10pt]
+&\text{(c) 15 hours is 60 students OR } p = 60 - 4 \\
+&p = 56 \\
+&21 \text{ hours is 76 students OR } q = 80 - 76 \text{ OR } q = 80 - 4 - 56 - 16 \\
+&q = 4 \\[10pt]
+&\text{(d) 20 of the 80 students OR } \frac{1}{4} \text{ spend more than 15 hours doing homework} \\
+&\frac{20}{80} = \frac{x}{320} \text{ OR } \frac{1}{4} \times 320 \text{ OR } 4 \times 20 \\
+&80 \text{ (students)} \\[10pt]
+&\text{(e) (i) only year 12 students surveyed OR amount of homework might be different for} \\
+&\text{different year levels} \\
+&\text{(ii) stratified sampling OR survey students in all years}
+\end{align*}
+```
+
+=== PAIR 140 ===
+Unit: stats
+Question Number: 8
+Question: ```latex
+L
+U
+\text{The interquartile range is } 20 \text{ grams}
+\text{(a) Find the minimum possible value of } U.
+\text{(b) Hence, find the minimum possible value of } L.
+```
+Answer: ```latex
+1.5 \times 20 + Q_3
+
+1.5 \times 20 + U \geq 75 \quad (\Rightarrow U \geq 45, \text{ accept } U > 45) \quad \text{OR} \quad 1.5 \times 20 + Q_3 = 75
+
+U = 45
+
+U - L = 20 \quad (\text{may be seen in part (a)}) \quad \text{OR} \quad L \geq 25 \quad (\text{accept } L > 25)
+
+L = 25
+```
+
+=== PAIR 141 ===
+Unit: stats
+Question Number: 9
+Question: ```latex
+36\,000
+
+5\%
+
+\$3 \text{ and } \$25
+
+\$a
+
+60
+
+18
+```
+Answer: ```latex
+\begin{align*}
+\text{(d) (i)} & \quad 75\% \text{ (of } 36000 \text{ spent between \$3 and \$25)} \\
+& = 27000 \\
+& \quad (M1) \\
+& \quad A1 \\
+(ii) & \quad a = 7 \\
+& \quad A1 \\
+& \quad [3 \text{ marks}] \\
+\text{(e) (i)} & \quad \text{METHOD 1} \\
+& \quad \text{old mean is } 600 \text{ (tickets)} \quad (A1) \\
+& \quad \text{recognising new mean is old mean } + 18 \quad (M1) \\
+& \quad 600 + 18 \\
+& = 618 \text{ (tickets)} \\
+& \quad A1 \\
+& \quad \text{METHOD 2} \\
+& \quad \text{new total number of tickets } = 36000 + 60 \times 18 (= 37080) \quad (A1) \\
+& \quad \text{new mean } = \frac{36000 + 60 \times 18}{60} \left( = \frac{37080}{60} \right) \quad (M1) \\
+& = 618 \text{ (tickets)} \\
+& \quad A1 \\
+(ii) & \quad \text{no effect on the variance} \\
+& \quad A1 \\
+& \quad [4 \text{ marks}] \\
+& \quad \text{Total [17 marks]}
+\end{align*}
+```
+
+=== PAIR 142 ===
+Unit: trig
+Question Number: 1
+Question: ```latex
+f(x) = \sin qx
+q > 0
+0 \leq x \leq 4m
+x = 0, 2m \text{ and } 4m
+g(x) = 3 \sin \frac{2qx}{3}, \text{ for } 0 \leq x \leq 6m
+```
+Answer: ```latex
+4m = \frac{2\pi}{q} \quad \text{OR} \quad 1 = \sin qm
+
+m = \frac{\pi}{2q}
+
+\frac{3}{2}
+```
+
+=== PAIR 143 ===
+Unit: trig
+Question Number: 2
+Question: ```latex
+\text{[BA] is extended to form an isosceles triangle } DAC, \text{ with } \hat{D} = \theta, \text{ as shown in the following diagram.}
+
+\text{(c) Find the value of } \sin \hat{C}\hat{A}\hat{D}.
+
+\text{(d) Find the area of triangle } DAC, \text{ in terms of } a.
+```
+Answer: ```latex
+\text{recognizing } \widehat{DCA} = \theta
+
+\text{recognizing } AD = b \left( = \frac{3a}{4} \right)
+
+\text{area} = \frac{1}{2} (b)(b) \left( \frac{4\sqrt{5}}{9} \right) \quad \text{OR} \quad \text{area} = \frac{1}{2} (b)(b) \sin 2\theta \quad \text{OR} \quad \text{area} = \frac{1}{2} (b)(b) \sin \widehat{CAD}
+
+\text{area} = \frac{1}{2} \left( \frac{3a}{4} \right) \left( \frac{3a}{4} \right) \left( \frac{4\sqrt{5}}{9} \right)
+
+\text{area} = \frac{\sqrt{5} a^2}{8}
+```
+
+=== PAIR 144 ===
+Unit: trig
+Question Number: 3
+Question: ```latex
+f(x) = a \sin(bx) \quad \text{with} \quad a, b \in \mathbb{Z}^+.
+
+f\left(\frac{\pi}{12}\right)
+```
+Answer: ```latex
+a = 7
+```
+
+```latex
+\text{period} = \pi
+```
+
+```latex
+b = \frac{2\pi}{\pi} \quad \text{OR} \quad \pi = \frac{2\pi}{b}
+```
+
+```latex
+= 2
+```
+
+```latex
+f\left(\frac{\pi}{12}\right) = 7 \sin\left(\frac{\pi}{6}\right)
+```
+
+```latex
+\sin\left(\frac{\pi}{6}\right) = \frac{1}{2}
+```
+
+```latex
+= \frac{7}{2}
+```
+
+=== PAIR 145 ===
+Unit: trig
+Question Number: 4
+Question: ```latex
+f(x) = 4 \sin x + 2.5
+```
+
+```latex
+g(x) = 4 \sin \left( x - \frac{3\pi}{2} \right) + 2.5 + q
+```
+
+```latex
+x \in \mathbb{R}
+```
+
+```latex
+q > 0
+```
+
+```latex
+(0, r)
+```
+
+```latex
+g(x) \geq 7
+```
+Answer: ```latex
+\text{translation (shift) by } \frac{3\pi}{2}
+\text{translation (shift) by } q
+
+\begin{pmatrix}
+\frac{3\pi}{2} \\
+q
+\end{pmatrix}
+
+4 \sin \left( x - \frac{3\pi}{2} \right) = -4
+
+-4 + 2.5 + q \geq 7
+
+q \geq 8.5
+
+(r=) \, 4 \sin \left( -\frac{3\pi}{2} \right) + 2.5 + 8.5
+
+4 + 2.5 + 8.5
+```
+
+=== PAIR 146 ===
+Unit: trig
+Question Number: 5
+Question: ```latex
+AB = \sqrt{15} \text{ cm}, \quad AC = 16 \text{ cm}, \quad \cos \angle BAC = \frac{1}{4}
+```
+Answer: ```latex
+\text{METHOD 2}
+
+\text{height} = \sqrt{15} \times \sin \hat{B}\hat{A}\hat{C}
+
+\text{height} = \sqrt{15} \times \sqrt{1 - \left( \frac{1}{4} \right)^2}
+
+= \sqrt{15} \times \frac{\sqrt{15}}{4} \left( = \frac{15}{4} \right)
+
+\text{adjacent} = \frac{\sqrt{15}}{4}
+
+\text{height} = \sqrt{15 - \frac{15}{16} \left( = \frac{15}{4} \right)}
+
+\text{Area} = \frac{1}{2} \text{base} \times \text{height}
+
+= \frac{1}{2} \times 16 \times \frac{15}{4}
+
+= 30 \, (\text{cm}^2)
+```
+
+=== PAIR 147 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\begin{array}{c|c|c}
+a & 1 & 2 \\
+\hline
+P(A = a) & \cos \theta & 2 \cos 2\theta \\
+\end{array}
+
+\cos \theta = \frac{3}{4}
+
+\tan \theta > 0
+```
+Answer: ```latex
+\sum p = 1
+
+\cos \theta + 2 \cos 2\theta = 1
+
+\cos \theta + 2 \left( 2 \cos^2 \theta - 1 \right) = 1, \quad 4 \cos^2 \theta + \cos \theta - 3 = 0
+
+\frac{-1 \pm \sqrt{1 - 4 \times 4 \times (-3)}}{8}
+
+(4 \cos \theta - 3)(\cos \theta + 1), \quad \frac{-1 \pm 7}{8}
+
+\cos \theta = \frac{3}{4}
+
+\sin^2 x + \cos^2 x = 1
+
+\sqrt{7}, \quad \frac{4}{3}, \quad \frac{3}{4}
+
+\tan \theta = \frac{\sqrt{7}}{3}
+```
+
+=== PAIR 148 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\text{Find the least positive value of } x \text{ for which } \cos\left(\frac{x}{2} + \frac{\pi}{3}\right) = \frac{1}{\sqrt{2}}.
+```
+Answer: ```latex
+\frac{\pi}{4}
+
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4}
+
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4}, \frac{7\pi}{4}
+
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4} \implies x < 0 \text{ and so } \frac{\pi}{4} \text{ is rejected}
+
+\frac{x}{2} + \frac{\pi}{3} = 2\pi - \frac{\pi}{4} \left( = \frac{7\pi}{4} \right)
+
+x = \frac{17\pi}{6}
+```
+
+=== PAIR 149 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+f(x) = \sqrt{3} \sin x + \cos x \quad \text{where} \quad 0 \leq x \leq \pi
+```
+```latex
+g(x) = 2x \quad \text{where} \quad x \in \mathbb{R}
+```
+```latex
+(f \circ g)(x)
+```
+```latex
+(f \circ g)(x) = 2 \cos 2x \quad \text{where} \quad 0 \leq x \leq \pi
+```
+Answer: ```latex
+(f \circ g)(x) = f(2x)
+
+f(2x) = \sqrt{3} \sin 2x + \cos 2x
+
+\sqrt{3} \sin 2x + \cos 2x = 2 \cos 2x
+
+\sqrt{3} \sin 2x = \cos 2x
+
+\tan 2x = \frac{1}{\sqrt{3}} \quad \text{OR} \quad \cot 2x = \sqrt{3}
+
+\left( \arctan \left( \frac{1}{\sqrt{3}} \right) = \frac{\pi}{6} \right)
+
+2x = \frac{\pi}{6}, \frac{7\pi}{6}
+
+x = \frac{\pi}{12}, \frac{7\pi}{12}
+```
+
+=== PAIR 150 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\text{Find the least positive value of } x \text{ for which } \cos\left(\frac{x}{2} + \frac{\pi}{3}\right) = \frac{1}{\sqrt{2}}.
+```
+Answer: ```latex
+\frac{\pi}{4}
+```
+
+```latex
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4}
+```
+
+```latex
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4}, \frac{7\pi}{4}
+```
+
+```latex
+\frac{x}{2} + \frac{\pi}{3} = \frac{\pi}{4} \implies x < 0 \text{ and so } \frac{\pi}{4} \text{ is rejected}
+```
+
+```latex
+\frac{x}{2} + \frac{\pi}{3} = 2\pi - \frac{\pi}{4} \left( = \frac{7\pi}{4} \right)
+```
+
+```latex
+x = \frac{17\pi}{6} \quad \text{(must be in radians)}
+```
+
+=== PAIR 151 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+2\cos^2 x + 5\sin x = 4
+```
+
+```latex
+2\sin^2 x - 5\sin x + 2 = 0
+```
+
+```latex
+2\cos^2 x + 5\sin x = 4, \, 0 \leq x \leq 2\pi
+```
+Answer: ```latex
+\begin{align*}
+&\text{EITHER} \\
+&\text{attempting to factorise} \\
+&(2\sin x - 1)(\sin x - 2) \quad \text{M1} \\
+&\quad \text{A1} \\[10pt]
+&\text{OR} \\
+&\text{attempting to use the quadratic formula} \\
+&\sin x = \frac{5 \pm \sqrt{5^2 - 4 \times 2 \times 2}}{4} \left( = \frac{5 \pm 3}{4} \right) \quad \text{M1} \\
+&\quad \text{A1} \\[10pt]
+&\text{THEN} \\
+&\sin x = \frac{1}{2} \quad (\text{A1}) \\[10pt]
+&x = \frac{\pi}{6}, \frac{5\pi}{6} \quad \text{A1A1} \\[10pt]
+&\text{[5 marks]} \\
+&\text{Total [6 marks]}
+\end{align*}
+```
+
+=== PAIR 152 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\begin{align*}
+\text{(a)} & \quad \text{Show that } \sin 2x + \cos 2x - 1 = 2 \sin x (\cos x - \sin x). \\
+\text{(b)} & \quad \text{Hence or otherwise, solve } \sin 2x + \cos 2x - 1 + \cos x - \sin x = 0 \text{ for } 0 < x < 2\pi.
+\end{align*}
+```
+Answer: ```latex
+\text{Note: Do not award the final } A1 \text{ for proofs which work from both sides to find a common expression other than } 2\sin x \cos x - 2\sin^2 x.
+
+\text{METHOD 1 (LHS to RHS)}
+\text{attempt to use double angle formula for } \sin 2x \text{ or } \cos 2x
+\text{LHS}=2\sin x \cos x + \cos 2x - 1 \text{ OR}
+\sin 2x + 1 - 2\sin^2 x - 1 \text{ OR}
+2\sin x \cos x + 1 - 2\sin^2 x - 1
+= 2\sin x \cos x - 2\sin^2 x
+\sin 2x + \cos 2x - 1 = 2\sin x (\cos x - \sin x) = \text{RHS}
+
+\text{METHOD 2 (RHS to LHS)}
+\text{RHS} = 2\sin x \cos x - 2\sin^2 x
+\text{attempt to use double angle formula for } \sin 2x \text{ or } \cos 2x
+= \sin 2x + 1 - 2\sin^2 x - 1
+= \sin 2x + \cos 2x - 1 = \text{LHS}
+
+\text{(b) attempt to factorise}
+(\cos x - \sin x)(2\sin x + 1) = 0
+
+\text{recognition of } \cos x = \sin x \Rightarrow \frac{\sin x}{\cos x} = \tan x = 1 \text{ OR } \sin x = -\frac{1}{2}
+
+\frac{\pi}{4} \text{ OR } \frac{\pi}{6} \text{ (accept } -\frac{\pi}{6}, \frac{7\pi}{6} \text{ )}
+
+x = \frac{7\pi}{6}, \frac{11\pi}{6}, \frac{\pi}{4}, \frac{5\pi}{4}
+```
+
+=== PAIR 153 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+f(x) = \cos^2 x - 3 \sin^2 x, \, 0 \leq x \leq \pi.
+
+f(x) = 0.
+```
+Answer: ```latex
+\cos^2 x - 3 \sin^2 x = 0
+
+\frac{\sin^2 x}{\cos^2 x} = \frac{1}{3} \quad \text{OR} \quad 1 - \sin^2 x - 3 \sin^2 x = 0 \quad \text{OR} \quad \cos^2 x - 3(1 - \cos^2 x) = 0
+
+\cos 2x - 1 + \cos 2x = 0
+
+\tan^2 x = \frac{1}{3} \quad \text{OR} \quad \cos^2 x = \frac{3}{4} \quad \text{OR} \quad \sin^2 x = \frac{1}{4} \quad \text{OR} \quad \cos 2x = \frac{1}{2}
+
+\tan x = \pm \frac{1}{\sqrt{3}} \quad \text{OR} \quad \cos x = \pm \frac{\sqrt{3}}{2} \quad \text{OR} \quad \sin x = (\pm) \frac{1}{2} \quad \text{OR} \quad 2x = \frac{\pi}{3}, \left(\frac{5\pi}{3}\right)
+
+x = \frac{\pi}{6}, \quad x = \frac{5\pi}{6}
+```
+
+=== PAIR 154 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\begin{enumerate}
+    \item Show that the equation \(\cos 2x = \sin x\) can be written in the form \(2\sin^2 x + \sin x - 1 = 0\).
+    \item Hence, solve \(\cos 2x = \sin x\), where \(-\pi \leq x \leq \pi\).
+\end{enumerate}
+```
+Answer: ```latex
+1 - 2\sin^2 x = \sin x
+
+2\sin^2 x + \sin x - 1 = 0
+
+(2\sin x - 1)(\sin x + 1) \quad \text{OR} \quad \frac{-1 \pm \sqrt{1 - 4(2)(-1)}}{2(2)}
+
+\sin x = \frac{1}{2} \quad \text{OR} \quad \sin x = -1
+
+x = -\frac{\pi}{2}, \frac{\pi}{6}, \frac{5\pi}{6}
+
+\text{Award A0 for } -\frac{\pi}{2}, \frac{\pi}{6}, \frac{5\pi}{6} \text{ if additional values also given.}
+```
+
+=== PAIR 155 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\sin x = \frac{1}{3}, \quad 0 < x < \frac{\pi}{2}, \quad \cos 4x
+```
+Answer: ```latex
+1 - 2 \left( \frac{1}{3} \right)^2, \ 2 \left( \frac{\sqrt{8}}{3} \right)^2 - 1, \ 2 \left( \frac{1}{3} \right) \left( \frac{\sqrt{8}}{3} \right), \ \left( \frac{\sqrt{8}}{3} \right)^2 - \left( \frac{1}{3} \right)^2
+
+\cos(2x) = \frac{7}{9} \quad \text{or} \quad \sin(2x) = \frac{2\sqrt{8}}{9} = \frac{\sqrt{32}}{9} = \frac{4\sqrt{2}}{9}
+
+2 \left( \frac{7}{9} \right)^2 - 1, \ \frac{98}{81} - 1, \ 1 - 2 \left( \frac{2\sqrt{8}}{9} \right)^2, \ 1 - \frac{64}{81}, \ \left( \frac{7}{9} \right)^2 - \left( \frac{2\sqrt{8}}{9} \right)^2, \ \frac{49}{81} - \frac{32}{81}
+
+\cos(4x) = \frac{17}{81}
+
+2 \left( 1 - 2 \left( \frac{1}{3} \right)^2 \right)^2 - 1, \ 2 \left( 1 - 4 \left( \frac{1}{3} \right)^2 + 4 \left( \frac{1}{3} \right)^4 \right) - 1, \ 1 - 2 \left( 2 \times \frac{1}{3} \times \frac{\sqrt{8}}{3} \right)^2
+
+2 \left( \frac{49}{81} \right) - 1, \ 1 - 2 \left( \frac{32}{81} \right), \ \frac{49}{81} - \frac{32}{81}
+
+\cos(4x) = \frac{17}{81}
+```
+
+=== PAIR 156 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+f(x) = 4 \cos\left(\frac{x}{2}\right) + 1, \text{ for } 0 \leq x \leq 6\pi.
+f(x) > 2\sqrt{2} + 1.
+```
+Answer: ```latex
+4 \cos\left(\frac{x}{2}\right) + 1 > 2\sqrt{2} + 1
+
+4 \cos\left(\frac{x}{2}\right) = 2\sqrt{2}, \cos\left(\frac{x}{2}\right) > \frac{\sqrt{2}}{2}
+
+\cos^{-1}\frac{\sqrt{2}}{2} = \frac{\pi}{4}
+
+-\frac{\pi}{4}, \frac{7\pi}{4}, 315^\circ, \frac{9\pi}{4}, -45^\circ, \frac{15\pi}{4}
+
+\frac{\pi}{2}, \frac{7\pi}{2}, \frac{9\pi}{2}
+
+0 \leq x < \frac{\pi}{2}, \frac{7\pi}{2} < x < \frac{9\pi}{2}
+```
+
+=== PAIR 157 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+f(x) = 2 \sin x, \quad 0 \leq x < 2\pi
+```
+
+```latex
+y = -1
+```
+
+```latex
+g(x) = 2 \sin px, \quad 0 \leq x < 2\pi, \quad \text{where } p > 0
+```
+
+```latex
+y = -1
+```
+Answer: ```latex
+\begin{align*}
+&\text{(a) correct equation} \quad (A1) \\
+&\text{eg} \quad 2 \sin x = -1, \, \sin x = -\frac{1}{2} \\
+&\text{one correct value for } \sin^{-1}\left(\frac{1}{2}\right) \text{ or } \sin^{-1}\left(-\frac{1}{2}\right) \text{ (seen anywhere)} \quad (A1) \\
+&\text{eg} \quad \frac{\pi}{6}, \, \frac{5\pi}{6}, \, 30^\circ, \, 150^\circ, \, 210^\circ, \, 330^\circ \\
+&x = \frac{7\pi}{6}, \, \frac{11\pi}{6} \quad \left( \text{accept } \left(\frac{7\pi}{6}, -1\right), \left(\frac{11\pi}{6}, -1\right) \right) \quad A1A1 \quad N1N1 \\
+&\text{Note: Award } A1A1A1A0 \text{ if more solutions given in addition to both correct answers.} \\
+&\text{[4 marks]} \\
+
+&\text{(b) recognizing period of } g \text{ is larger than the period of } f \quad (M1) \\
+&\text{eg sketch of } g \text{ with larger period (may be seen on diagram), } A \text{ at } x = 2\pi, \\
+&\text{image of } A \text{ when } x > 2\pi, \, \frac{7\pi}{6} \to 2\pi, \, 2 \sin(2\pi p) = -1, \, \frac{7\pi}{6} \times k = 2\pi \\
+&\text{correct working} \\
+&\text{eg} \quad \frac{7\pi}{6} \cdot \frac{1}{p} = 2\pi, \, 2\pi p = \frac{7\pi}{6}, \, \frac{12}{7} \\
+&p = \frac{7}{12} \quad \left( \text{accept } p < \frac{7}{12} \text{ or } p \leq \frac{7}{12} \right) \quad A1 \quad N2 \\
+&\text{[3 marks]} \\
+&\text{Total [7 marks]}
+\end{align*}
+```
+
+=== PAIR 158 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\sin 2x + \cos 2x - 1 = 2 \sin x (\cos x - \sin x)
+
+\sin 2x + \cos 2x - 1 + \cos x - \sin x = 0 \quad \text{for} \quad 0 < x < 2\pi
+```
+Answer: ```latex
+2 \sin x \cos x - 2 \sin^2 x
+
+\text{LHS}=2\sin x \cos x + \cos 2x - 1
+
+\sin 2x + 1 - 2\sin^2 x - 1 \quad \text{OR}
+
+2\sin x \cos x + 1 - 2\sin^2 x - 1
+
+= 2\sin x \cos x - 2\sin^2 x
+
+\sin 2x + \cos 2x - 1 = 2\sin x (\cos x - \sin x) = \text{RHS}
+
+\text{RHS} = 2\sin x \cos x - 2\sin^2 x
+
+\sin 2x + 1 - 2\sin^2 x - 1
+
+= \sin 2x + \cos 2x - 1 = \text{LHS}
+
+(\cos x - \sin x)(2\sin x + 1) = 0
+
+\cos x = \sin x \Rightarrow \frac{\sin x}{\cos x} = \tan x = 1 \quad \text{OR} \quad \sin x = -\frac{1}{2}
+
+\frac{\pi}{4} \quad \text{OR} \quad \frac{\pi}{6} \quad (\text{accept} -\frac{\pi}{6}, \frac{7\pi}{6})
+
+x = \frac{7\pi}{6}, \frac{11\pi}{6}, \frac{\pi}{4}, \frac{5\pi}{4}
+```
+
+=== PAIR 159 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Show that the equation \(2\cos^2 x + 5\sin x = 4\) may be written in the form \(2\sin^2 x - 5\sin x + 2 = 0\).
+        \item Hence, solve the equation \(2\cos^2 x + 5\sin x = 4, \, 0 \leq x \leq 2\pi\).
+    \end{enumerate}
+\end{enumerate}
+```
+Answer: ```latex
+(2\sin x - 1)(\sin x - 2)
+
+\sin x = \frac{5 \pm \sqrt{5^2 - 4 \times 2 \times 2}}{4} \left( = \frac{5 \pm 3}{4} \right)
+
+\sin x = \frac{1}{2}
+
+x = \frac{\pi}{6}, \frac{5\pi}{6}
+```
+
+=== PAIR 160 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+AB = 10, \, BC = x, \, AC = 2x.
+
+\cos \hat{C} = \frac{3}{4}
+
+\frac{p \sqrt{q}}{2} \quad \text{where} \quad p, q \in \mathbb{Z}^+.
+```
+Answer: ```latex
+100 = x^2 + 4x^2 - 2(x)(2x)\left(\frac{3}{4}\right)
+
+2x^2 = 100
+
+x^2 = 50 \quad \text{OR} \quad x = \sqrt{50} \left(= 5\sqrt{2}\right)
+
+\sin^2 \hat{C} + \left(\frac{3}{4}\right)^2 = 1 \quad \text{OR} \quad x^2 + 3^2 = 4^2
+
+\sin \hat{C} = \frac{\sqrt{7}}{4}
+
+A = \frac{1}{2} \times 5\sqrt{2} \times 10 \sqrt{2} \times \frac{\sqrt{7}}{4} \quad \text{or} \quad A = \frac{1}{2} \times \sqrt{50} \times 2 \sqrt{50} \times \frac{\sqrt{7}}{4}
+
+A = \frac{25\sqrt{7}}{2}
+```
+
+=== PAIR 161 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+f(x) = 6 + 6 \cos x, \quad 0 \leq x \leq 4\pi
+
+y = f(x)
+```
+Answer: ```latex
+6 + 6\cos x = 0 \quad (\text{or setting their } f'(x) = 0)
+
+\cos x = -1 \quad (\text{or } \sin x = 0)
+
+x = \pi, \, x = 3\pi
+```
+
+=== PAIR 162 ===
+Unit: trig
+Question Number: eq
+Question: ```latex
+\begin{align*}
+\text{(a)} & \quad 2x - 3 - \frac{6}{x - 1} = \frac{2x^2 - 5x - 3}{x - 1}, \quad x \in \mathbb{R}, \, x \neq 1. \\
+\text{(b)} & \quad 2\sin 2\theta - 3 - \frac{6}{\sin 2\theta - 1} = 0 \quad \text{for} \quad 0 \leq \theta \leq \pi, \, \theta \neq \frac{\pi}{4}.
+\end{align*}
+```
+Answer: ```latex
+\frac{2\sin^2 2\theta - 5\sin 2\theta - 3}{\sin 2\theta - 1} = 0
+
+\Rightarrow 2\sin^2 2\theta - 5\sin 2\theta - 3 = 0
+
+(2\sin 2\theta + a)(\sin 2\theta + b)
+
+(2\sin 2\theta + 1)(\sin 2\theta - 3) = 0
+
+\sin 2\theta = \frac{5 \pm \sqrt{49}}{4}
+
+\sin 2\theta = -\frac{1}{2} \quad \text{or} \quad \sin 2\theta = 3
+
+\theta = \frac{7\pi}{12}, \frac{11\pi}{12}
+```
+
+=== PAIR 163 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\hat{PQR} = 30^\circ, \quad \hat{QRP} = 45^\circ \quad \text{and} \quad PQ = 13 \, \text{cm}.
+```
+Answer: ```latex
+l = 1.3 \times 3
+
+l = 3.9 \, \text{(cm)}
+
+2\pi - \widehat{COA}
+
+2\pi - 1.3, \, 4.98318
+
+\frac{1}{2}(2\pi - 1.3)^2
+
+22.4243
+
+\text{area} = 9\pi - 5.85 \, \text{(exact)}, \, 22.4 \, \text{(cm}^2\text{)}
+```
+
+=== PAIR 164 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+AD = 6 \, \text{cm}, \, AB = 15 \, \text{cm}, \, \angle ABC = 44^\circ, \, \angle ACB = 83^\circ \, \text{and} \, \angle DAC = \theta
+
+\text{(a) Find } AC. \, [3]
+
+\text{(b) Find the area of triangle } ABC. \, [3]
+
+\text{The area of triangle } ACD \text{ is half the area of triangle } ABC.
+
+\text{(c) Find the possible values of } \theta. \, [5]
+
+\text{(d) Given that } \theta \text{ is obtuse, find } CD. \, [3]
+```
+Answer: ```latex
+\text{(a) evidence of choosing sine rule}
+\[
+\frac{AC}{\sin \angle CBA} = \frac{AB}{\sin \angle ACB}
+\]
+\text{correct substitution}
+\[
+\frac{AC}{\sin 44^\circ} = \frac{15}{\sin 83^\circ}
+\]
+10.4981 \\
+AC = 10.5 \, \text{(cm)}
+
+\text{(b) finding } \angle CAB \, \text{(seen anywhere)}
+\[
+180^\circ - 44^\circ - 83^\circ, \, \angle CAB = 53^\circ
+\]
+\text{correct substitution for area of triangle } ABC
+\[
+\frac{1}{2} \times 15 \times 10.4981 \times \sin 53^\circ
+\]
+62.8813 \\
+\text{area} = 62.9 \, \text{(cm}^2\text{)}
+
+\text{(c) correct substitution for area of triangle } DAC
+\[
+\frac{1}{2} \times 6 \times 10.4981 \times \sin \theta
+\]
+\text{attempt to equate area of triangle ACD to half the area of triangle ABC}
+\[
+\text{area ACD} = \frac{1}{2} \times \text{area ABC}; \, 2 \text{ACD} = \text{ABC}
+\]
+\text{correct equation}
+\[
+\frac{1}{2} \times 6 \times 10.4981 \times \sin \theta = \frac{1}{2} (62.9), \, 62.9887 \sin \theta = 62.8813, \, \sin \theta = 0.998294
+\]
+86.6531, \, 93.3468 \\
+\theta = 86.7^\circ, \, \theta = 93.3^\circ
+
+\text{(d) evidence of choosing cosine rule}
+\[
+CD^2 = AD^2 + AC^2 - 2 \times AD \times AC \times \cos \theta
+\]
+\text{correct substitution into rhs}
+\[
+CD^2 = 6^2 + 10.498^2 - 2 (6)(10.498) \cos 93.336^\circ
+\]
+12.3921 \\
+12.4 \, \text{(cm)}
+```
+
+=== PAIR 165 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+x^2 - (76 \cos 43^\circ) x + 420 = 0
+```
+Answer: ```latex
+TR = 32
+32^2 = x^2 + 38^2 - 2(x)(38) \cos 43^\circ, \quad 1024 = 1444 + x^2 - 76(x) \cos 43^\circ
+x^2 - (76 \cos 43^\circ)x + 420 = 0
+x = 9.02007, \quad 46.5628
+46.5 - 9.02, \quad x_1 - x_2
+37.5427
+37.5 \text{ (km)}
+```
+
+=== PAIR 166 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+AB = 6.73 \, \text{cm}, \, BC = 4.83 \, \text{cm}, \, \angle BCD = 78.2^\circ \, \text{and} \, CD = 3.80 \, \text{cm}.
+
+\text{(a) Find } BD.
+
+\text{(b) The area of triangle } ABD \text{ is } 18.5 \, \text{cm}^2. \text{ Find the possible values of } \theta.
+```
+Answer: ```latex
+c^2 = a^2 + b^2 - 2ab \cos C
+
+4.83^2 + 3.80^2 - 2 \times 4.83 \times 3.80 \times \cos 78.2, \, 30.2622,
+4.83^2 + 3.80^2 - 2(4.83)(3.80) \cos 1.36
+
+5.50111
+5.50 \, (\text{cm})
+
+\frac{1}{2} \times 6.73 \times 5.50111 \sin \theta
+
+\frac{1}{2} \times 6.73 \times 5.50111 \sin \theta = 18.5, \, \sin \theta = 0.999393
+
+88.0023, \, 91.9976, \, 1.53593, \, 1.60566
+\theta = 88.0 \, (\text{degrees}) \, \text{or} \, 1.54 \, (\text{radians})
+\theta = 92.0 \, (\text{degrees}) \, \text{or} \, 1.61 \, (\text{radians})
+```
+
+=== PAIR 167 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+0 < \theta < \frac{\pi}{2}
+
+OC = r \cos \theta
+
+\frac{3}{5}
+```
+Answer: ```latex
+\cos \theta = \frac{OC}{r}
+
+OC = r \cos \theta
+
+\frac{1}{2} OC \times OB \sin \theta, \, BC = r \sin \theta, \, \frac{1}{2} r \cos \theta \times BC, \, \frac{1}{2} r \sin \theta \times OC
+
+\text{area} = \frac{1}{2} r^2 \sin \theta \cos \theta \left( = \frac{1}{4} r^2 \sin (2\theta) \right)
+
+OCB = \frac{3}{5} OBA, \, \frac{1}{2} r^2 \sin \theta \cos \theta = \frac{3}{5} \times \frac{1}{2} r^2 \theta, \, \frac{1}{4} r^2 \sin 2\theta = \frac{3}{10} r^2 \theta
+
+\sin \theta \cos \theta = \frac{3}{5} \theta, \, \frac{1}{4} \sin 2\theta = \frac{3}{10} \theta
+
+-0.830017, \, 0
+
+0.830017
+
+\theta = 0.830
+```
+
+=== PAIR 168 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\angle A\hat{O}B = 2\theta, \quad 0 < \theta < \frac{\pi}{2}
+
+AC = \tan \theta
+```
+Answer: ```latex
+\tan \theta = \frac{AC}{OA}, \tan \theta = \frac{AC}{1}
+
+AC = \tan \theta
+
+\frac{1}{2} \times 1 \times \tan \theta
+
+\frac{1}{2} \times (1^2), \frac{1}{2} \theta
+
+A_{\text{their triangle}} - A_{\text{their sector}}, \frac{1}{2} \theta - \frac{1}{2} \tan \theta
+
+\frac{1}{2} \tan \theta - \frac{1}{2} \theta = \frac{1}{2} \theta, \tan \theta = 2 \theta
+
+1.16556
+
+1.17
+
+2 \times \frac{1}{2} \times 1 \times \tan \theta, \frac{1}{2} \times \frac{1}{\cos \theta} \times 2 \sin \theta
+
+\frac{1}{2} \times 2 \theta \times (1^2), \theta
+
+A_{\text{kite OACB}} - A_{\text{sector OADB}}, \theta - \tan \theta
+
+\tan \theta - \theta = \theta, \tan \theta = 2 \theta
+
+1.16556
+
+1.17
+```
+
+=== PAIR 169 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+AC = 800 \, \text{m}
+\angle \hat{A}BC
+195^\circ
+```
+Answer: ```latex
+\text{area} = \frac{392}{\theta^2} (\theta + \sin \theta)
+
+\frac{392}{\theta^2} (\theta + \sin \theta) = 460
+
+\theta = 1.43917\ldots
+
+\theta = 1.44
+
+\frac{\pi - (\pi - \theta)}{2} \quad \text{OR} \quad \frac{\theta}{2}
+
+\widehat{DÂE} = 0.719588\ldots
+
+\widehat{DÂE} = 0.720
+
+\widehat{ÂBC} = 195 - 180 + 90
+
+= 105^\circ
+
+\frac{BC}{\sin \widehat{DÂE}} = \frac{800}{\sin 105} \quad \text{OR} \quad \frac{BC}{\sin \widehat{DÂE}} = \frac{800}{\sin 1.83}
+
+BC = 546 \, (\text{m})
+```
+
+=== PAIR 170 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+AC = 12, \, CB = 7, \, \angle BAC = 25^\circ
+```
+Answer: ```latex
+12^2 + AB^2 - 2 \times 12 \times \cos 25^\circ \times AB = 7^2 \quad \text{OR} \quad AB^2 - 21.7513 \ldots AB + 95 = 0
+
+AB = 6.05068 \ldots \quad \text{OR} \quad AB = 15.7007 \ldots
+
+12 + 7 + 6.05068 \ldots
+
+\frac{\sin B}{12} = \frac{\sin 25^\circ}{7} \quad \text{OR} \quad \sin B = 0.724488 \ldots \quad \text{OR} \quad \hat{B} = 133.573 \ldots ^\circ \quad \text{OR} \quad \hat{B} = 46.4263 \ldots ^\circ
+
+\hat{C} = 21.4263 \ldots ^\circ \quad \text{OR} \quad \hat{C} = 108.573 \ldots ^\circ
+
+12 + 7 + \sqrt{12^2 + 7^2 - 2 \times 12 \times 7 \cos 21.4263 \ldots ^\circ} \quad \text{OR} \quad 12 + 7 + \frac{7 \sin 21.4263 \ldots ^\circ}{\sin 25^\circ}
+
+25.0506 \ldots
+
+\text{minimum perimeter} = 25.1
+```
+
+=== PAIR 171 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+PQ = 2r
+\hat{ROQ} = \theta
+0 < \theta < \pi
+\theta = 2 \sin \theta
+```
+Answer: ```latex
+\text{Area of segment} = \frac{1}{2} r^2 \theta - \frac{1}{2} r^2 \sin \theta
+
+\text{Area of triangle} = \frac{1}{2} r^2 \sin (\pi - \theta)
+
+\theta - \sin \theta = \sin (\pi - \theta)
+
+\theta - \sin \theta = \sin \theta
+
+\theta = 2 \sin \theta
+
+\frac{1}{2} r^2 \sin (180^\circ - \theta)
+
+\frac{1}{2} r^2 \sin \theta
+
+\theta = 1.89549 \ldots
+
+\theta = 1.90
+```
+
+=== PAIR 172 ===
+Unit: trig
+Question Number: seq
+Question: ```latex
+f(x) = \sqrt{x} \sin \left( \frac{\pi}{4} x \right)
+```
+```latex
+g(x) = \sqrt{x} \quad \text{for} \quad x \geq 0
+```
+```latex
+x = 0
+```
+```latex
+f(x) = g(x)
+```
+```latex
+u_n = a + bn \quad \text{where} \quad n \geq 1
+```
+```latex
+f(x) = g(x)
+```
+```latex
+a
+```
+```latex
+b
+```
+```latex
+P
+```
+```latex
+f
+```
+```latex
+g
+```
+```latex
+21\text{st}
+```
+```latex
+P
+```
+Answer: ```latex
+\sin\left(\frac{\pi}{4}x\right) = 1, \sqrt{x}\left(1 - \sin\left(\frac{\pi}{4}x\right)\right) = 0
+
+\sin\left(\frac{\pi}{2}\right) = 1
+
+\frac{\pi}{4}x = \frac{\pi}{2}, \frac{\pi}{4}x = \frac{\pi}{2} + 2\pi
+
+x = 2, 10
+
+d = 10 - 2, \quad a + b = 2, \quad a + 2b = 10
+
+2 + (n - 1)8, \quad a + 2(2 - a) = 10, \quad b = \text{common difference}
+
+a = -6, \quad b = 8 \quad (\text{accept } -6 + 8n)
+
+-6 + 8 \times 20, \quad 2 + (20 - 1) \times 8, \quad u_{20} = 154
+
+\mathbb{P}(154, \sqrt{154}) \quad (\text{accept } x = 154 \text{ and } y = \sqrt{154})
+```
+
+=== PAIR 173 ===
+Unit: trig
+Question Number: seq
+Question: ```latex
+f(x) = \sqrt{x} \sin \left( \frac{\pi}{4} x \right)
+```
+```latex
+g(x) = \sqrt{x} \quad \text{for} \quad x \geq 0
+```
+```latex
+f(x) = g(x)
+```
+```latex
+u_n = a + bn \quad \text{where} \quad n \geq 1
+```
+Answer: ```latex
+u_{20} \quad u_{21} \quad u_{20} + \frac{d}{2} \quad 154 + 4 \quad -2 + 8n
+
+\{6, 14, \ldots\}
+
+x = 158
+
+\int_{0}^{158} \left( \sqrt{x} \sin \left( \frac{\pi}{4} x \right) + \sqrt{x} \right) \, dx
+
+\int_{0}^{158} (g + f) \, dx
+
+\int_{0}^{158} \sqrt{x} \sin \left( \frac{\pi}{4} x \right) \, dx - \int_{0}^{158} -\sqrt{x} \, dx
+```
+
+=== PAIR 174 ===
+Unit: binom
+Question Number: dist
+Question: ```latex
+\begin{align*}
+&\text{A factory manufactures lamps. It is known that the probability that a lamp is found to be defective is } 0.05. \\
+&\text{A random sample of } 30 \text{ lamps is tested.} \\
+&\text{(a) Find the probability that there is at least one defective lamp in the sample.} \\
+&\text{(b) Given that there is at least one defective lamp in the sample, find the probability that there are at most two defective lamps.}
+\end{align*}
+```
+Answer: ```latex
+X \sim \text{B}(30, 0.05)
+
+P(X \geq 1)
+
+1 - P(X = 0) \quad \text{OR} \quad 1 - 0.95^{30} \quad \text{OR} \quad 1 - 0.214638\ldots \quad \text{OR} \quad 0.785361\ldots
+
+P(X \geq 1) = 0.785
+
+P(X \leq 2 \mid X \geq 1) \quad \text{OR} \quad P(\text{at most 2 defective} \mid \text{at least 1 defective})
+
+P(1 \leq X \leq 2) \over P(X \geq 1) \quad \text{OR} \quad {P(X = 1) + P(X = 2) \over P(X \geq 1)}
+
+{0.597540\ldots \over 0.785361\ldots} \quad \text{OR} \quad {0.812178\ldots - 0.214638\ldots \over 0.785361\ldots} \quad \text{OR} \quad {0.338903\ldots + 0.258636\ldots \over 0.785361\ldots}
+
+= 0.760847\ldots
+
+P(X \leq 2 \mid X \geq 1) = 0.761
+```
+
+=== PAIR 175 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+x^6
+(ax^3 + b)^8
+448
+x^6
+(ax^3 + b)^{10}
+2880
+a
+b
+a, b > 0
+```
+Answer: ```latex
+n = 8: r = 2 \, (\text{or} \, r = 6) \quad \text{OR} \quad n = 10: r = 2 \, (\text{or} \, r = 8)
+{}^8C_2 a^2 b^6 = 448 \quad \left( 28 a^2 b^6 = 448 \Rightarrow a^2 b^6 = 16 \right)
+{}^{10}C_2 a^2 b^8 = 2880 \quad \left( 45 a^2 b^8 = 2880 \Rightarrow a^2 b^8 = 64 \right)
+b = 2; \quad a = \frac{1}{2}
+b = \pm 2 \quad \text{and/or} \quad a = \pm \frac{1}{2}
+```
+
+=== PAIR 176 ===
+Unit: binom
+Question Number: thm
+Question: ```latex
+(x + h)^8
+h > 0
+x^8 + ax^7 + bx^6 + cx^5 + dx^4 + \ldots + h^8
+a, b, c, d, \ldots \in \mathbb{R}
+a
+b
+d
+```
+Answer: ```latex
+(x+h)^8
+
+^8C_0 x^8 h^0 + ^8C_1 x^7 h^1 + ^8C_2 x^6 h^2 + \ldots
+
+a = 8h \quad (\text{accept } ^8C_1 h)
+
+b = 28h^2 \quad (\text{accept } ^8C_2 h^2)
+
+d = 70h^4 \quad (\text{accept } ^8C_4 h^4)
+
+8h \times r = 28h^2 \quad \text{OR} \quad 28h^2 \times r = 70h^4 \quad \text{OR} \quad 8h \times r^2 = 70h^4
+
+\frac{28h^2}{8h} = \frac{70h^4}{28h^2} \quad (\text{or equivalent})
+
+h = 1.4
+```
+
+=== PAIR 177 ===
+Unit: exp
+Question Number: logs
+Question: ```latex
+f(x) = 4 - 2e^x
+```
+Answer: ```latex
+f(x) = 0, \quad 4 - 2e^x = 0
+
+0.693147
+
+x = \ln 2 \, (\text{exact}), \, 0.693
+```
+
+=== PAIR 178 ===
+Unit: financial
+Question Number: math
+Question: ```latex
+9000
+20000
+7\%
+5
+9000
+r\%
+r
+10000
+20000
+9000
+20000
+5
+```
+Answer: ```latex
+S_{\infty} < 20000
+
+S_n \text{ for a large value of } n, \, n \geq 80
+
+50 \leq n < 80
+
+S_n
+
+S_n \text{ as } n \to \infty
+
+\frac{u_1 (1 - 0.5^5)}{0.5} = 20000
+
+10322.58\ldots
+
+(\$) 10323
+```
+
+=== PAIR 179 ===
+Unit: financial
+Question Number: math
+Question: ```latex
+1700
+2.74\%
+10
+1700
+r\%
+10
+```
+Answer: ```latex
+N = 10
+
+PV = \pm 1700
+
+FV = \pm 2231.71\ldots
+
+P/Y = 1
+
+C/Y = 1
+
+1700 \left( 1 + \frac{r}{100} \right)^{10} = 2231.71\ldots
+
+r = 2.75876\ldots
+
+r = 2.76
+
+\$531.71
+```
+
+=== PAIR 180 ===
+Unit: financial
+Question Number: math
+Question: ```latex
+C = 40000(0.91)^t
+3\%
+\$15000
+\$M
+```
+Answer: ```latex
+n = 5 \\
+\text{I\%} = 3 \\
+\text{PV} = (\mp) 15000 \\
+\text{P/Y} = 1 \\
+\text{C/Y} = 1 \\
+
+\Rightarrow \text{FV} = (\pm) 17389.11\ldots \\
+
+15000 \left( 1 + \frac{3}{100} \right)^5 (= 17389.11\ldots) \\
+
+7572.17 \ldots \\
+7570 \text{ (dollars)}
+```
+
+=== PAIR 181 ===
+Unit: financial
+Question Number: math
+Question: ```latex
+\text{Option A: Each payment is } \$4200.
+
+\text{Option B: The first payment is } \$1500. \text{ In each month which follows, the payment is } 4\% \text{ more than the previous month.}
+
+\text{(a) Find the total amount Daniela would receive if she chooses}
+
+\text{(i) Option A;}
+
+\text{(ii) Option B.}
+
+\$160000
+
+5\%
+
+\text{(b) Write down an expression for the value of Sorin’s investment after } n \text{ years.}
+
+\text{(c) (i) Find the \textbf{total} value of Daniela’s winnings and Sorin’s investment on the last day of the sixth month.}
+
+\$257000
+
+\$30000
+
+r\%
+
+\$41000
+```
+Answer: ```latex
+\text{EITHER}
+
+N = 24 \quad \text{OR} \quad N = 6
+
+PV = \pm 30000
+
+PMT = 0
+
+FV = \pm 41000
+
+P/Y = 4
+
+C/Y = 4
+
+(M1)(A1)
+
+\text{OR}
+
+30000 \left( 1 + \frac{r}{100 \times 4} \right)^{6 \times 4} = 41000 \quad (M1)(A1)
+
+\text{THEN}
+
+5.24027 \ldots
+
+(r =) 5.24 \, (\%)
+```
+
+=== PAIR 182 ===
+Unit: functions
+Question Number: quadratics
+Question: ```latex
+f(x) = 6x^2 - 12x + 1
+```
+
+```latex
+g(x) = -x + c
+```
+
+```latex
+c \in \mathbb{R}
+```
+
+```latex
+(g \circ f)(x) \leq 0
+```
+
+```latex
+x \in \mathbb{R}
+```
+Answer: ```latex
+x = 1 \quad \text{OR} \quad y = -5 \quad \text{OR} \quad f(x) = 6(x-1)^2 - 5
+
+y \geq -5
+
+(g \circ f)(x) = -(6x^2 - 12x + 1) + c \quad \left( = \left( -6(x-1)^2 - 5 \right) + c \right)
+
+5 + c \leq 0
+
+144 + 24(c-1) \leq 0 \quad (120 + 24c \leq 0)
+
+c \leq -5
+
+(1, 5 + c)
+
+5 + c \leq 0
+
+c \leq -5
+```
+
+=== PAIR 183 ===
+Unit: integrals
+Question Number: intro
+Question: ```latex
+h(x) = \sqrt{4x - 2}, \text{ for } x \geq \frac{1}{2}.
+
+h^{-1}(x)
+
+h^{-1}(x)
+
+h
+
+h^{-1}
+
+x
+
+h
+
+h^{-1}
+
+h'(x)
+
+x
+```
+Answer: ```latex
+h'(x) = 4 \cdot \frac{1}{2} (4x - 2)^{\frac{1}{2}}
+
+h'(x) = \frac{2}{\sqrt{4x-2}}
+
+\left( h^{-1} \right)'(x) = \frac{x}{2}
+
+\frac{2}{\sqrt{4x-2}} = \frac{x}{2}
+
+x = 1.77
+```
+
+=== PAIR 184 ===
+Unit: intro
+Question Number: caclulus
+Question: ```latex
+f(x) = \ln(x^2), \text{ for } x \neq 0.
+
+f'(x) = \frac{2}{x}.
+
+P(d, f(d))
+
+Q(1, -3)
+
+d
+```
+Answer: ```latex
+f'(x) = \frac{1}{x^2} \times 2x
+
+f'(x) = \frac{2}{x}
+
+y = \ln(d^2)
+
+\text{gradient of tangent at P is } \frac{2}{d}
+
+y - (-3) = m(x - 1), \quad y = \left(\frac{2}{d}\right)x + b, \quad y - \ln d^2 = m(x - d)
+
+y + 3 = \left(\frac{2}{d}\right)(x - 1), \quad -3 = \left(\frac{2}{d}\right)1 + b, \quad m = \frac{\ln d^2 + 3}{d - 1}
+
+-3 - \ln(d^2) = \left(\frac{2}{d}\right)(1 - d), \quad \ln(x^2) + 1 + \left(\frac{2}{x}\right) = 0
+
+d = -1.31
+```
+
+=== PAIR 185 ===
+Unit: intro
+Question Number: caclulus
+Question: ```latex
+H(t) = 21 + 75e^{-0.08t}, \, t \geq 0
+```
+
+```latex
+H'(3)
+```
+
+```latex
+67^\circ \text{C}
+```
+
+```latex
+k, \, k \in \mathbb{Z}^+
+```
+
+```latex
+H(t)
+```
+
+```latex
+H'(t)
+```
+Answer: ```latex
+H(t) = 67
+
+t \to \infty
+
+21(^{\circ}C)
+
+\lim_{t \to \infty} H'(t) = 0
+
+\lim_{t \to \infty} H'(t) = 0
+```
+
+=== PAIR 186 ===
+Unit: intro
+Question Number: calculus
+Question: ```latex
+f(x) = 90e^{-0.5x} \quad \text{for} \quad x \in \mathbb{R}^+.
+
+y = x
+
+x
+
+L
+
+y = -x + 2\ln 45 + 2.
+```
+Answer: ```latex
+\begin{align*}
+\text{(a)} & \\
+x &= 5.56619\ldots \\
+&= 5.57 \\
+\\
+\text{(b)} & \\
+f'(x) &= -45e^{-0.5x} \\
+-45e^{-0.5x} &= -1 \\
+\text{Q has coordinates } & \left(2 \ln 45, 2\right) \text{ (accept } \left(-2 \ln \frac{1}{45}, 2\right) \\
+\\
+\text{Note:} & \\
+\frac{\ln \frac{1}{45}}{-0.5} & \quad \frac{\ln 45}{0.5} \\
+\\
+\text{(c)} & \\
+y - 2 &= -(x - 2 \ln 45) \quad \text{OR} \quad 2 = -2 \ln 45 + c \\
+\text{equation of } L & \text{ is } y = -x + 2 \ln 45 + 2 \\
+\end{align*}
+```
+
+=== PAIR 187 ===
+Unit: intro
+Question Number: calculus
+Question: ```latex
+f(x) = x^2 - 10x
+A(4, -24)
+f
+A
+f
+A
+f
+A
+f
+A
+f
+B
+```
+Answer: ```latex
+f'(4) = -2
+
+\frac{1}{2}
+
+y + 24 = \frac{1}{2}(x - 4) \quad (y = 0.5x - 26)
+
+x^2 - 10x = 0.5x - 26
+
+(6.5, -22.8) \quad \text{(exact answer is } (6.5, -22.75))
+```
+
+=== PAIR 188 ===
+Unit: kinematics
+Question Number: 6
+Question: ```latex
+v = \frac{(t^2 + 1) \cos t}{4}, \quad 0 \leq t \leq 3.
+```
+
+```latex
+-1.9 \, \text{ms}^{-2}
+```
+Answer: ```latex
+t = 1.57079\ldots \left( = \frac{\pi}{2} \right)
+
+t = 1.57 \left( = \frac{\pi}{2} \right) \, \text{(s)}
+
+a(t) = v'(t)
+
+t_1 = 2.26277\ldots, \, t_2 = 2.95736\ldots
+
+t_1 = 2.26, \, t_2 = 2.96 \, \text{(s)}
+
+0 \leq t \leq 3
+
+t = 3
+
+a = -1.83778\ldots
+
+a = -1.84 \, \text{(m s}^{-2}\text{)}
+```
+
+=== PAIR 189 ===
+Unit: kinematics
+Question Number: 7
+Question: ```latex
+s(t) = 3(t + 2)^{\cos t}, \quad 0 \leq t \leq 6.8
+```
+
+```latex
+t = 2
+```
+
+```latex
+t = b \quad \text{and} \quad t = c, \quad b < c
+```
+
+```latex
+b \leq t \leq c
+```
+Answer: ```latex
+a(t) = v'(t) \quad \text{OR} \quad a(t) = s''(t)
+
+b = 1.23140\ldots, \quad c = 5.68959\ldots
+
+b = 1.23, \quad c = 5.69
+
+\int_{1.23140\ldots}^{5.68959\ldots} |v(t)| \, dt \quad \text{OR} \quad \int_{b}^{c} |s'(t)| \, dt \quad \text{OR} \quad -\int_{1.23140\ldots}^{3.25575\ldots} v(t) \, dt + \int_{3.25575\ldots}^{5.68959\ldots} v(t) \, dt \quad \text{OR}
+
+3.8560 + 15.696
+
+19.5525\ldots
+
+\text{total distance} = 19.6 \, (\text{m})
+```
+
+=== PAIR 190 ===
+Unit: kinematics
+Question Number: 8
+Question: ```latex
+v(t) = 4e^{-\frac{t}{3}} \cos\left(\frac{t}{2} - \frac{\pi}{4}\right), \quad 0 \leq t \leq 4\pi
+```
+
+```latex
+t_1
+```
+
+```latex
+t_2
+```
+
+```latex
+t = t_1
+```
+
+```latex
+t = t_2
+```
+Answer: ```latex
+v'(t) = 0
+
+t_1 = 0.394791 \ldots
+
+t_1 = 0.395 \left( = \arctan \left( \frac{5}{12} \right) \right) \text{ (seconds)}
+
+v = 0
+
+t = 4.71238 \ldots \quad \text{OR} \quad t = 10.9955 \ldots
+
+t_2 = 10.9955 \ldots
+
+t_2 = 11.0 \left( = \frac{7\pi}{2} \right)
+
+\int_{t_1}^{t_2} |v| \, dt \quad \text{OR} \quad \int_{0.394791 \ldots}^{10.9955 \ldots} |v| \, dt \quad \text{OR} \quad \int_{0.394791 \ldots}^{4.71238 \ldots} v \, dt + \int_{4.71238 \ldots}^{10.9955 \ldots} |v| \, dt (= 6.53806 \ldots + 1.29313 \ldots)
+
+\int_{4.71238 \ldots}^{10.9955 \ldots} v \, dt - \int_{0.394791 \ldots}^{4.71238 \ldots} v \, dt (= 6.53806 \ldots - (-1.29313 \ldots))
+
+\text{distance} = 7.83118 \ldots
+
+= 7.83 \, \text{(m)}
+```
+
+=== PAIR 191 ===
+Unit: kinematics
+Question Number: 9
+Question: ```latex
+s(t) = 5.2 \sin \left( \sqrt{4t + 6} \right), \quad 0 \leq t \leq 10
+```
+Answer: ```latex
+\begin{align*}
+q &= 4.05165\ldots \\
+&= 4.05 \\
+\int_{0}^{4.05\ldots} |v(t)| dt \quad &\text{OR} \quad \int_{0}^{4.05\ldots} \left| \frac{d}{dt} s(t) \right| dt \quad \text{OR} \quad \left| \int_{0}^{4.05\ldots} v(t) dt \right| \quad \text{OR} \quad -\int_{0}^{4.05\ldots} v(t) dt \\
+\int_{0}^{q} v(t) \, dt \\
+&= 8.51841\ldots \\
+&= 8.52 \, (\text{m}) \\
+\text{initial displacement is } 3.31841\ldots \quad &\text{AND at minimum is } -5.2 \\
+\text{total distance travelled} &= 3.31841\ldots - (-5.2) \\
+&= 8.51841\ldots \\
+&= 8.52 \, (\text{m})
+\end{align*}
+```
+
+=== PAIR 192 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+y = -0.6T^2 + 23T + 110, \quad \text{where } 10 \leq T \leq 35
+```
+
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{Total number of children } (y) & 81 & 175 & 202 & 346 & 360 \\
+\hline
+\text{Ice creams sold } (x) & 15 & 27 & 23 & 35 & 46 \\
+\hline
+\end{array}
+\]
+Answer: ```latex
+x = 0.0935114 \times 310 + 7.43053 \ldots (= 36.4190 \ldots)
+```
+```latex
+36 \text{ (accept 37 or 36.4)}
+```
+
+=== PAIR 193 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\text{Number of days } (d) & 2 & 5 & 13 & 24 & 33 & 37 & 42 \\
+\hline
+\text{Average height } (h) & 10 & 16 & 30 & 59 & 76 & 79 & 82 \\
+\hline
+\end{array}
+
+h = ad + b
+
+r
+
+20
+```
+Answer: ```latex
+a = 1.93258\ldots, \quad b = 7.21662\ldots
+```
+```latex
+a = 1.93, \quad b = 7.22
+```
+```latex
+r = 0.991087\ldots
+```
+```latex
+r = 0.991
+```
+```latex
+d = 20
+```
+```latex
+\text{height} = 45.8683\ldots
+```
+```latex
+\text{height} = 45.9 \, (\text{cm})
+```
+
+=== PAIR 194 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{Hand length } (x \, \text{cm}) & 21.0 & 21.9 & 21.0 & 20.3 & 20.8 \\
+\hline
+\text{Height } (y \, \text{cm}) & 178.3 & 185.0 & 177.1 & 169.0 & 174.6 \\
+\hline
+\end{array}
+
+y = ax + b
+```
+Answer: ```latex
+r^2 (= 0.973)
+
+9.91044, -31.3194
+
+a = 9.91, \, b = -31.3, \, y = 9.91x - 31.3
+
+0.986417
+
+r = 0.986
+
+x = 21.5
+
+9.91(21.5) - 31.3
+
+181.755
+
+182 \, (\text{cm})
+```
+
+=== PAIR 195 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\text{Waist } (x \text{ cm}) & 58 & 63 & 75 & 82 & 93 & 98 & 105 \\
+\hline
+\text{BMI } (y) & 19 & 20 & 22 & 23 & 25 & 24 & 26 \\
+\hline
+\end{array}
+
+y = ax + b
+```
+Answer: ```latex
+r^2 = 0.955631
+
+0.141120, 11.1424
+
+a = 0.141, \, b = 11.1
+
+0.977563
+
+r = 0.978
+
+0.141(95) + 11.1
+
+24.5488
+
+24.5
+```
+
+=== PAIR 196 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+\text{Maximum temperature } (T) & 14 & 8 & 4 & 18 & 13 & 11 \\
+\hline
+\text{Number of hot chocolates } (H) & 79 & 143 & 191 & 58 & 84 & 105 \\
+\hline
+\end{array}
+
+H = aT + b
+```
+Answer: ```latex
+a = -9.84636, \, b = 221.592
+
+a = -9.85, \, b = 222
+
+r^2 = 0.962839
+
+-0.981244
+
+r = -0.981
+
+-9.85 \times 12 + 222
+
+103.435 \, (103.8 \, \text{from 3 sf})
+
+103 \, (\text{hot chocolates})
+```
+
+=== PAIR 197 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+x: 3.3, 6.9, 11.9, 13.4, 17.8, 19.6, 21.8, 25.3
+
+y: 6.3, 8.1, 8.4, 11.6, 10.3, 12.9, 13.1, 17.3
+
+y = ax + b, \quad a, \, b \in \mathbb{R}
+
+x = 18
+
+\bar{x}, \, \bar{y}
+```
+Answer: ```latex
+a = 0.433156\ldots, \quad b = 4.50265\ldots
+
+a = 0.433, \quad b = 4.50
+
+y = 0.433 \times 18 + 4.50
+
+= 12.2994\ldots
+
+= 12.3
+
+\bar{x} = 15, \quad \bar{y} = 11
+
+(15, 11)
+
+b \pm 1.5
+
+3.3 \leq x \leq 25.3
+```
+
+=== PAIR 198 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{Number of customers } (x) & 3 & 9 & 11 & 10 & 5 \\
+\hline
+\text{Sarah's waiting time } (y) & 6 & 10 & 12 & 11 & 6 \\
+\hline
+\end{array}
+
+y = ax + b
+```
+Answer: ```latex
+\begin{align*}
+1. \quad & (a) \\
+& \quad (i) \quad a = 0.805084\ldots \text{ and } b = 2.88135\ldots \\
+& \quad \quad a = 0.805 \text{ and } b = 2.88 \\
+& \quad (ii) \quad r = 0.97777\ldots \\
+& \quad \quad r = 0.978 \\
+& (b) \\
+& \quad a \text{ represents the (average) increase in waiting time } (0.805 \text{ mins}) \\
+& \quad \text{per additional customer (waiting to receive their coffee)} \\
+& (c) \\
+& \quad \text{attempt to substitute } x = 7 \text{ into their equation} \\
+& \quad 8.51693\ldots \\
+& \quad 8.52 \text{ (mins)}
+\end{align*}
+```
+
+=== PAIR 199 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\text{Average weekly practice time } (h) & 28 & 13 & 45 & 33 & 17 & 29 & 39 & 36 \\
+\hline
+\text{Diploma score } (D) & 115 & 82 & 120 & 116 & 79 & 101 & 110 & 121 \\
+\hline
+\end{array}
+
+D = ah + b
+```
+Answer: ```latex
+r = 0.883529\ldots
+
+r = 0.884
+
+r^2 = 0.780624\ldots
+
+a = 1.36609\ldots, \quad b = 64.5171\ldots
+
+a = 1.37, \quad b = 64.5
+
+5 \times 1.36609\ldots \quad \text{OR} \quad 1.36609\ldots (h + 5) + 64.5171\ldots - (1.36609\ldots h + 64.5171\ldots)
+
+6.83045\ldots
+
+= 6.83 \quad (6.85 \text{ from } 1.37)
+```
+
+=== PAIR 200 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{year } (x) & 2011 & 2013 & 2014 & 2018 & 2022 \\
+\hline
+\text{annual salary } (\$S) & 45000 & 47200 & 48500 & 53000 & 57000 \\
+\hline
+\end{array}
+
+S = ax + b
+```
+Answer: ```latex
+r = 1.02
+
+45000 \times 1.02^{10} \quad \text{OR} \quad 45000 \times 1.02^{11-1} \quad \text{OR listing terms}
+
+N = 10
+
+PV = 45000
+
+I\% = 2
+
+P/Y = 1
+
+C/Y = 1
+
+FV = \pm 54854.7489...
+
+a = 1096.89... \quad \text{and} \quad b = -2160753.8... (\text{accept} \quad b = -2.16 \times 10^6)
+
+S = 1096.89...x + 33028.49..., \quad \text{or} \quad S = 1096.89...x + 43997.4..., \quad \text{or} \quad S = 1096.89...x + 45094.3...
+```
+
+=== PAIR 201 ===
+Unit: lin
+Question Number: reg
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\text{Mathematics scores } (x) & 64 & 68 & 72 & 75 & 80 & 82 & 85 & 86 \\
+\hline
+\text{Science scores } (y) & 67 & 72 & 77 & 76 & 84 & 83 & 89 & 91 \\
+\hline
+\end{array}
+
+y = ax + b
+
+a
+
+b
+
+r
+```
+Answer: ```latex
+1. 
+\begin{align*}
+(a) & \quad 1.01206\ldots, \, 2.45230\ldots \\
+& \quad a = 1.01, \, b = 2.45 \, (1.01x + 2.45) \\
+(b) & \quad 0.981464\ldots \\
+& \quad r = 0.981 \\
+(c) & \quad \text{correct substitution of 78 into their regression equation} \\
+& \quad 81.3930\ldots \, 81.23 \, \text{from 3 sf answer} \\
+& \quad 81
+\end{align*}
+```
+
+=== PAIR 202 ===
+Unit: nomral
+Question Number: 4
+Question: ```latex
+W \sim N(12, 3^2)
+
+B \sim N(50, \sigma^2)
+```
+Answer: ```latex
+\begin{align*}
+(a) & \\
+& 0.158655 \\
+& P(15 < W < 30) = 0.159 \\[10pt]
+(b) & \\
+& \text{finding standardized value for 60} \\
+& z = 1.56322 \\
+& \text{correct substitution using their } z\text{-value} \\
+& \frac{60 - 50}{\sigma} = 1.56322, \quad \frac{60 - 50}{1.56322} = \sigma \\
+& 6.39703 \\
+& \sigma = 6.40 \\[10pt]
+(c) & \\
+& 0.217221 \\
+& P(B < 45) = 0.217 \\[10pt]
+(d) & \\
+& \text{valid attempt to find one possible way of being on time (do not penalize incorrect use of strict inequality signs)} \\
+& \text{eg } W \leq 15 \text{ and } B < 60, \quad 15 < W \leq 30 \text{ and } B < 45 \\
+& \text{correct calculation for } P(W \leq 15 \text{ and } B < 60) \text{ (seen anywhere)} \\
+& \text{eg } 0.841 \times 0.941, \quad 0.7917 \\
+& \text{correct calculation for } P(15 < W \leq 30 \text{ and } B < 45) \text{ (seen anywhere)} \\
+& \text{eg } 0.159 \times 0.217, \quad 0.03446 \\
+& \text{correct working} \\
+& \text{eg } 0.841 \times 0.941 + 0.159 \times 0.217, \quad 0.7917 + 0.03446 \\
+& 0.826168 \\
+& P(\text{on time}) = 0.826 \\[10pt]
+(e) & \\
+& \text{recognizing binomial with } n = 183, \quad p = 0.826168 \\
+& \text{eg } X \sim B(183, 0.826) \\
+& 151.188 \quad (151.158 \text{ from 3 sf}) \\
+& 151
+\end{align*}
+```
+
+=== PAIR 203 ===
+Unit: nomral
+Question Number: 5
+Question: ```latex
+T
+75
+\sigma
+2\%
+82
+80
+64
+6
+```
+Answer: ```latex
+X \sim \text{B}(64, 0.071193...) \quad \text{or} \quad \text{E}(X) = 64 \times 0.071193...
+
+\text{E}(X) = 4.556353...
+
+\text{E}(X) = 4.56 \, \text{(flights)}
+
+\text{P}(X > 6) = \text{P}(X \geq 7) = 1 - \text{P}(X \leq 6)
+
+= 1 - 0.83088...
+
+= 0.1691196...
+
+= 0.169
+```
+
+=== PAIR 204 ===
+Unit: normal
+Question Number: 10
+Question: ```latex
+D \text{ mm}
+32
+\sigma
+0.28
+\sigma
+```
+Answer: ```latex
+Q_1 = 31.86 \quad \text{OR} \quad Q_3 = 32.14
+
+z = -0.674489\ldots \quad \text{OR} \quad z = 0.674489\ldots
+
+-0.674489\ldots = \frac{31.86 - 32}{\sigma} \quad \text{OR} \quad 0.674489\ldots = \frac{32.14 - 32}{\sigma}
+
+0.207564\ldots
+
+\sigma = 0.208 \, \text{(mm)}
+
+z = -0.674489\ldots \quad \text{OR} \quad z = 0.674489\ldots
+
+(Q_1 =) 32 - 0.674489\ldots \sigma \quad \text{OR} \quad (Q_3 =) 32 + 0.674489\ldots \sigma
+
+(Q_3 - Q_1 =) 2 \times 0.674489\ldots \sigma
+
+2 \times 0.674489\ldots \sigma = 0.28
+
+0.207564\ldots
+
+\sigma = 0.208 \, \text{(mm)}
+```
+
+=== PAIR 205 ===
+Unit: normal
+Question Number: 11
+Question: ```latex
+W
+204
+5
+210
+80\%
+w
+210
+w
+w
+w
+```
+Answer: ```latex
+\text{P}(W > 210) \\
+\text{P}(W > 210) = 0.115069\ldots \\
+\text{P}(W > 210) = 0.115 \\
+
+\text{P}(W < w) = 1 - \text{P}(w < W < 210) - \text{P}(W > 210) \\
+\text{P}(W < w) = 1 - 0.8 - 0.115069\ldots \\
+\text{P}(W < w) = 0.084930\ldots \\
+\text{P}(W < w) = 0.0849 \\
+
+w = 197.136\ldots \\
+w = 197 \, \text{(grams)} \\
+
+X \sim \text{B}(10, 0.0849302\ldots) \\
+\text{P}(X = 1) = 0.382076\ldots \\
+\text{P}(X = 1) = 0.382
+```
+
+=== PAIR 206 ===
+Unit: normal
+Question Number: 12
+Question: ```latex
+H_{cm}
+\mu
+\sigma
+\mathbb{P}(H < 82.4) = 0.213
+\mathbb{P}(H > 87.3) = 0.409
+82.4 \, \text{cm}
+87.3 \, \text{cm}
+\mu
+\sigma
+100
+87.3 \, \text{cm}
+32
+44
+32
+F_{cm}
+92.8
+d
+4.52 \, \text{cm}
+d
+```
+Answer: ```latex
+Q_1 = 90.54 \quad \text{OR} \quad Q_3 = 95.06
+
+P(90.54 < F < 95.06) = 0.5 \quad \text{OR} \quad P(F < 90.54) = 0.25 \quad \text{OR} \quad P(F < 95.06) = 0.75
+
+1 - 2P\left( Z < -\frac{2.26}{d} \right) = 0.5 \quad \text{OR} \quad P(Z < -\frac{2.26}{d}) = 0.25 \quad \text{OR} \quad P(Z < \frac{2.26}{d}) = 0.75
+
+P(-\frac{2.26}{d} < Z < \frac{2.26}{d}) = 0.5
+
+-\frac{2.26}{d} = -0.674489... \quad \text{OR} \quad \frac{2.26}{d} = 0.674489...
+
+3.35068...
+
+d = 3.35
+```
+
+=== PAIR 207 ===
+Unit: normal
+Question Number: 4
+Question: ```latex
+\text{A company produces bags of sugar whose masses, in grams, can be modelled by a normal distribution with mean } 1000 \text{ and standard deviation } 3.5. \text{ A bag of sugar is rejected for sale if its mass is less than } 995 \text{ grams.}
+
+\begin{enumerate}
+    \item[(a)] \text{Find the probability that a bag selected at random is rejected.} \quad [2]
+    \item[(b)] \text{Estimate the number of bags which will be rejected from a random sample of } 100 \text{ bags.} \quad [1]
+    \item[(c)] \text{Given that a bag is not rejected, find the probability that it has a mass greater than } 1005 \text{ grams.} \quad [3]
+\end{enumerate}
+```
+Answer: ```latex
+\text{Let } X = \text{mass of a bag of sugar}
+
+\text{(a) evidence of identifying the correct area}
+
+P(X < 995) = 0.0765637\ldots
+
+= 0.0766
+
+\text{(b) } 0.0766 \times 100
+
+\approx 8
+
+\text{(c) recognition that } P(X > 1005 \mid X \geq 995) \text{ is required}
+
+\frac{P(X \geq 995 \cap X > 1005)}{P(X \geq 995)}
+
+\frac{P(X > 1005)}{P(X \geq 995)}
+
+\frac{0.0765637\ldots}{1 - 0.0765637\ldots} = \left(\frac{0.0765637\ldots}{0.923436\ldots}\right)
+
+= 0.0829
+```
+
+=== PAIR 208 ===
+Unit: normal
+Question Number: 6
+Question: ```latex
+P(\mu - 1.5\sigma < X < \mu + 1.5\sigma)
+```
+```latex
+\mu
+```
+```latex
+\sigma
+```
+```latex
+\$200
+```
+```latex
+\$438
+```
+Answer: ```latex
+1.1 \times 0.6 + 1.29 \times 0.3 + 1.96 \times 0.1 \text{ OR } 1.243n
+
+1.1 \times 0.6n + 1.29 \times 0.3n + 1.96 \times 0.1n - 200 \geq 438 \text{ OR } 1.243n - 200 = 438
+
+n = 513.274\ldots
+
+n = 514
+```
+
+=== PAIR 209 ===
+Unit: normal
+Question Number: 7
+Question: ```latex
+C \sim N(62, 2.9^2)
+
+P(C < 61)
+
+B \sim N(68, 3.4^2)
+
+P(\text{muffin is chocolate}) = 0.6
+
+P(\text{muffin is banana}) = 0.4
+
+P(\text{muffin weighs less than } 61 \, g) = 0.157
+
+\sigma
+```
+Answer: ```latex
+\text{P}(CM) \times \text{P}(C < 61 \mid CM) + \text{P}(BM) \times \text{P}(B < 61 \mid BM) = 0.157
+
+(0.6 \times \text{P}(C < 61)) + (0.4 \times 0.0197555\ldots) = 0.157
+
+\text{P}(C < 61) = 0.248496\ldots
+
+\sigma = 1.47225\ldots
+
+\sigma = 1.47 \quad (g)
+
+\text{P}(CM) \times \text{P}(C < 61 \mid CM) + \text{P}(BM) \times \text{P}(B < 61 \mid BM) = 0.157
+
+(0.6 \times \text{P}(C < 61)) + (0.4 \times 0.0197555\ldots) = 0.157
+
+\text{P}(C < 61) = 0.248496\ldots
+
+z = -0.679229\ldots
+
+\frac{61 - 62}{\sigma} = -0.679229\ldots
+
+\sigma = 1.47225\ldots
+
+\sigma = 1.47 \quad (g)
+```
+
+=== PAIR 210 ===
+Unit: normal
+Question Number: 8
+Question: ```latex
+\begin{align*}
+&\text{The time it takes Suzi to drive from home to work each morning is normally distributed with a mean of } 35 \text{ minutes and a standard deviation of } \sigma \text{ minutes.} \\
+&\text{On } 25\% \text{ of days, it takes Suzi longer than } 40 \text{ minutes to drive to work.} \\
+&(a) \quad \text{Find the value of } \sigma. \quad [4] \\
+&(b) \quad \text{On a randomly selected day, find the probability that Suzi's drive to work will take longer than } 45 \text{ minutes.} \quad [2] \\
+&\text{Suzi will be late to work if it takes her longer than } 45 \text{ minutes to drive to work. The time it takes to drive to work each day is independent of any other day.} \\
+&\text{Suzi will work five days next week.} \\
+&(c) \quad \text{Find the probability that she will be late to work at least one day next week.} \quad [3] \\
+&(d) \quad \text{Given that Suzi will be late to work at least one day next week, find the probability that she will be late less than three times.} \quad [5] \\
+&\text{Suzi will work } 22 \text{ days this month. She will receive a bonus if she is on time at least } 20 \text{ of those days.} \\
+&\text{So far this month, she has worked } 16 \text{ days and been on time } 15 \text{ of those days.} \\
+&(e) \quad \text{Find the probability that Suzi will receive a bonus.} \quad [4]
+\end{align*}
+```
+Answer: ```latex
+X \sim B(6, 0.0886718\ldots), \text{ where } X \text{ is the number of days late}
+
+P(X \leq 1) = P(X = 0) + P(X = 1)
+
+= 0.907294\ldots
+
+P(\text{Suzi gets a bonus}) = 0.907
+
+X \sim B(6, 0.911328\ldots), \text{ where } X \text{ is the number of days on time}
+
+P(X \geq 5) = 1 - P(X \leq 4) \text{ OR } 1 - 0.0927052\ldots \text{ OR } P(X = 5) + (X = 6) \text{ OR }
+
+0.334434\ldots + 0.572860\ldots
+
+= 0.907294\ldots
+
+P(\text{Suzi gets a bonus}) = 0.907
+```
+
+=== PAIR 211 ===
+Unit: normal
+Question Number: 9
+Question: ```latex
+T
+P(a \leq T \leq b) = 0.904
+P(T > b) = 2P(T < a)
+```
+Answer: ```latex
+\text{(d) Let } P(T < a) = x
+
+x + 0.904 + 2x \text{ OR } P(T < a) + 0.904 + 2P(T < a) \text{ OR } \frac{1}{2}P(T > b) + 0.904 + P(T > b)
+
+P(T < a) + 0.904 + 2P(T < a) = 1 \text{ OR } \frac{1}{2}P(T > b) + 0.904 + P(T > b) = 1
+
+(P(T < a) =) \frac{1}{3}(1 - P(a \leq T \leq b)) \text{ OR } (P(T > b) =) \frac{2}{3}(1 - P(a \leq T \leq b))
+
+x = \frac{1}{3}(1 - 0.904)(= 0.032) \text{ OR } P(T > b) = \frac{2}{3}(1 - 0.904)(= 0.064)
+
+P(T < a) = 0.032
+
+a = 22.18167...
+
+a = 22.2 \text{ accept } 22.1
+```
+
+=== PAIR 212 ===
+Unit: prob
+Question Number: dist
+Question: ```latex
+x
+P(X = x)
+0.15
+k
+0.1
+2k
+k
+E(X)
+```
+Answer: ```latex
+\sum p_i = 1
+
+0.15 + k + 0.1 + 2k = 1, \quad 3k + 0.25 = 1
+
+k = 0.25
+
+0 \times 0.15 + 1 \times 0.25 + 2 \times 0.1 + 3 \times 0.5
+
+\mathbb{E}(X) = 1.95
+```
+
+=== PAIR 213 ===
+Unit: probability
+Question Number: binom
+Question: ```latex
+\begin{array}{|c|c|c|c|}
+\hline
+ & M \, (\text{milk chocolate}) & D \, (\text{dark chocolate}) & \text{Total} \\
+\hline
+C \, (\text{children}) & 48 & p & 60 \\
+\hline
+A \, (\text{adults}) & x & y & q \\
+\hline
+\end{array}
+
+\begin{align*}
+(a) & \quad \text{Find the value of} \\
+(i) & \quad p ; \\
+(ii) & \quad q . \\
+(b) & \quad \text{Three people are chosen at random from those surveyed. Find the probability that all three are adults.} \\
+(c) & \quad (i) \quad \text{Given that } P(A|M) = \frac{1}{3}, \text{ find the value of } x . \\
+(ii) & \quad \text{A person is chosen at random from those surveyed. Write down the probability that they are an adult who prefers milk chocolate.} \\
+(d) & \quad \text{Determine if the events } A \text{ and } M \text{ are independent. Justify your answer.} \\
+(e) & \quad \text{Ten people in the city are chosen at random. Find the probability that at least five of them prefer dark chocolate.}
+\end{align*}
+```
+Answer: ```latex
+P(A|B) = P(A)
+
+P(A|M) = P(A)
+
+\frac{1}{3} \neq \frac{100}{160}
+
+P(A) \cdot P(B) = P(A \cap B)
+
+P(A) \times P(M) \quad \text{OR} \quad P(A) \times P(D)
+
+\frac{100}{160} \times \frac{72}{160} \neq \frac{24}{160} \left( \frac{9}{32} \neq \frac{3}{20} \right)
+
+\frac{100}{160} \times \frac{88}{160} \neq \frac{76}{160} \left( \frac{11}{32} \neq \frac{19}{40} \right)
+
+P(\text{dark chocolate}) = \frac{88}{160} \, (= 0.55)
+
+X \sim B(10, 0.55)
+
+P(X \geq 5) \quad \text{or} \quad 1 - P(X \leq 4)
+
+0.738437 \ldots
+
+0.738
+```
+
+=== PAIR 214 ===
+Unit: probability
+Question Number: dist
+Question: ```latex
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+d & 0 & 2 & 10 & 50 & \text{Grand Prize} \\
+\hline
+P(D = d) & 0.85 & c & 0.03 & 0.002 & 0.0001 \\
+\hline
+\end{array}
+
+(a) \quad \text{Find the value of } c. \quad [2]
+
+(b) \quad \text{Determine whether this lottery is a fair game in the first week. Justify your answer.} \quad [4]
+
+(c) \quad \text{Given that the grand prize is not won and the grand prize continues to double, write an expression in terms of } n \text{ for the value of the grand prize in the } n\text{th week of the lottery.} \quad [2]
+
+(d) \quad \text{Find the value of } p. \quad [7]
+```
+Answer: ```latex
+E(D) > 2
+
+(0 \times 0.85) + (2 \times 0.1179) + (10 \times 0.03) + (50 \times 0.002) + (1000 \times 2^{w-1} \times 0.0001)
+
+0.6358 + (1000 \times 2^{w-1} \times 0.0001) > 2 \quad \text{OR} \quad 2^{n-1} > 13.642
+
+n - 1 > 3.76998 \quad \text{OR} \quad w = 4.76998\ldots
+
+E(D) = 1.4358 \text{ in week 4 or } E(D) = 2.2358 \text{ in week 5}
+
+w = 5
+
+\text{expected profit per ticket} = \text{their } E(D) - 2
+
+= 0.2358
+```
+
+=== PAIR 215 ===
+Unit: probability
+Question Number: dist
+Question: ```latex
+x & 0 & 1 & 2 & 3 \\
+P(X = x) & 0.41 & k - 0.28 & 0.46 & 0.29 - 2k^2 \\
+
+2k^2 - k + 0.12 = 0
+
+\mathbb{E}(X)
+```
+Answer: ```latex
+0.41 + k - 0.28 + 0.46 + 0.29 - 2k^2 = 1 \quad \text{OR} \quad k - 2k^2 + 0.01 = 0.13
+```
+
+```latex
+2k^2 - k + 0.12 = 0
+```
+
+```latex
+k = 0.3
+```
+
+```latex
+P(1) = k - 0.28 \geq 0 \quad \text{therefore} \quad k \neq 0.2
+```
+
+```latex
+\text{E}(X) = 0 \times 0.41 + 1 \times (0.3 - 0.28) + 2 \times 0.46 + 3 \times (0.29 - 2 \times 0.3^2)
+```
+
+```latex
+= 1.27
+```
+
+=== PAIR 216 ===
+Unit: probability
+Question Number: dist
+Question: ```latex
+a, k \in \mathbb{R}^+
+
+\begin{array}{|c|c|c|c|c|}
+\hline
+x & 1 & 2 & 3 & 4 \\
+\hline
+P(X = x) & k & k^2 & a & k^3 \\
+\hline
+\end{array}
+
+E(X) = 2.6
+```
+Answer: ```latex
+E(X) = k + 2k^2 + 3a + 4k^3 = 2.6
+```
+
+```latex
+k + k^2 + a + k^3 = 1
+```
+
+```latex
+a = 1 - k - k^2 - k^3 \quad \text{and} \quad a = \frac{1}{3} \left( 2.6 - k - 2k^2 - 4k^3 \right)
+```
+
+```latex
+k^3 - k^2 - 2k + 0.4 = 0 \quad \text{OR} \quad 3 \left( 1 - k - k^2 - k^3 \right) = 2.6 - k - 2k^2 - 4k^3 \quad \text{(or equivalent)}
+```
+
+```latex
+a = 0.773073... \quad \text{OR} \quad k = 0.185928...
+```
+
+```latex
+\text{(Other solutions to the cubic are: } k = 1.92921..., \quad k = -1.11514...)
+```
+
+```latex
+a = 0.773
+```
+
+=== PAIR 217 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+PB = 215 \text{ km}, \, AP = 65 \text{ km} \, \text{and} \, \angle APB = 90^\circ.
+
+42 \text{ km h}^{-1}
+
+84 \text{ km h}^{-1}
+
+BD = x \text{ km}
+
+T
+
+T'
+
+C
+```
+Answer: ```latex
+C = 200 \cdot \sqrt{\frac{(215-x)^2 + 65^2}{42}} + 150 \cdot \frac{x}{84}
+
+x = 188.706\ldots \text{ km}
+
+x = 189 \text{ km}
+
+0 < x < 215
+
+C = 670.864
+
+C = \$671
+```
+
+=== PAIR 218 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\begin{align*}
+\text{The rectangle measures } 5 \, \text{cm by } 4 \, \text{cm.} \\
+\text{The points } A \text{ and } B \text{ lie on a circle, with centre } O \\
+\text{and radius } 2 \, \text{cm, such that } \angle A \hat{O} B = \theta, \text{ where } 0 < \theta < \pi. \\
+\text{(a) Find the area of one of the shaded segments in terms of } \theta. \\
+\text{(b) Given that the area of the logo is } 13.4 \, \text{cm}^2, \text{ find the value of } \theta.
+\end{align*}
+```
+Answer: ```latex
+\frac{1}{2} r^2 \theta - \frac{1}{2} r^2 \sin \theta
+
+\frac{1}{2} (2)^2 \theta - \frac{1}{2} (2)^2 \sin \theta
+
+\text{area} = 2\theta - 2\sin \theta
+
+5 \times 4 - 2 \times (2\theta - 2\sin \theta) = 13.4
+
+\frac{20 - 13.4}{2} \quad (=3.3)
+
+2\theta - 2\sin \theta = 3.3
+
+\theta = 2.35672\ldots
+
+\theta = 2.36 \quad \text{(do not accept an answer in degrees)}
+```
+
+=== PAIR 219 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\hat{AVB} = 40^\circ
+57.2 \, \text{cm}^3
+2x \, \text{cm}
+y \, \text{cm}
+S \, \text{cm}^2
+```
+Answer: ```latex
+V = x \times 2x \times y = 57.2
+
+S = 2 \left( 2x^2 + xy + 2xy \right)
+
+y = \frac{57.2}{2x^2}
+
+S(x) = 4x^2 + 6x \left( \frac{57.2}{2x^2} \right)
+
+\frac{dS}{dx} = 8x - 171.6x^{-2} = 0 \quad \text{OR} \quad x = 2.77849...
+
+92.6401...
+
+\text{minimum surface area} = 92.6 \, (\text{cm}^2)
+```
+
+=== PAIR 220 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\text{The following diagram shows a circle with centre } O \text{ and radius } 5 \text{ metres.}
+
+\text{Points } A \text{ and } B \text{ lie on the circle and } \angle A\hat{O}B = 1.9 \text{ radians.}
+
+(a) \text{ Find the length of the chord } [AB].
+
+(b) \text{ Find the area of the shaded sector.}
+```
+Answer: ```latex
+\hat{AOB} = 2\pi - 1.9 \, ( = 4.3831\ldots )
+
+A = \frac{1}{2} \times 5^2 \times 4.3831\ldots \quad \text{OR} \quad \left( \frac{2\pi - 1.9}{2\pi} \right) \times \pi (5^2)
+
+= 54.7898\ldots
+
+= 54.8 \, (\text{m}^2)
+
+A = A_C - A_U
+
+A = \pi \times 5^2 - \frac{1}{2} \times 5^2 \times 1.9 \, ( = 78.5398\ldots - 23.75)
+
+= 54.7898\ldots
+
+= 54.8 \, (\text{m}^2)
+```
+
+=== PAIR 221 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\begin{align*}
+&\text{(a) Find the distance from point } A \text{ to point } C. \\
+&\text{(b) Find the area of this piece of land.} \\
+&\text{(c) Find } \angle CAB. \\
+&\text{(d) Find the distance from point } B \text{ to point } D.
+\end{align*}
+```
+Answer: ```latex
+\text{AD} = \frac{1}{2} \text{AC} = 54.3115 \ldots
+
+\text{BD}^2 = 230^2 + 54.3115^2 - 2(230)(54.3115) \cos 47.0049^\circ
+
+\text{BD} = 197.009 \ldots
+
+\text{BD} = 197(m)
+```
+
+=== PAIR 222 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\text{The following diagram shows triangle } ABC, \text{ with } AC = 24, \, BC = 17, \text{ and } \angle ABC = 113^\circ.
+
+(a) \quad \text{Find } \angle BAC.
+
+(b) \quad \text{Find } AB.
+```
+Answer: ```latex
+\frac{24}{\sin 113^\circ} = \frac{17}{\sin \hat{B}\hat{A}\hat{C}} \quad \text{OR} \quad \left( \sin \hat{B}\hat{A}\hat{C} = \right) 0.652024\ldots
+
+\hat{B}\hat{A}\hat{C} = 40.7^\circ
+
+24^2 = AB^2 + 17^2 - 2 \cdot 17 \cdot AB \cdot \cos 113^\circ \quad \left( AB^2 + 13.2848\ldots AB - 287 = 0 \right) \quad \text{OR}
+
+17^2 = AB^2 + 24^2 - 2 \cdot 24 \cdot AB \cdot \cos 40.6943\ldots ^\circ \quad \left( AB^2 - 36.3935\ldots AB + 287 = 0 \right)
+
+AB = 11.6
+```
+
+=== PAIR 223 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+2\alpha
+
+r
+
+\text{(b) (i) Find } \angle DOE \text{ in terms of } \alpha.
+
+\text{(ii) Hence or otherwise, find an expression for the area of } R.
+
+\text{(c) Find the value of } \alpha \text{ for which the area of } R \text{ is equal to the area of the circle of centre } O \text{ and radius } r.
+```
+Answer: ```latex
+\pi r^2
+
+\frac{r^2}{\tan \alpha} - \frac{1}{2} r^2 (\pi - 2\alpha) = \pi r^2
+
+\frac{1}{\tan \alpha} - \frac{1}{2} (\pi - 2\alpha) = \pi
+
+\alpha = 0.218979\ldots
+
+\alpha = 0.219
+```
+
+=== PAIR 224 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\text{Lucknow lies } 500 \text{ km directly east of Jaipur, and } \angle JLD = 25^\circ.
+```
+
+```latex
+\text{The bearing of D from J is } 034^\circ.
+```
+
+```latex
+\text{(a) Find } \angle JDL.
+```
+
+```latex
+\text{(b) Find the distance between Lucknow and Delhi.}
+```
+Answer: ```latex
+\hat{NJD} = 34^\circ \quad \text{OR} \quad \hat{DJL} = 56^\circ
+```
+
+```latex
+\hat{JDL} = 99^\circ
+```
+
+```latex
+\frac{11\pi}{20}, \, 1.73 \, \text{(radians)}
+```
+
+```latex
+\frac{\text{DL}}{\sin 56^\circ} = \frac{500}{\sin 99^\circ} \quad \text{OR} \quad \frac{\text{DL}}{\sin 0.977384\ldots} = \frac{500}{\sin 1.72787\ldots}
+```
+
+```latex
+419.685\ldots
+```
+
+```latex
+\text{DL} = 420 \, \text{(km)}
+```
+
+=== PAIR 225 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\hat{AOB} = \theta \text{ radians, where } 0 < \theta < \pi.
+
+\theta = 2.08
+
+R(t)
+
+R'(t) = 50 \cos \left( \frac{2\pi t}{5} \right) + 3000, \, t \geq 0.
+```
+Answer: ```latex
+\text{volume of gutter } = 176323 \text{ OR } 176658 \text{ (OR } 600 \times \text{ their area)} 
+
+\int_{0}^{60} R'(t) \, dt = \left( \frac{250}{2\pi} \sin\left(\frac{2\pi \times 60}{5}\right) + 3000 \times 60 \right)
+
+\text{rainfall over 60 seconds } = 180000 \, (\text{cm}^3)
+
+R'(t) \geq -1 \times 50 + 3000 (\text{cm}^3\text{s}^{-1})
+
+\text{rainfall over 60 seconds } \geq 177000
+```
+
+=== PAIR 226 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+\begin{align*}
+&\text{The distance from point } P \text{ to point } A \text{ at the top of the taller building is } 150 \text{ metres.} \\
+&\text{The distance from point } P \text{ to point } B \text{ at the top of the shorter building is } 90 \text{ metres.} \\
+&\text{The distance between } A \text{ and } B \text{ is } 154 \text{ metres.} \\
+&\text{(a) Find the measure of } \angle APB. \\
+&\text{(b) Find the height, } h, \text{ of the taller building.}
+\end{align*}
+```
+Answer: ```latex
+154^2 = 150^2 + 90^2 - 2(150)(90) \cos \angle APB \quad \text{OR} \quad \cos \angle APB = \frac{150^2 + 90^2 - 154^2}{2(150)(90)}
+
+\angle APB = 75.2286\ldots^\circ \quad \text{OR} \quad 1.31298\ldots \text{ radians}
+
+\angle APB = 75.2^\circ \quad \text{OR} \quad 1.31 \text{ radians}
+
+\theta = \frac{180^\circ - \angle APB}{2} \quad \text{OR} \quad \theta = \frac{180^\circ - 75.2286\ldots^\circ}{2} \quad (= 52.3856\ldots) \quad \text{OR}
+
+\theta = \frac{\pi - 1.31298\ldots}{2} \quad (= 0.914302\ldots)
+
+\sin \theta = \frac{h}{150} \quad \text{OR} \quad h = 150 \sin 52.3856\ldots^\circ
+
+h = 118.820\ldots
+
+h = 119 \, (\text{m})
+```
+
+=== PAIR 227 ===
+Unit: trig
+Question Number: geo
+Question: ```latex
+240 - 2.4r^2
+176 \, \text{cm}^2
+r
+```
+Answer: ```latex
+\frac{1}{2} \times 4.8 \times 100 - \frac{1}{2} \times 4.8 \times r^2 \quad \text{OR} \quad 10^2 \pi - \pi r^2 - \left( \frac{1}{2} 10^2 \times (2\pi - 4.8) - \frac{1}{2} \times (2\pi - 4.8) r^2 \right)
+
+\text{(area)} = 240 - 2.4r^2
+
+240 - 2.4r^2 = 176
+
+r = 5.16397\ldots
+
+= 5.16 \, \text{(cm)} \left( \frac{4\sqrt{15}}{3} \, \text{exact} \right)
+
+10 \times 4.8 \quad \text{OR} \quad 5.16\ldots \times 4.8
+
+\text{Perimeter} = 10 \times 4.8 + 5.16\ldots \times 4.8 + 2(10 - 5.16\ldots) \, (= 48 + 24.7870\ldots + 9.67204\ldots)
+
+= 82.4591\ldots
+
+= 82.5 \, \text{(cm)} \, (82.4 \, \text{from 3 sf})
+```
+
+=== PAIR 228 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+k
+[AB]
+17.0 \text{ metres}
+\hat{AOB}
+h
+```
+Answer: ```latex
+h'(k), \, h'(11.6510), \, 0.782024
+
+-0.782024 \, (-0.768662 \text{ from 3 sf})
+
+\text{rate of change is } -0.782 \, (\text{ms}^{-1})
+
+(-0.769 \, (\text{ms}^{-1}) \text{ from 3sf})
+```
+
+=== PAIR 229 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+h(t) = a \cos(bt) + c
+```
+```latex
+a, b, c \in \mathbb{R}
+```
+Answer: ```latex
+\text{amplitude is } \frac{110}{2} = 55
+
+a = -55
+
+c = 65
+
+\frac{2\pi}{b} = 20 \quad \text{OR} \quad -55\cos(20b) + 65 = 10
+
+b = \frac{\pi}{10} ( = 0.314)
+
+t = 6.74416\ldots
+
+= 6.74 \, (\text{sec})
+
+\int_{0}^{10} |v(t)| dt \quad \text{OR} \quad -\int_{0}^{6.74416\ldots} v(t) \, dt + \int_{6.74416\ldots}^{9.08837\ldots} v(t) \, dt - \int_{9.08837\ldots}^{10} v(t) \, dt
+
+= 37.0968\ldots
+
+= 37.1 \, (\text{m})
+
+\text{acceleration} = 5.93430\ldots
+
+= 5.93 \, (\text{ms}^{-2})
+```
+
+=== PAIR 230 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+\begin{align*}
+\text{From point A the angle of elevation of point C is } 0.6 \text{ radians.} \\
+\text{(a) Given that point A is 12 metres from the base of the windmill, find the height of point C above the ground.} \\
+\text{An observer walks 7 metres from point A to point B.} \\
+\text{(b) Find the angle of elevation of point C from point B.} \\
+\text{The observer keeps walking until he is standing directly under point C. The observer has a height of } 1.8 \text{ metres, and as the blades of the windmill rotate, the end of each blade passes } 2.5 \text{ metres over his head.} \\
+\text{(c) Find the length of each blade of the windmill.} \\
+\text{One of the blades is painted a different colour than the others. The end of this blade is labelled point D. The height } h, \text{ in metres, of point D above the ground can be modelled} \\
+\text{by the function } h(t) = p \cos \left( \frac{3\pi}{10} t \right) + q, \text{ where } t \text{ is in seconds and } p, q \in \mathbb{R}. \text{ When } t = 0, \\
+\text{point D is at its maximum height.} \\
+\text{(d) Find the value of } p \text{ and the value of } q. \\
+\text{If the observer stands directly under point C for one minute, point D will pass over his head } n \text{ times.} \\
+\text{(e) Find the value of } n.
+\end{align*}
+```
+Answer: ```latex
+\text{period} = \frac{\frac{2\pi}{3\pi}}{10} (= 6.6666\ldots)
+
+\text{rotations per minute} = \frac{60}{\text{their period}}
+
+n = 9 \, (\text{must be an integer}) \, (\text{accept } n = 10, \, n = 18, \, n = 19)
+```
+
+=== PAIR 231 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+H(t) = a \sin(b(t-c)) + d
+\quad a > 0, \, b > 0, \, c > 0
+```
+
+(a) Show that \( b = \frac{\pi}{6} \).
+
+(b) Find the value of \( a \).
+
+(c) Find the value of \( d \).
+
+(d) Find the smallest possible value of \( c \).
+
+(e) Find the height of the water at 12:00.
+
+(f) Determine the number of hours, over a 24-hour period, for which the tide is higher than 5 metres.
+```
+Answer: ```latex
+5 = 2.3 \sin \left( \frac{\pi}{6} (t - 1.5) \right) + 4.5
+
+t = 1.91852...
+
+t = 7.08147...
+
+t = 13.9185...
+
+t = 19.0814...
+
+2 \times (7.081... - 1.919...)
+
+10.3258...
+
+= 10.3
+```
+
+=== PAIR 232 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+h_A(t) = \sin(2t + 6) + 9t + 27, \quad \text{where } 0 \leq t \leq 9.
+
+h_B(t) = 8t + 32, \quad \text{where } 0 \leq t \leq 9.
+
+h_A(t) = h_B(t).
+```
+Answer: ```latex
+h_A'(t) \text{ and } h_B'(t)
+
+h_A'(t) = h_B'(t)
+
+t = 1.18879\ldots \text{ and } 2.23598\ldots \text{ OR } 4.33038\ldots \text{ and } 5.37758\ldots \text{ OR } 7.47197\ldots \text{ and } 8.51917\ldots
+
+t = \frac{4\pi}{3} - 3, \frac{5\pi}{3} - 3, \left( \frac{7\pi}{3} - 3, \frac{8\pi}{3} - 3, \frac{10\pi}{3} - 3, \frac{11\pi}{3} - 3 \right)
+
+1.18879\ldots < t < 2.23598\ldots \text{ OR } 4.33038\ldots < t < 5.37758\ldots \text{ OR } 7.47197\ldots < t < 8.51917\ldots
+
+3(2.2359\ldots - 1.1887\ldots) = 3 \left( \left( \frac{5\pi}{3} - 3 \right) - \left( \frac{4\pi}{3} - 3 \right) \right)
+
+= 3.14 \, (= \pi) \, \text{(weeks)}
+```
+
+=== PAIR 233 ===
+Unit: trig
+Question Number: graph
+Question: ```latex
+H
+\quad
+t
+\quad
+a
+\quad
+b
+\quad
+1.5
+```
+Answer: ```latex
+t = 0.571757...
+
+0.337978...
+
+2.02787...
+
+\frac{0.337978... \times 6}{5} \quad \text{OR} \quad \frac{2.02787...}{5}
+
+= 0.405574...
+
+P(\text{height is greater than 1.5 m}) = 0.406
+```
